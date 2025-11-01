@@ -1,0 +1,15 @@
+{
+  "hash": "65a6d841",
+  "configHash": "eb3e5178",
+  "lockfileHash": "1959ad2c",
+  "browserHash": "f2e94751",
+  "optimized": {
+    "axios": {
+      "src": "../../node_modules/axios/index.js",
+      "file": "axios.js",
+      "fileHash": "8cfb4a90",
+      "needsInterop": false
+    }
+  },
+  "chunks": {}
+}
