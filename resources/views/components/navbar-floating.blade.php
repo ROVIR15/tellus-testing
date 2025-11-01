@@ -1,0 +1,59 @@
+<?php
+
+$navbarItems = [
+  ['label' => 'Home', 'url' => '/'],
+  ['label' => 'Services', 'url' => '/services'],
+  ['label' => 'About Us', 'url' => '/about-us'],
+  ['label' => 'FAQ', 'url' => '/faq'],
+  ['label' => 'Contact Us', 'url' => '/contact-us'],
+];
+
+?>
+
+<nav class="navbar-floating">
+  <div class="navbar-container">
+    <!-- Left: Logo -->
+    <div class="flex items-center gap-3">
+      <img src="{{ asset('images/logo.png') }}" alt="logo" class="h-10 rounded-full object-cover">
+    </div>
+
+    <!-- Center: Links -->
+    <div class="navbar-links hidden md:flex items-center gap-10">
+      @foreach ($navbarItems as $item)
+        <a href="{{ $item['url'] }}" class="heading-7 text-neutral-900 hover:text-primary-500">{{ $item['label'] }}</a>
+      @endforeach
+    </div>
+
+    <!-- Mobile menu button -->
+    <button class="navbar-menu-button" id="mobile-menu-button" aria-label="Toggle mobile menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Right: CTA -->
+    <div>
+      <a href="#contact" class="btn-accent px-5 py-2 rounded-full shadow-md">Talk To Us</a>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="navbar-mobile-menu" id="mobile-menu">
+    <a href="#" class="body-2 text-neutral-900 hover:text-primary-500">Home</a>
+    <a href="#" class="body-2 text-neutral-900 hover:text-primary-500">Services</a>
+    <a href="#" class="body-2 text-neutral-900 hover:text-primary-500">About Us</a>
+    <a href="#" class="body-2 text-neutral-900 hover:text-primary-500">FAQ</a>
+    <a href="#" class="body-2 text-neutral-900 hover:text-primary-500">Contact Us</a>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      mobileMenuButton.addEventListener('click', function () {
+        mobileMenu.classList.toggle('active');
+      });
+    });
+  </script>
+</nav>
