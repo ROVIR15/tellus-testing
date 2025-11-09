@@ -11,9 +11,13 @@
     // Get the first image or use placeholder
     $imageSrc = is_array($images) && count($images) > 0 ? $images[0] : 'https://via.placeholder.com/800x400?text=No+Image';
     $imageAlt = $attributes->get('title', 'News Image') ?? 'News Image';
+
+    $class = $attributes->get('class', '') ;
+
+    $class = $class == '' ? 'h-90' : $class;
 @endphp
 
-<div class="news-card-1 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative h-96">
+<div class="news-card-1 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative {{ $class }}">   
     <!-- Image Container (Full Background) -->
     <div class="absolute inset-0 overflow-hidden bg-gray-200">
         <img 

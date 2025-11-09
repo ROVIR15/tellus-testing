@@ -2,43 +2,39 @@
 
 @section('content')
 
-<!-- Hero Section -->
-@include('components.section-hero')
+    <!-- Hero Section -->
+    @include('components.section-hero')
 
-<!-- Who We Serve Section -->
-@include('components.section-who-we-serve')
+    <!-- Who We Serve Section -->
+    @include('components.section-who-we-serve')
 
-<!-- Inside The Lab Section -->
-@include('components.section-inside-the-lab')
+    <!-- Inside The Lab Section -->
+    @include('components.section-inside-the-lab')
 
-<!-- Lab Services Section -->
-@include('components.section-lab-services')
+    <!-- Lab Services Section -->
+    @include('components.section-lab-services')
 
-<x-section>
-    <div class="max-w-5xl mx-auto text-left">
+    <x-section>
         <x-heading-display-3>
-            "Trusted by engineers, builders, and decision-makers across 
+            "Trusted by engineers, builders, and decision-makers across
             <span style="background: linear-gradient(180deg, #2D6BB4 0%, #2F68B1 28%, #355FA7 49%, #415097 68%, #513B81 85%, #652266 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;">continents infrastructure</span> landscape."
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;">continents infrastructure</span> landscape."
         </x-heading-display-3>
-    </div>
-</x-section>
+    </x-section>
 
-<x-section>
-    <p>testimonies</p>
-</x-section>
+    @include('components.section-testimony')
 
-<x-section>
-    <p>our clients</p>
-</x-section>
+    <x-section>
+        <p>our clients</p>
+    </x-section>
 
-@include('components.section-inquiry')
+    @include('components.section-inquiry')
 
-@include('components.faq-section')
+    @include('components.faq-section')
 
-<!-- Latest News Section -->
-<x-latest-news-section :max-news-items="3" />
+    <!-- Latest News Section -->
+    <x-latest-news-section :max-news-items="3" />
 
 @endsection

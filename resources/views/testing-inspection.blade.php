@@ -4,7 +4,7 @@
 @section('description', 'Professional testing and inspection services for construction, engineering, and infrastructure projects.')
 
 @section('content')
-    <div class="relative px-8">
+    <div class="relative">
         <!-- Background gradient -->
         <div class="absolute inset-0 overflow-hidden z-0 pointer-events-none">
             <svg width="100%" height="100%" viewBox="0 0 1440 800" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -35,30 +35,9 @@
         </div>
 
         <!-- Main content with responsive margin -->
-        <div class="relative z-10 pt-16 md:pt-20 lg:pt-24">
-            <!-- Hero Section -->
-            <x-section class="mb-16">
-                <div class="max-w-5xl mx-auto text-center">
-                    <x-heading-h1 class="mb-6">Testing & Inspection Services</x-heading-h1>
-                    <x-body-1 class="mb-8 max-w-3xl mx-auto">
-                        Our comprehensive testing and inspection services ensure your projects meet all quality standards
-                        and regulatory requirements. With state-of-the-art equipment and experienced professionals, we
-                        deliver accurate results you can trust.
-                    </x-body-1>
-                    <div class="flex flex-wrap justify-center gap-4">
-                        <x-button variant="primary" size="lg">
-                            Request a Service
-                        </x-button>
-                        <x-button variant="secondary" size="lg">
-                            View Our Certifications
-                        </x-button>
-                    </div>
-                </div>
-            </x-section>
-
-
+        <x-hero>
             <x-section-test-details />
-        </div>
+        </x-hero>
 @endsection
 
     <!-- Custom CSS for this page -->

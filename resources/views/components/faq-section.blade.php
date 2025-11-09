@@ -12,7 +12,7 @@
 
 <!-- Experimentation Section -->
 <x-section class="bg-gradient-to-br from-primary-100 to-neutral-100">
-    <div class="max-w-4xl mx-auto">
+    <div>
         <div class="text-center mb-16">
             <x-heading-h1 style="
                 background: linear-gradient(180deg, #2D6BB4 0%, #2F68B1 28%, #355FA7 49%, #415097 68%, #513B81 85%, #652266 100%);

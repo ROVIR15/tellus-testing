@@ -7,6 +7,10 @@
     $author = $attributes->get('author', '');
     $category = $attributes->get('category', '');
     $readTime = $attributes->get('read_time', '');
+    // Image display controls
+    $aspect = $attributes->get('aspect', '4/3'); // allows 16/9, 4/3, 1/1, 3/2
+    $fit = $attributes->get('fit', 'cover'); // cover or contain
+    $position = $attributes->get('position', 'center'); // center, top, bottom, left, right
     
     // Format the unix timestamp to readable date
     $formattedDate = $createdAt 
@@ -18,19 +22,46 @@
         ? $images[0] 
         : 'https://via.placeholder.com/1200x675?text=No+Image';
     $imageAlt = $attributes->get('title', 'News Image') ?? 'News Image';
+
+    // Map aspect ratios to Tailwind padding-top classes to avoid inline style interpolation
+    switch ($aspect) {
+        case '1/1':
+            $containerPaddingClass = 'pt-[100%]';
+            break;
+        case '3/2':
+            $containerPaddingClass = 'pt-[66.6667%]';
+            break;
+        case '4/3':
+            $containerPaddingClass = 'pt-[75%]';
+            break;
+        case '16/9':
+        default:
+            $containerPaddingClass = 'pt-[56.25%]';
+            break;
+    }
+
+    // Map fit and position to Tailwind utility classes (no inline CSS)
+    $fitClass = $fit === 'contain' ? 'object-contain' : 'object-cover';
+    $posClass = match ($position) {
+        'top' => 'object-top',
+        'bottom' => 'object-bottom',
+        'left' => 'object-left',
+        'right' => 'object-right',
+        default => 'object-center',
+    };
 @endphp
 
 <div class="news-card-3 rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-30 dark:bg-neutral-800 cursor-pointer max-w-full sm:max-w-[calc(50%-1rem)] lg:max-w-[calc(33.333%-1rem)] xl:max-w-[calc(25%-1rem)] flex flex-col gap-3" 
      onclick="window.location.href='{{ $attributes->get('href', '#') }}'"
      style="min-width:fit-content;"
 >
-    <!-- Image Container with 16:9 aspect ratio -->
-    <div class="relative overflow-hidden bg-gray-200 dark:bg-gray-700" style="padding-top: 56.25%; border-radius: 10px">
+    <!-- Image Container with configurable aspect ratio -->
+    <div class="relative overflow-hidden bg-gray-200 dark:bg-gray-700 {{ $containerPaddingClass }} rounded-[10px]">
         <!-- Image with overlay for better text contrast -->
         <img 
             src="{{ $imageSrc }}"
             alt="{{ $imageAlt }}"
-            class="absolute inset-0 w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+            class="absolute inset-0 w-full h-full hover:scale-105 transition-transform duration-300 {{ $fitClass }} {{ $posClass }}"
             loading="lazy"
         />
         <!-- <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-60"></div> -->

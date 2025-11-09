@@ -5,6 +5,7 @@
     $maxNewsItems = 4;
     $title = $attributes->get('title', 'Latest News');
     $subtitle = $attributes->get('subtitle', 'Stay updated with our latest news and insights');
+    $activateShowMore = $attributes->get('activate-show-more', true);
 
     // In a real application, you would fetch news from a database
     // For this example, we'll create sample news items
@@ -64,13 +65,14 @@
     // Limit the number of news items based on max-news-items
     $newsItems = array_slice($newsItems, 0, $maxNewsItems);
 @endphp
+<!-- style="background: linear-gradient(180deg, #F5F9FF 0%, #F0F0F0 100%);" -->
 
-<section {{ $attributes->merge(['class' => 'section']) }}
-    style="background: linear-gradient(180deg, #F5F9FF 0%, #F0F0F0 100%);">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section {{ $attributes->merge(['class' => 'section']) }}>
+    <div class="flex flex-col gap-8 px-4 sm:px-6 lg:px-8">
         <!-- Section Header -->
         <div class="flex flex-row items-center justify-between">
-            <h2 class="heading-2 mb-4">{{ $title }}</h2>
+            <h2 class="heading-1 mb-4">{{ $title }}</h2>
+            @if ($activateShowMore)
             <button type="button"
                 class="px-8 py-3 rounded-full transition-all duration-300 font-semibold" style="
                             color: var(--color-primary-300);
@@ -78,6 +80,7 @@
                         ">
                 <span>Show More</span>
             </button>
+            @endif
         </div>
 
         <!-- News Cards Grid -->

@@ -1,8 +1,10 @@
 <section class="section-lg bg-neutral-100">
-    <div class="max-w-7xl mx-auto">
+    <div>
         <!-- Heading -->
         <div class="text-center mb-16">
-            <h2 class="heading-1 mb-6" style="background: linear-gradient(180deg, #2D6BB4 0%, #2F68B1 28%, #355FA7 49%, #415097 68%, #513B81 85%, #652266 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Inside The Lab</h2>
+            <h2 class="heading-1 mb-6"
+                style="background: linear-gradient(180deg, #2D6BB4 0%, #2F68B1 28%, #355FA7 49%, #415097 68%, #513B81 85%, #652266 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                Inside The Lab</h2>
             <p class="sub-heading-2 mx-auto leading-relaxed">
                 Our lab isn't just a facility—it's a partner in your project's success.<br>
                 Whether you're in construction, geotech, or infrastructure, reliable results mean smarter decisions.
@@ -56,7 +58,8 @@
                             <div
                                 class="carousel-card rounded-3xl overflow-hidden shadow-xl bg-white border border-neutral-300">
                                 <img src="{{ asset($card['image']) }}" alt="{{ $card['title'] }}"
-                                    class="w-full h-full object-cover" title="{{ $card['description'] }}" style="max-width: 756px;">
+                                    class="w-full h-full object-cover" title="{{ $card['description'] }}"
+                                    style="max-width: 756px;">
                             </div>
                         </div>
                     @endforeach

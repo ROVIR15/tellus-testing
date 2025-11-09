@@ -1,5 +1,5 @@
 <!-- Who We Serve Section - Figma Specification Match -->
-<section class="py-20 md:py-28 lg:py-32">
+<section>
     <div class="max-w-7xl mx-auto px-16 md:px-16 lg:px-16">
         <!-- 3x3 Grid Layout with 24px gap -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">

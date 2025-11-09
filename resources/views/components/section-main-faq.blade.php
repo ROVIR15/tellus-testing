@@ -2,7 +2,19 @@
 
 <!-- FAQ Section Container -->
 @php
-    $faqItems = $items ?: \App\Constants\FAQConstants::getItems();
+    $dbItems = \App\Models\Faq::query()
+        ->where('is_published', true)
+        ->orderBy('order')
+        ->orderByDesc('created_at')
+        ->get(['id', 'label', 'description'])
+        ->map(fn ($f) => [
+            'id' => 'faq-' . $f->id,
+            'label' => $f->label,
+            'description' => $f->description,
+        ])
+        ->toArray();
+
+    $faqItems = $items ?: (count($dbItems) ? $dbItems : \App\Constants\FAQConstants::getItems());
 
     // Calculate displayed and total items
     $displayedItems = $maxItems ? array_slice($faqItems, 0, $maxItems) : $faqItems;
@@ -11,7 +23,7 @@
 @endphp
 
 <!-- Experimentation Section -->
-<x-section class="bg-gradient-to-br from-primary-100 to-neutral-100">
+<x-section>
     <div class="w-full" style="color: var(--color-secondary-300);" x-data="{
             showAll: false,
             openedId: null,
@@ -49,7 +61,7 @@
                 return this.filteredItems.length === 0;
             }
         }">
-        <div class="text-left mb-16 flex flex-col gap-8" style="gap: 16px;">
+        <div class="text-left mb-16 flex flex-col gap-16">
             <x-heading-display-3 style="
                 -webkit-background-clip: text; /* Safari/Chrome */
                 background-clip: text;         /* Modern browsers */

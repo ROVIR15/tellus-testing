@@ -23,3 +23,6 @@
     New Soil Analysis Techniques Show Promise
 </x-news-card-3>
 
+<x-section-testimony />
+
+<x-image-hero-secondary />

@@ -13,8 +13,8 @@
     $imageAlt = $attributes->get('title', 'News Image') ?? 'News Image';
 @endphp
 
-<div class="news-card-2 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white min-h-[94px]">
-    <!-- Horizontal Layout: Image Left, Content Right -->
+<div class="news-card-2 rounded-2xl overflow-hidden duration-300 min-h-[94px]">
+    <!-- Horizontal Layout: Image Left,ı Content Right -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
         <!-- Image Container -->
         <div class="relative h-64 md:h-auto overflow-hidden bg-gray-200 order-2 md:order-1 min-h-[94px]" style="border-radius: 10px;">

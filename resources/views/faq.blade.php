@@ -4,7 +4,7 @@
 @section('description', 'Find answers to common questions about our testing services, methodologies, and processes.')
 
 @section('content')
-    <div class="relative px-8">
+    <div class="relative">
         <!-- Background gradient -->
         <div class="absolute inset-0 overflow-hidden z-0 pointer-events-none">
             <svg width="100%" height="100%" viewBox="0 0 1440 800" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
@@ -30,7 +30,7 @@
         </div>
 
         <!-- Main content with responsive margin -->
-        <div class="relative z-10 pt-16 md:pt-20 lg:pt-24">
+        <div class="relative z-10 pt-16 md:pt-20 lg:pt-24 px-8">
             <!-- Main FAQ section using the existing component -->
             <x-section-main-faq />
 

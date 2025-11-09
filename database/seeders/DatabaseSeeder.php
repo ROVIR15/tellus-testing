@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use Database\Seeders\TestimonySeeder;
+use Database\Seeders\TestDetailSeeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -21,5 +23,11 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+        // Seed dummy testimonies
+        $this->call(TestimonySeeder::class);
+
+        // Seed test details
+        $this->call(TestDetailSeeder::class);
     }
 }
