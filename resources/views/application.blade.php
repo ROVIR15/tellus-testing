@@ -35,9 +35,9 @@
         </div>
 
         <!-- Main content with responsive margin -->
-        <div class="relative z-10 pt-24 md:pt-24 lg:pt-32">
+        <x-section-top-padding>
             <x-section-application />
-        </div>
+        </x-section-top-padding>
 @endsection
 
     <!-- Custom CSS for this page -->

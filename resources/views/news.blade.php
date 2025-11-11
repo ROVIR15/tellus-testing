@@ -71,20 +71,22 @@
         ];
     @endphp
 
-        <div class="relative z-10 pt-24 md:pt-24 lg:pt-32">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <x-section-top-padding>
+        <div class="px-4 sm:px-6 lg:px-8">
             <!-- Page Intro -->
             <div class="mb-6">
-                <h1 class="text-2xl sm:text-3xl font-extrabold text-neutral-900">Stay informed with the latest from Tallius
-                    Testing</h1>
-                <p class="mt-2 text-neutral-600">Neutral styling and dummy data to simplify later integration.</p>
+                <x-heading-display-3 class="text-2xl sm:text-3xl font-extrabold"
+                    style="color: var(--color-secondary-300);">Stay informed with the latest from Tallius
+                    Testing</x-heading-display-3>
+                <x-heading-h4 class="mt-2" style="color: var(--color-secondary-300);">Neutral styling and dummy data to
+                    simplify later integration.</x-heading-h4>
             </div>
 
             <!-- Hero row: left featured, right headlines -->
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <div class="lg:col-span-2">
-                    <x-news-card-1 :images="$featured['images']" :status="$featured['status']"
-                        :created_at="$featured['created_at']" :href="$featured['href']" :title="$featured['title']" 
+                    <x-news-card-1 :images="['images/other-news/3.jpg']" :status="$featured['status']"
+                        :created_at="$featured['created_at']" :href="$featured['href']" :title="$featured['title']"
                         class="h-full">
                         {{ $featured['title'] }}
                     </x-news-card-1>
@@ -92,23 +94,23 @@
 
                 <div class="flex flex-col gap-4">
                     @foreach($sidebarItems as $item)
-                        <x-news-card-2 :images="$item['images']" :status="$item['status']" :created_at="$item['created_at']"
-                            :href="$item['href']" :title="$item['title']">
+                        <x-news-card-2 :images="['images/other-news/3.jpg']" :status="$item['status']"
+                            :created_at="$item['created_at']" :href="$item['href']" :title="$item['title']">
                             {{ $item['title'] }}
                         </x-news-card-2>
                     @endforeach
                 </div>
             </div>
         </div>
-    </div>
+    </x-section-top-padding>
 
     <!-- Release This Week -->
     <x-section>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="px-4 sm:px-6 lg:px-8">
             <h2 class="text-xl sm:text-2xl font-bold text-neutral-900 mb-4">Release This Week</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 @foreach($releaseThisWeek as $item)
-                    <x-news-card-1 :images="$item['images']" :status="''" :created_at="$item['created_at']"
+                    <x-news-card-1 :images="['images/other-news/2.jpg']" :status="''" :created_at="$item['created_at']"
                         :href="$item['href']" :title="$item['title']">
                         {{ $item['title'] }}
                     </x-news-card-1>
@@ -119,7 +121,7 @@
 
     <!-- Latest News Grid -->
     <x-section>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between mb-4">
                 <h2 class="text-xl sm:text-2xl font-bold text-neutral-900">Latest News</h2>
                 <a href="#" class="text-neutral-800 font-semibold">Show more news</a>

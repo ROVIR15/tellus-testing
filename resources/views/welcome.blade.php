@@ -16,11 +16,11 @@
 
     <x-section>
         <x-heading-display-3>
-            "Trusted by engineers, builders, and decision-makers across
+            "Trusted by engineers, builders, and decision-<br>makers across
             <span style="background: linear-gradient(180deg, #2D6BB4 0%, #2F68B1 28%, #355FA7 49%, #415097 68%, #513B81 85%, #652266 100%);
-                -webkit-background-clip: text;
-                background-clip: text;
-                color: transparent;">continents infrastructure</span> landscape."
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    color: transparent;">continents infrastructure<br></span> landscape."
         </x-heading-display-3>
     </x-section>
 

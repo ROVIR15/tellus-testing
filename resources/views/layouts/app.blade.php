@@ -31,7 +31,7 @@
 
     <!-- Footer -->
     <footer class="text-white py-12" style="background-color: var(--color-secondary-500);">
-        <div class="flex flex-col gap-4 max-w-7xl mx-auto px-8">
+        <div class="flex flex-col gap-4 w-full px-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <!-- Company Info -->
                 <div class="mb-6 md:mb-0">
@@ -259,11 +259,11 @@
 
                 <!-- Navigation Links -->
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-4 mb-6 md:mb-0">
-                    <a href="#" class="text-sm hover:underline">Home</a>
-                    <a href="#" class="text-sm hover:underline">Application Procedure</a>
-                    <a href="#" class="text-sm hover:underline">Contact Us</a>
-                    <a href="#" class="text-sm hover:underline">Testing & Inspection</a>
-                    <a href="#" class="text-sm hover:underline">FAQs</a>
+                    <a href="{{ route('home') }}" class="text-sm hover:underline">Home</a>
+                    <a href="{{ route('application') }}" class="text-sm hover:underline">Application Procedure</a>
+                    <a href="{{ route('contact-us') }}" class="text-sm hover:underline">Contact Us</a>
+                    <a href="{{ route('testing-inspection') }}" class="text-sm hover:underline">Testing & Inspection</a>
+                    <a href="{{ route('faq') }}" class="text-sm hover:underline">FAQs</a>
                 </div>
 
                 <!-- Social Media Icons -->
