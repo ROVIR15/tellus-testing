@@ -58,20 +58,20 @@ export default {
       },
       fontSize: {
         // Display Styles (Largest Impact)
-        'display-1': ['80px', { lineHeight: '125%', letterSpacing: '0px', fontWeight: '700' }],
-        'display-2': ['64px', { lineHeight: '125%', letterSpacing: '0px', fontWeight: '700' }],
-        'display-3': ['56px', { lineHeight: '125%', letterSpacing: '0px', fontWeight: '700' }],
+        'display-1': ['80px', { lineHeight: '125%', letterSpacing: '0px', fontWeight: '600' }],
+        'display-2': ['64px', { lineHeight: '125%', letterSpacing: '0px', fontWeight: '600' }],
+        'display-3': ['56px', { lineHeight: '125%', letterSpacing: '0px', fontWeight: '600' }],
 
         // Heading Styles (Structural Hierarchy)
-        'heading-1': ['30px', { lineHeight: '125%', letterSpacing: '0px', fontWeight: '700' }],
-        'heading-2': ['28px', { lineHeight: '125%', letterSpacing: '0px', fontWeight: '700' }],
-        'heading-3': ['26px', { lineHeight: '125%', letterSpacing: '0px', fontWeight: '700' }],
-        'heading-4': ['24px', { lineHeight: '125%', letterSpacing: '0px', fontWeight: '700' }],
+        'heading-1': ['30px', { lineHeight: '125%', letterSpacing: '0px', fontWeight: '600' }],
+        'heading-2': ['28px', { lineHeight: '125%', letterSpacing: '0px', fontWeight: '600' }],
+        'heading-3': ['26px', { lineHeight: '125%', letterSpacing: '0px', fontWeight: '600' }],
+        'heading-4': ['24px', { lineHeight: '125%', letterSpacing: '0px', fontWeight: '600' }],
 
         // Subheading Styles (Supporting Text)
-        'subheading-1': ['22px', { lineHeight: '125%', letterSpacing: '1px', fontWeight: '500' }],
-        'subheading-2': ['20px', { lineHeight: '125%', letterSpacing: '1px', fontWeight: '500' }],
-        'subheading-3': ['18px', { lineHeight: '125%', letterSpacing: '1px', fontWeight: '500' }],
+        'subheading-1': ['22px', { lineHeight: '125%', letterSpacing: '1px', fontWeight: '400' }],
+        'subheading-2': ['20px', { lineHeight: '125%', letterSpacing: '1px', fontWeight: '400' }],
+        'subheading-3': ['18px', { lineHeight: '125%', letterSpacing: '1px', fontWeight: '400' }],
 
         // Body Styles (Content Text)
         'body-1': ['16px', { lineHeight: '125%', letterSpacing: '1px', fontWeight: '400' }],

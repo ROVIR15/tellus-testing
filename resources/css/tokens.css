@@ -51,7 +51,7 @@
 /* Display Styles */
 .display-1 {
     /* text-display-1: 70px / 60px / 700 */
-    font-weight: 700;
+    font-weight: 600;
     font-size: 80px;
     line-height: 125%;
     letter-spacing: 0px;
@@ -61,7 +61,7 @@
 
 .display-2 {
     /* text-display-2/display-3: 26px / 42px (or 30px) / 700 */
-    font-weight: 700;
+    font-weight: 600;
     font-size: 64px;
     line-height: 125%;
     letter-spacing: 0px;
@@ -71,7 +71,7 @@
 }
 
 .display-3 {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 56px;
     line-height: 125%;
     letter-spacing: 0px;
@@ -83,7 +83,7 @@
 /* Heading Styles */
 .heading-1 {
     /* heading-1: 30px / 40px / 700 */
-    font-weight: 700;
+    font-weight: 600;
     font-size: 30px;
     line-height: 125%;
     letter-spacing: 0px;
@@ -93,7 +93,7 @@
 
 .heading-2 {
     /* heading-1: 30px / 40px / 700 */
-    font-weight: 700;
+    font-weight: 600;
     font-size: 28px;
     line-height: 125%;
     letter-spacing: 0px;
@@ -103,7 +103,7 @@
 
 .heading-3 {
     /* heading-3: 26px / 30px / 700 */
-    font-weight: 700;
+    font-weight: 600;
     font-size: 26px;
     line-height: 125%;
     letter-spacing: 0px;
@@ -113,74 +113,67 @@
 
 .heading-4 {
     /* heading-4: 24px / 30px / 700 */
-    font-weight: 700;
+    font-weight: 600;
     font-size: 24px;
     line-height: 125%;
     letter-spacing: 0px;
     font-family: var(--font-manrope);
-    color: var(--color-neutral-900);
 }
 
 .heading-5 {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 20px;
     line-height: 125%;
     letter-spacing: 0px;
     font-family: var(--font-manrope);
-    color: var(--color-neutral-900);
 }
 
 .heading-6 {
     /* heading-7: 18px / 27px / 700 */
-    font-weight: 700;
+    font-weight: 600;
     font-style: Bold;
     font-size: 18px;
     line-height: 125%;
     letter-spacing: 0px;
     font-family: var(--font-manrope);
-    color: var(--color-neutral-900);
 }
 
 .heading-7 {
     /* heading-7: 18px / 27px / 700 */
-    font-weight: 700;
+    font-weight: 600;
     font-style: Bold;
     font-size: 18px;
     line-height: 125%;
     letter-spacing: 0px;
     font-family: var(--font-manrope);
-    color: var(--color-neutral-900);
 }
 
 /* Subheading Styles */
 .subheading-1 {
     /* subheading-1: 23px / 30px / 700 */
-    font-weight: 500;
+    font-weight: 400;
     font-size: 22px;
     line-height: 125%;
     letter-spacing: 1px;
     font-family: var(--font-manrope);
-    color: var(--color-neutral-1000);
 }
 
 .subheading-2 {
     /* subheading-2: 20px / 30px / 700 */
-    font-weight: 500;
+    font-weight: 400;
     font-size: 20px;
     line-height: 125%;
     letter-spacing: 1px;
     font-family: var(--font-manrope);
-    color: var(--color-neutral-1000);
 }
 
 .subheading-3 {
     /* subheading-3: 18px / 27px / 700 */
-    font-weight: 500;
+    font-weight: 400;
     font-size: 18px;
     line-height: 125%;
     letter-spacing: 1px;
     font-family: var(--font-manrope);
-    color: var(--color-neutral-1000);
 }
 
 /* Body Styles */
@@ -191,7 +184,6 @@
     line-height: 125%;
     letter-spacing: 1px;
     font-family: var(--font-manrope);
-    color: var(--color-neutral-1000);
 }
 
 .body-2 {
@@ -201,7 +193,6 @@
     line-height: 125%;
     letter-spacing: 1px;
     font-family: var(--font-manrope);
-    color: var(--color-neutral-1000);
 }
 
 .body-3 {
@@ -211,7 +202,6 @@
     line-height: 125%;
     letter-spacing: 1px;
     font-family: var(--font-manrope);
-    color: var(--color-neutral-1000);
 }
 
 .body-4 {
@@ -221,7 +211,6 @@
     line-height: 125%;
     letter-spacing: 1px;
     font-family: var(--font-manrope);
-    color: var(--color-neutral-1000);
 }
 
 /* Interactive Elements - Buttons */
@@ -231,7 +220,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-weight: 500;
+    font-weight: 400;
     transition: all 0.2s ease;
     outline: none;
     border-radius: 8px;
@@ -318,7 +307,7 @@
 .btn-sm {
     padding: 0.375rem 0.75rem; /* py-1.5 px-3 */
     font-size: 0.875rem; /* text-sm */
-    font-weight: 500;
+    font-weight: 400;
 }
 .btn-sm .btn-icon {
     width: 1rem;
@@ -335,7 +324,7 @@
 .btn-md {
     padding: 0.75rem 1.5rem; /* py-3 px-6 */
     font-size: 1rem; /* text-base */
-    font-weight: 500;
+    font-weight: 400;
 }
 .btn-md .btn-icon {
     width: 1.25rem;
