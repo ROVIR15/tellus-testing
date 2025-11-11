@@ -1,16 +1,16 @@
 <section class="section-lg bg-white">
-    <div class="max-w-6xl mx-auto">
+    <div class="flex flex-col gap-8 mx-auto">
         <!-- Heading -->
-        <div class="flex flex-col">
-            <x-heading-h1 class="text-white mb-6">
+        <div class="flex flex-col gap-4">
+            <x-heading-h1 style="color: var(--color-secondary-300);">
                 Specialized in Soil, Water, and Geosynthetics
             </x-heading-h1>
 
-            <x-body-1 class="text-white opacity-95 mb-8">
+            <x-subheading-2>
                 Our lab isn’t just a facility—it’s a partner in your project’s success. Whether you're in construction,
                 geotech, or infrastructure,
                 reliable results mean smarter decisions.
-            </x-body-1>
+            </x-subheading-2>
         </div>
 
 
@@ -21,25 +21,25 @@
                     'id' => 1,
                     'title' => 'Permeability & Hydraulic Conductivity Test',
                     'description' => 'Measure soil water permeability',
-                    'image' => 'images/lab-test-1.jpg'
+                    'image' => 'images/lab-facility/1.png'
                 ],
                 [
                     'id' => 2,
                     'title' => 'Soil Compaction Analysis',
                     'description' => 'Determine optimal soil density',
-                    'image' => 'images/lab-test-2.jpg'
+                    'image' => 'images/lab-facility/2.png'
                 ],
                 [
                     'id' => 3,
                     'title' => 'Water Quality Testing',
                     'description' => 'Comprehensive water analysis',
-                    'image' => 'images/lab-test-3.jpg'
+                    'image' => 'images/lab-facility/3.jpg'
                 ],
                 [
                     'id' => 4,
                     'title' => 'Bearing Capacity Test',
                     'description' => 'Foundation load assessment',
-                    'image' => 'images/lab-test-4.jpg'
+                    'image' => 'images/lab-facility/4.jpg'
                 ],
             ];
         @endphp

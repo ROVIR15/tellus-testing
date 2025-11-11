@@ -41,9 +41,9 @@
             <!-- Title -->
             @if($slot->isNotEmpty())
                 <div>
-                    <h3 class="heading-7 md:heading-3 text-neutral-1000 leading-tight mb-4">
+                    <span class="heading-7 md:heading-3 text-neutral-1000 leading-tight mb-4">
                         {{ $slot }}
-                    </h3>
+                    </span>
                 </div>
             @endif
 

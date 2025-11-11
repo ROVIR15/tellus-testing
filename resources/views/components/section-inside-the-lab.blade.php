@@ -1,14 +1,15 @@
 <section class="section-lg bg-neutral-100">
     <div>
         <!-- Heading -->
-        <div class="text-center mb-16">
-            <h2 class="heading-1 mb-6"
+        <div class="text-center flex flex-col gap-4">
+            <x-heading-h1
                 style="background: linear-gradient(180deg, #2D6BB4 0%, #2F68B1 28%, #355FA7 49%, #415097 68%, #513B81 85%, #652266 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
-                Inside The Lab</h2>
-            <p class="sub-heading-2 mx-auto leading-relaxed">
+                Inside The Lab
+            </x-heading-h1>
+            <x-subheading-2 class="mx-auto leading-relaxed">
                 Our lab isn't just a facility—it's a partner in your project's success.<br>
                 Whether you're in construction, geotech, or infrastructure, reliable results mean smarter decisions.
-            </p>
+            </x-subheading-2>
         </div>
 
         <!-- Mock Card Data -->
@@ -17,31 +18,31 @@
                 [
                     'id' => 1,
                     'title' => 'Modern Architecture',
-                    'image' => 'images/lab-building-1.jpg',
+                    'image' => 'images/inside-lab/1.png',
                     'description' => 'State-of-the-art facility design'
                 ],
                 [
                     'id' => 2,
                     'title' => 'Advanced Laboratory',
-                    'image' => 'images/lab-building-2.jpg',
+                    'image' => 'images/inside-lab/2.png',
                     'description' => 'Cutting-edge testing equipment'
                 ],
                 [
                     'id' => 3,
                     'title' => '3 Engineering',
-                    'image' => 'images/lab-building-3.jpg',
+                    'image' => 'images/inside-lab/3.png',
                     'description' => 'Expert analysis and quality control'
                 ],
                 [
                     'id' => 4,
                     'title' => '4 Engineering',
-                    'image' => 'images/lab-building-3.jpg',
+                    'image' => 'images/inside-lab/4.png',
                     'description' => 'Expert analysis and quality control'
                 ],
                 [
                     'id' => 5,
                     'title' => '5 Engineering',
-                    'image' => 'images/lab-building-3.jpg',
+                    'image' => 'images/inside-lab/5.png',
                     'description' => 'Expert analysis and quality control'
                 ],
             ];
@@ -57,7 +58,7 @@
                         <div class="carousel-item" data-index="{{ $index }}">
                             <div
                                 class="carousel-card rounded-3xl overflow-hidden shadow-xl bg-white border border-neutral-300">
-                                <img src="{{ asset($card['image']) }}" alt="{{ $card['title'] }}"
+                                <img src="{{ asset(path: $card['image']) }}" alt="{{ $card['title'] }}"
                                     class="w-full h-full object-cover" title="{{ $card['description'] }}"
                                     style="max-width: 756px;">
                             </div>

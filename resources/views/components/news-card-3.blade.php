@@ -50,16 +50,16 @@
         default => 'object-center',
     };
 @endphp
+            <!-- src="{{ $imageSrc ?? asset('images/other-news/1.jpg') }}" -->
 
-<div class="news-card-3 rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-30 dark:bg-neutral-800 cursor-pointer max-w-full sm:max-w-[calc(50%-1rem)] lg:max-w-[calc(33.333%-1rem)] xl:max-w-[calc(25%-1rem)] flex flex-col gap-3" 
+<div class="news-card-3 rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-30 dark:bg-neutral-800 cursor-pointer flex flex-col gap-3" 
      onclick="window.location.href='{{ $attributes->get('href', '#') }}'"
-     style="min-width:fit-content;"
 >
     <!-- Image Container with configurable aspect ratio -->
     <div class="relative overflow-hidden bg-gray-200 dark:bg-gray-700 {{ $containerPaddingClass }} rounded-[10px]">
         <!-- Image with overlay for better text contrast -->
         <img 
-            src="{{ $imageSrc }}"
+            src="{{ asset('images/other-news/1.jpg') }}"
             alt="{{ $imageAlt }}"
             class="absolute inset-0 w-full h-full hover:scale-105 transition-transform duration-300 {{ $fitClass }} {{ $posClass }}"
             loading="lazy"
