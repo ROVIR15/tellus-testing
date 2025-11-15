@@ -19,7 +19,7 @@
             </x-form-input>
         </div>
         <div class="w-1/2">
-            <x-image-hero-secondary style="min-height: 630px;" />
+            <x-image-hero-secondary style="min-height: 630px;" images="{{ asset('images/lab-testing.png') }}" />
         </div>
     </div>
 
@@ -146,20 +146,17 @@
         @endphp
 
         <!-- Test Detail Cards Grid -->
-        <div id="test-grid" class="grid grid-cols-1 py-8 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div id="test-grid" class="grid grid-cols-1 py-8 md:grid-cols-2 lg:grid-cols-3 gap-6 py-14">
             @foreach($testDetails as $test)
                 <div class="js-test-card">
-                    <x-test-detail-card 
-                        :label="$test['label']" 
-                        :description="$test['description']"
-                        :details="$test['details']" 
-                    />
+                    <x-test-detail-card :label="$test['label']" :description="$test['description']"
+                        :details="$test['details']" />
                 </div>
             @endforeach
         </div>
 
         <script>
-            (function() {
+            (function () {
                 const input = document.getElementById('test-search');
                 const grid = document.getElementById('test-grid');
                 if (!input || !grid) return;
@@ -190,4 +187,5 @@
                 applyFilter('');
             })();
         </script>
+
     </div>

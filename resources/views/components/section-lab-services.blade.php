@@ -45,7 +45,7 @@
         @endphp
 
         <!-- Test Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             @foreach($labTests as $test)
                 <x-lab-test-card :title="$test['title']" :description="$test['description']"
                     :image="asset($test['image'])" />
