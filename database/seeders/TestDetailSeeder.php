@@ -22,7 +22,7 @@ class TestDetailSeeder extends Seeder
                 'label' => 'ASTM D1557',
                 'description' => 'Standard Test Methods for Laboratory Compaction Characteristics of Soil.',
                 'details' => 'This test method is used to determine the relationship between the water content and the dry density of soils compacted in a mold. The test method applies to soils with a maximum particle size of 37.5 mm (No. 1/2 in.) that can be compacted by the applied compactive effort.'
-            ],
+            ], 
             [
                 'label' => 'ASTM D2216',
                 'description' => 'Standard Test Methods for Laboratory Determination of Water Content of Soil.',
