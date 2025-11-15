@@ -12,7 +12,7 @@
         isExpanded: false
     }"
     @class([
-        'test-detail-card transition-all duration-300 ease-in-out rounded-2xl border border-solid p-6 gap-6 opacity-100 flex flex-col',
+        'test-detail-card pink-border transition-all duration-300 ease-in-out rounded-2xl border border-solid p-6 gap-6 opacity-100 flex flex-col',
         'expanded' => false,
     ])
     :class="{ 'expanded': isExpanded }"
