@@ -71,7 +71,7 @@
     <div class="flex flex-col gap-8 px-4 sm:px-6 lg:px-8">
         <!-- Section Header -->
         <div class="flex flex-row items-center justify-between">
-            <h2 class="heading-1 mb-4">{{ $title }}</h2>
+            <h2 class="heading-1 mb-4"><span class="custom-color">{{ $title }}</span></h2>
             @if ($activateShowMore)
             <button type="button"
                 class="px-8 py-3 rounded-full transition-all duration-300 font-semibold" style="

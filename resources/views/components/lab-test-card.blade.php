@@ -1,18 +1,16 @@
 <!-- Lab Test Card Component -->
-<div
-  style="height: 392px; gap: 16px; opacity: 1; padding: 24px; background: linear-gradient(180deg, rgba(80, 80, 80, 0) 49.07%, #505050 100%); backdrop-filter: blur(44px);"
-  class="rounded-2xl overflow-hidden relative flex flex-col justify-between text-white">
+<div class="latest-news-card-ratio-304x406 m-auto rounded-2xl overflow-hidden relative flex flex-col justify-between text-white">
   <!-- Image Background -->
-  <div class="absolute inset-0 z-0">
-    <img src="{{ $image ?? asset('images/lab-test-default.jpg') }}" alt="{{ $title ?? 'Lab Test' }}"
-      class="w-full h-full object-cover">
-  </div>
+  <img src="{{ $image ?? asset('images/lab-test-default.jpg') }}" alt="{{ $title ?? 'Lab Test' }}"
+    class="w-full h-full object-cover">
 
   <!-- Overlay Gradient -->
-  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/40 z-10"></div>
+  <div class="absolute inset-0 z-10"
+    style="backdrop-filter: blur(1px); background: linear-gradient(180deg, rgba(80, 80, 80, 0) 49.07%, #505050 100%);">
 
-  <!-- Content -->
-  <div class="relative z-20 flex flex-col justify-end h-full">
-    <h3 class="heading-6 text-white mb-2">{{ $title ?? 'Test Name' }}</h3>
+    <!-- Bottom Title -->
+    <div class="absolute bottom-0 left-0 right-0 p-4">
+      <h3 class="heading-6 text-white mb-0">{{ $title ?? 'Test Name' }}</h3>
+    </div>
   </div>
 </div>

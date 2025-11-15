@@ -16,7 +16,7 @@
     <!-- Image Container (Full Background) -->
     <div class="absolute inset-0 overflow-hidden bg-gray-200">
         <img src="{{ $imageSrc }}" alt="{{ $imageAlt }}"
-            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" style="aspect-ratio: 640/464;"/>
 
         <!-- Gradient Overlay -->
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
