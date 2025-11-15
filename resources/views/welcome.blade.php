@@ -30,9 +30,12 @@
         <p>our clients</p>
     </x-section>
 
-    @include('components.section-inquiry')
+    <div class="relative">
+        <img src="{{ asset('images/elipse-6.svg') }}" alt="decorative background" class="absolute left-0 top-0 w-full pointer-events-none select-none" style="z-index:-1;">
+        @include('components.section-inquiry')
 
-    @include('components.faq-section')
+        @include('components.faq-section')
+    </div>
 
     <!-- Latest News Section -->
     <x-latest-news-section :max-news-items="3" />
