@@ -532,22 +532,22 @@
 }
 
 .section-top-padding {
-    padding-top: 12rem; /* py-12 */
+    padding-top: 6rem; /* 96px - mobile */
 
     @media screen and (min-width: 640px) {
-        padding-top: 16rem; /* py-24 */
+        padding-top: 7rem; /* 112px - small tablet */
     }
 
     @media screen and (min-width: 768px) {
-        padding-top: 8rem; /* py-24 */
+        padding-top: 8rem; /* 128px - tablet */
     }
 
     @media screen and (min-width: 1024px) {
-        padding-top: 8rem; /* py-32 */
+        padding-top: 9rem; /* 144px - desktop */
     }
 
     @media screen and (min-width: 1280px) {
-        padding-top: 10rem; /* py-48 */
+        padding-top: 10rem; /* 160px - large desktop */
     }
 }
 
