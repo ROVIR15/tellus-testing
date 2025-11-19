@@ -1,5 +1,5 @@
 <x-hero class="bg-gradient-to-br from-primary-500 via-primary-400 to-primary-300">
-    <div class="grid grid-cols-1 lg:grid-cols-[35%_65%] gap-12 items-center">
+    <div class="grid grid-cols-1 md:grid-cols-[40%_60%] gap-12 items-center">
         <!-- Left Content -->
         <div class="relative flex flex-col gap-8 justify-center">
             <x-heading-display-2 class="text-white" style="color: var(--color-secondary-300);">
