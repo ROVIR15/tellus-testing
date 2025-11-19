@@ -83,8 +83,8 @@
             </div>
 
             <!-- Hero row: left featured, right headlines -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <div class="lg:col-span-2">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
+                <div class="md:col-span-2 lg:col-span-2">
                     <x-news-card-1 :images="['images/other-news/3.jpg']" :status="$featured['status']"
                         :created_at="$featured['created_at']" :href="$featured['href']" :title="$featured['title']"
                         class="h-full">
@@ -104,11 +104,11 @@
         </div>
     </x-section-top-padding>
 
-    <!-- Release This Week -->
-    <x-section>
-        <div class="px-4 sm:px-6 lg:px-8">
-            <h2 class="text-xl sm:text-2xl font-bold text-neutral-900 mb-4">Release This Week</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="mt-20 flex flex-col gap-12">
+        <!-- Release This Week -->
+        <div class="flex flex-col gap-8  px-4 sm:px-6 lg:px-8">
+            <x-heading-h1 class="custom-color">Release This Week</x-heading-h1>
+            <div class="grid gri-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
                 @foreach($releaseThisWeek as $item)
                     <x-news-card-1 :images="['images/other-news/2.jpg']" :status="''" :created_at="$item['created_at']"
                         :href="$item['href']" :title="$item['title']">
@@ -117,17 +117,15 @@
                 @endforeach
             </div>
         </div>
-    </x-section>
 
-    <!-- Latest News Grid -->
-    <x-section>
-        <div class="px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between mb-4">
-                <h2 class="text-xl sm:text-2xl font-bold text-neutral-900">Latest News</h2>
-                <a href="#" class="text-neutral-800 font-semibold">Show more news</a>
+        <!-- Latest News Grid -->
+        <div class="flex flex-col gap-8 px-4 sm:px-6 md:px-8 mb-20">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+                <x-heading-h2 class="custom-color">Latest News</x-heading-h2>
+                <a href="#" class="text-neutral-800 font-semibold hover:text-secondary-300 transition-colors text-sm sm:text-base whitespace-nowrap">Show more news</a>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
                 @foreach($latestNews as $item)
                     <x-news-card-3 :images="$item['images']" :created_at="$item['created_at']" :href="$item['href']"
                         :title="$item['title']" aspect="4/3" fit="cover" position="center">
@@ -135,7 +133,9 @@
                     </x-news-card-3>
                 @endforeach
             </div>
+
+            <x-button-primary class="w-full">Show more news</x-button-primary>
         </div>
-    </x-section>
+    </div>
 
 @endsection
