@@ -12,29 +12,10 @@
     $standardsList = is_array($standards) ? $standards : [];
 @endphp
 
-<div
-    class="lab-card-4 rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:scale-[1.02] transition-all duration-300 cursor-pointer" style="color: var(--color-secondary-300);">
-    <!-- Card Header with Icon -->
-    <!-- <div class="bg-secondary-500 text-white p-6">
-        <div class="flex items-center justify-between">
-            <h3 class="text-xl md:text-2xl font-bold leading-tight">{{ $labName }}</h3>
-            @if($icon)
-                <div class="text-white">
-                    {!! $icon !!}
-                </div>
-            @else
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                </svg>
-            @endif
-        </div>
-        @if($testType)
-            <div class="mt-2 text-sm font-medium">{{ $testType }}</div>
-        @endif
-    </div> -->
-
+<div class="relative lab-card-4 rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:scale-[1.02] transition-all duration-300 cursor-pointer"
+    style="color: var(--color-secondary-300);">
     <!-- Card Content -->
-    <div class="flex flex-col gap-12" style="color: var(--color-secondary-100);">
+    <div class="relative flex flex-col gap-12" style="color: var(--color-secondary-100);">
         <!-- Quality Standards Section -->
         @if(count($standardsList) > 0)
             <div class="flex flex-col gap-1" style="color: var(--color-secondary-100);">
@@ -49,6 +30,8 @@
                 </ul>
             </div>
         @endif
+        <img src="{{ asset('images/vector-4.svg') }}" alt="Decorative element" class="w-full h-auto absolute -top-10
+                                                 -right-10 z-10">
 
         <div class="flex flex-col gap-2 pl-3">
             <!-- Turnaround Time Section -->

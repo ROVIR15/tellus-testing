@@ -1,5 +1,5 @@
 <section class="section-lg bg-neutral-100">
-    <div>
+    <div class="relative flex flex-col gap-8">
         <!-- Heading -->
         <div class="text-center flex flex-col gap-4">
             <x-heading-h1
@@ -11,6 +11,9 @@
                 Whether you're in construction, geotech, or infrastructure, reliable results mean smarter decisions.
             </x-subheading-2>
         </div>
+
+        <img src="{{ asset('images/decorative-about-us/union-2.svg') }}" alt="Decorative element"
+            class="absolute top-0 left-0 w-[200%] h-[200%] z-10">
 
         <!-- Mock Card Data -->
         @php
@@ -115,48 +118,54 @@
                 width: 427px;
                 height: 533px;
                 transition: inherit;
+                border-radius: 24px;
+            }
+
+            .carousel-card img {
+                border-radius: 24px;
             }
 
             /* Center Item (Active) */
             .carousel-item[data-position="center"] {
                 z-index: 30;
-                transform: translateX(0) scale(1);
+                transform: translateX(0) scale(1.05);
                 opacity: 1;
             }
 
             /* Immediate Left Side Item (position -1) */
             .carousel-item[data-position="left-1"] {
                 z-index: 25;
-                transform: translateX(-380px) scale(0.8);
+                transform: translateX(-455px) scale(1);
                 opacity: 0.7;
             }
 
             /* Immediate Right Side Item (position +1) */
             .carousel-item[data-position="right-1"] {
                 z-index: 25;
-                transform: translateX(380px) scale(0.8);
+                transform: translateX(455px) scale(1);
                 opacity: 0.7;
             }
 
             /* Far Left Side Item (position -2) */
             .carousel-item[data-position="left-2"] {
                 z-index: 20;
-                transform: translateX(-720px) scale(0.7);
+                transform: translateX(-895px) scale(1);
                 opacity: 0.7;
             }
 
             /* Far Right Side Item (position +2) */
             .carousel-item[data-position="right-2"] {
                 z-index: 20;
-                transform: translateX(720px) scale(0.7);
+                transform: translateX(895px) scale(1);
                 opacity: 0.7;
             }
 
             /* Items */
             .carousel-item[data-position="hidden"] {
-                z-index: 10;
-                opacity: 0.5;
+                z-index: 1;
+                opacity: 0;
                 pointer-events: none;
+                transform: translateX(0) scale(0.8);
             }
 
             /* Navigation Buttons */

@@ -7,7 +7,7 @@
         ->orderBy('order')
         ->orderByDesc('created_at')
         ->get(['id', 'label', 'description'])
-        ->map(fn ($f) => [
+        ->map(fn($f) => [
             'id' => 'faq-' . $f->id,
             'label' => $f->label,
             'description' => $f->description,
@@ -23,7 +23,7 @@
 @endphp
 
 <!-- Experimentation Section -->
-<x-section>
+<div class="section-top-padding px-16 mb-32">
     <div class="w-full" style="color: var(--color-secondary-300);" x-data="{
             showAll: false,
             openedId: null,
@@ -62,62 +62,52 @@
             }
         }">
         <div class="text-left mb-16 flex flex-col gap-16">
-            <x-heading-display-3 style="
-                -webkit-background-clip: text; /* Safari/Chrome */
-                background-clip: text;         /* Modern browsers */
-            ">
+            <x-heading-display-3 style="color: var(--color-secondary-300);">
                 Frequently Asked Questions
-                </x-heading-h1>
-                <x-heading-h4 style="color: inherit">
-                    Got a question? We've got you covered.
-                </x-heading-h4>
+            </x-heading-display-3>
+            <x-heading-h4 style="color: inherit">
+                Got a question? We've got you covered.
+            </x-heading-h4>
 
-                <x-body-1 style="color: inherit;">
-                    Submit the required documents, provide your samples, and receive confirmation—all in a few easy
-                    steps. Make sure to prepare all necessary information before starting to ensure a smooth and
-                    efficient submission.
-                </x-body-1>
+            <x-body-1 style="color: inherit;">
+                Submit the required documents, provide your samples, and receive confirmation—all in a few easy
+                steps. Make sure to prepare all necessary information before starting to ensure a smooth and
+                efficient submission.
+            </x-body-1>
 
-                <x-form-input label="" placeholder="What are you looking for?" name="search" icon-position="left" style="width: 50%;" x-model="searchQuery">
-                    <x-slot name="icon">
-                        ✉️
-                    </x-slot>
-                </x-form-input>
+            <x-form-input label="" placeholder="What are you looking for?" name="search" icon-position="left"
+                style="width: 50%;" x-model="searchQuery">
+                <x-slot name="icon">
+                    ✉️
+                </x-slot>
+            </x-form-input>
         </div>
 
         <!-- FAQ Items -->
         <div class="space-y-4">
-            
+
             <!-- FAQ Items List -->
             <div class="space-y-4">
                 <template x-for="item in displayedItems" :key="item.id">
-                    <div x-data="{ isOpen: false }" 
-                         @class([
-                             'faq-item transition-all duration-300 ease-in-out rounded-2xl border border-solid p-6 opacity-100 flex flex-col',
-                         ])
-                         :class="{ 'gap-6': isOpen }"
-                         style="
-                             width: 100%;
-                             border-image-source: linear-gradient(180deg, #FDEDFD 0%, #FDCDFD 100%);
-                             box-shadow: 2px 4px 4px 0px rgba(167, 167, 167, 0.25);
-                             backdrop-filter: blur(10px);
-                         ">
+                    <div x-data="{ isOpen: false }"
+                        class="pink-border transition-all duration-300 ease-in-out rounded-2xl border border-solid p-6 flex flex-col"
+                        :class="{ 'gap-6': isOpen }">
                         <!-- Question -->
                         <div class="flex justify-between items-center cursor-pointer" @click="isOpen = !isOpen">
                             <h3 class="heading-4 text-neutral-1000 flex-1" x-text="item.label"></h3>
-                            <button type="button" 
-                                    class="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full transition-transform duration-300"
-                                    :class="{ 'rotate-180': isOpen }">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            <button type="button"
+                                class="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full transition-transform duration-300"
+                                :class="{ 'rotate-180': isOpen }">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
                                 </svg>
                             </button>
                         </div>
-                        
+
                         <!-- Answer -->
-                        <div x-show="isOpen" 
-                             x-collapse
-                             class="body-3 text-neutral-700 leading-relaxed">
+                        <div x-show="isOpen" x-collapse class="body-3 text-neutral-700 leading-relaxed">
                             <div x-html="item.description"></div>
                         </div>
                     </div>
@@ -144,4 +134,4 @@
             </div>
         </div>
     </div>
-</x-section>
+</div>

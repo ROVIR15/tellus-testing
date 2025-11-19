@@ -31,19 +31,19 @@ $navbarItems = [
       </svg>
     </button>
 
-    <!-- Right: CTA -->
-    <div>
+    <!-- Right: CTA (Hidden on mobile) -->
+    <div class="hidden md:block">
       <a href="#contact" class="btn-accent px-5 py-2 rounded-full shadow-md">Talk To Us</a>
     </div>
   </div>
 
   <!-- Mobile menu -->
   <div class="navbar-mobile-menu" id="mobile-menu">
-    <a href="#" class="body-2 text-neutral-900 hover:text-primary-500">Home</a>
-    <a href="#" class="body-2 text-neutral-900 hover:text-primary-500">Services</a>
-    <a href="#" class="body-2 text-neutral-900 hover:text-primary-500">About Us</a>
-    <a href="#" class="body-2 text-neutral-900 hover:text-primary-500">FAQ</a>
-    <a href="#" class="body-2 text-neutral-900 hover:text-primary-500">Contact Us</a>
+    @foreach ($navbarItems as $item)
+      <a href="{{ $item['url'] }}" class="body-2 text-neutral-900 hover:text-primary-500">{{ $item['label'] }}</a>
+    @endforeach
+    <!-- Talk to Us button in mobile menu -->
+    <a href="#contact" class="btn-accent px-5 py-2 rounded-full shadow-md text-center mt-4">Talk To Us</a>
   </div>
 
   <script>

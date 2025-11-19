@@ -65,27 +65,24 @@
     ];
 @endphp
 
-<section class="py-16 md:py-20" style="background: radial-gradient(120% 120% at 50% 0%, #FFFFFF 0%, #F4F8FF 60%, #EAF1FF 100%);">
-    <div class="px-6">
+<section class="py-16 md:py-20">
+    <div class="px-4 md:px-16">
         <div class="text-center mb-10">
-            <h2 class="display-3" style="background: linear-gradient(180deg, #2D6BB4 0%, #2F68B1 28%, #355FA7 49%, #415097 68%, #513B81 85%, #652266 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Real Feedback. Real Results.</h2>
+            <h2 class="display-3"
+                style="background: linear-gradient(180deg, #2D6BB4 0%, #2F68B1 28%, #355FA7 49%, #415097 68%, #513B81 85%, #652266 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                Real Feedback. Real Results.</h2>
         </div>
 
         <!-- Slider Container -->
         <div id="testimony-slider" class="relative">
             <!-- Scrollable Track -->
-            <div id="testimony-scroll" class="flex gap-6 overflow-x-auto pb-4" style="scroll-snap-type: x mandatory; scroll-behavior: smooth;">
+            <div id="testimony-scroll" class="flex gap-4 md:gap-6 overflow-x-auto pb-4 -mx-4 px-4 md:mx-0 md:px-0"
+                style="scroll-snap-type: x mandatory; scroll-behavior: smooth;">
                 @foreach ($testimonies as $testimony)
                     <div class="snap-start shrink-0 w-[280px] sm:w-[320px] md:w-[340px]">
-                        <x-testimony-card 
-                            :name="$testimony['name']"
-                            :role="$testimony['role']"
-                            :company="$testimony['company']"
-                            :location="$testimony['location']"
-                            :avatar="$testimony['avatar']"
-                            :quote="$testimony['quote']"
-                            :source="$testimony['source']"
-                        />
+                        <x-testimony-card :name="$testimony['name']" :role="$testimony['role']"
+                            :company="$testimony['company']" :location="$testimony['location']"
+                            :avatar="$testimony['avatar']" :quote="$testimony['quote']" :source="$testimony['source']" />
                     </div>
                 @endforeach
             </div>
