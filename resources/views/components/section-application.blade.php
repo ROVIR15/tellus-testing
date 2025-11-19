@@ -1,10 +1,10 @@
 @php
     $color = "color: var(--color-secondary-300);";
 @endphp
-<div class="flex flex-col gap-24 mx-auto">
+<div class="flex flex-col gap-12 lg:gap-24 px-8 md:px-16 mb-12 lg:mb-16">
     <!-- Heading -->
-    <div class="flex flex-row gap-18 items-center px-8">
-        <div class="flex flex-col w-1/2 mb-12 gap-8">
+    <div class="flex flex-col lg:flex-row gap-8 lg:gap-18 items-center">
+        <div class="flex flex-col w-full lg:w-1/2 gap-6 lg:gap-8">
             <x-heading-display-3 :style="$color">
                 Application Procedure
             </x-heading-display-3>
@@ -21,10 +21,8 @@
                 need.
             </x-body-1>
         </div>
-        <div class="w-1/2">
+        <div class="w-full lg:w-1/2 min-h-[600px] lg:min-h-[700px] flex items-start">
             <x-application-submission-wizard />
         </div>
     </div>
-
-    <x-section-inquiry />
 </div>
