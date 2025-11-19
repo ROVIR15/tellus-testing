@@ -1,7 +1,7 @@
-<div class="mx-auto">
-    <!-- Heading -->
-    <div class="flex flex-row gap-18 items-center">
-        <div class="flex flex-col w-1/2 mb-12 gap-8">
+<!-- Heading -->
+<div class="section-top-padding px-16">
+    <div class="flex flex-col lg:flex-row gap-8 lg:gap-18 items-center">
+        <div class="flex flex-col w-full lg:w-1/2 mb-8 lg:mb-12 gap-6 lg:gap-8">
             <x-heading-display-3 style="color: var(--color-secondary-300);">
                 Testing and Inspection
             </x-heading-display-3>
@@ -18,11 +18,14 @@
                 </x-slot>
             </x-form-input>
         </div>
-        <div class="w-1/2">
-            <x-image-hero-secondary style="min-height: 630px;" images="{{ asset('images/lab-testing.png') }}" />
+        <div class="w-full lg:w-1/2">
+            <x-image-hero-secondary class="min-h-[400px] lg:min-h-[630px]"
+                images="{{ asset('images/lab-testing.png') }}" />
         </div>
     </div>
+</div>
 
+<div class="px-16">
     <div x-data="{ 
         isExpanded: false
     }" @class([
@@ -187,5 +190,4 @@
                 applyFilter('');
             })();
         </script>
-
     </div>
