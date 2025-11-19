@@ -50,130 +50,214 @@
 
 /* Display Styles */
 .display-1 {
-    /* text-display-1: 70px / 60px / 700 */
+    /* Mobile first: smaller sizes */
     font-weight: 600;
-    font-size: 80px;
+    font-size: 40px;
     line-height: 125%;
     letter-spacing: 0px;
     font-family: var(--font-manrope);
     color: var(--color-neutral-1000);
 }
 
+@media (min-width: 768px) {
+    .display-1 {
+        font-size: 60px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .display-1 {
+        font-size: 80px;
+    }
+}
+
 .display-2 {
-    /* text-display-2/display-3: 26px / 42px (or 30px) / 700 */
     font-weight: 600;
-    font-size: 64px;
+    font-size: 36px;
     line-height: 125%;
     letter-spacing: 0px;
-
     font-family: var(--font-manrope);
     color: var(--color-neutral-1000);
+}
+
+@media (min-width: 768px) {
+    .display-2 {
+        font-size: 48px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .display-2 {
+        font-size: 64px;
+    }
 }
 
 .display-3 {
     font-weight: 600;
-    font-size: 56px;
+    font-size: 32px;
     line-height: 125%;
     letter-spacing: 0px;
-
     font-family: var(--font-manrope);
     color: var(--color-neutral-1000);
+}
+
+@media (min-width: 768px) {
+    .display-3 {
+        font-size: 42px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .display-3 {
+        font-size: 56px;
+    }
 }
 
 /* Heading Styles */
 .heading-1 {
-    /* heading-1: 30px / 40px / 700 */
-    font-weight: 600;
-    font-size: 30px;
-    line-height: 125%;
-    letter-spacing: 0px;
-    font-family: var(--font-manrope);
-    color: var(--color-neutral-1000);
-}
-
-.heading-2 {
-    /* heading-1: 30px / 40px / 700 */
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 125%;
-    letter-spacing: 0px;
-    font-family: var(--font-manrope);
-    color: var(--color-neutral-1000);
-}
-
-.heading-3 {
-    /* heading-3: 26px / 30px / 700 */
-    font-weight: 600;
-    font-size: 26px;
-    line-height: 125%;
-    letter-spacing: 0px;
-    font-family: var(--font-manrope);
-    color: var(--color-neutral-1000);
-}
-
-.heading-4 {
-    /* heading-4: 24px / 30px / 700 */
     font-weight: 600;
     font-size: 24px;
     line-height: 125%;
     letter-spacing: 0px;
     font-family: var(--font-manrope);
+    color: var(--color-neutral-1000);
+}
+
+@media (min-width: 768px) {
+    .heading-1 {
+        font-size: 30px;
+    }
+}
+
+.heading-2 {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 125%;
+    letter-spacing: 0px;
+    font-family: var(--font-manrope);
+    color: var(--color-neutral-1000);
+}
+
+@media (min-width: 768px) {
+    .heading-2 {
+        font-size: 28px;
+    }
+}
+
+.heading-3 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 125%;
+    letter-spacing: 0px;
+    font-family: var(--font-manrope);
+    color: var(--color-neutral-1000);
+}
+
+@media (min-width: 768px) {
+    .heading-3 {
+        font-size: 26px;
+    }
+}
+
+.heading-4 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 125%;
+    letter-spacing: 0px;
+    font-family: var(--font-manrope);
+}
+
+@media (min-width: 768px) {
+    .heading-4 {
+        font-size: 24px;
+    }
 }
 
 .heading-5 {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 125%;
     letter-spacing: 0px;
     font-family: var(--font-manrope);
+}
+
+@media (min-width: 768px) {
+    .heading-5 {
+        font-size: 20px;
+    }
 }
 
 .heading-6 {
-    /* heading-7: 18px / 27px / 700 */
     font-weight: 600;
     font-style: Bold;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 125%;
     letter-spacing: 0px;
     font-family: var(--font-manrope);
 }
 
+@media (min-width: 768px) {
+    .heading-6 {
+        font-size: 18px;
+    }
+}
+
 .heading-7 {
-    /* heading-7: 18px / 27px / 700 */
     font-weight: 600;
     font-style: Bold;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 125%;
     letter-spacing: 0px;
     font-family: var(--font-manrope);
+}
+
+@media (min-width: 768px) {
+    .heading-7 {
+        font-size: 18px;
+    }
 }
 
 /* Subheading Styles */
 .subheading-1 {
-    /* subheading-1: 23px / 30px / 700 */
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 125%;
-    letter-spacing: 1px;
-    font-family: var(--font-manrope);
-}
-
-.subheading-2 {
-    /* subheading-2: 20px / 30px / 700 */
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 125%;
-    letter-spacing: 1px;
-    font-family: var(--font-manrope);
-}
-
-.subheading-3 {
-    /* subheading-3: 18px / 27px / 700 */
     font-weight: 400;
     font-size: 18px;
     line-height: 125%;
     letter-spacing: 1px;
     font-family: var(--font-manrope);
+}
+
+@media (min-width: 768px) {
+    .subheading-1 {
+        font-size: 22px;
+    }
+}
+
+.subheading-2 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: 1px;
+    font-family: var(--font-manrope);
+}
+
+@media (min-width: 768px) {
+    .subheading-2 {
+        font-size: 20px;
+    }
+}
+
+.subheading-3 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: 1px;
+    font-family: var(--font-manrope);
+}
+
+@media (min-width: 768px) {
+    .subheading-3 {
+        font-size: 18px;
+    }
 }
 
 /* Body Styles */
@@ -435,16 +519,16 @@
 /* Section Spacing */
 .section {
     margin: 0 auto;
-    padding-top: 5rem; /* py-12 */
-    padding-bottom: 5rem;
-    padding-left: 2rem; /* px-6 */
-    padding-right: 2rem;
+    padding-top: 56px;
+    padding-bottom: 56px;
+    padding-left: 4rem; /* 64px */
+    padding-right: 4rem;
 }
 .section-lg {
     padding-top: 8rem; /* py-16 */
     padding-bottom: 8rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 4rem; /* 64px */
+    padding-right: 4rem;
 }
 
 .section-top-padding {
@@ -470,6 +554,7 @@
 /* Test Detail Card */
 .test-detail-card {
     height: fit-content;
+    background: #FFFFFF4D;
 }
 
 .test-detail-card.expanded {
