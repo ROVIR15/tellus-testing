@@ -32,7 +32,7 @@
     <!-- Footer -->
     <footer class="text-white py-12" style="background-color: var(--color-secondary-500);">
         <div class="flex flex-col gap-4 w-full px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="flex flex-col gap-28 md:flex-row justify-between items-center">
                 <!-- Company Info -->
                 <div class="mb-6 md:mb-0">
                     <svg width="285" height="34" viewBox="0 0 285 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -258,7 +258,7 @@
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-4 mb-6 md:mb-0">
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-x-28 gap-y-4 mb-6 md:mb-0">
                     <a href="{{ route('home') }}" class="text-sm hover:underline">Home</a>
                     <a href="{{ route('application') }}" class="text-sm hover:underline">Application Procedure</a>
                     <a href="{{ route('contact-us') }}" class="text-sm hover:underline">Contact Us</a>
