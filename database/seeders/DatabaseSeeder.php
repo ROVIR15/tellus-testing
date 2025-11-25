@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\User;
 use Database\Seeders\TestimonySeeder;
 use Database\Seeders\TestDetailSeeder;
+use Database\Seeders\FaqSeeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -29,5 +30,8 @@ class DatabaseSeeder extends Seeder
 
         // Seed test details
         $this->call(TestDetailSeeder::class);
+
+        // Seed FAQs from constants
+        $this->call(FaqSeeder::class);
     }
 }
