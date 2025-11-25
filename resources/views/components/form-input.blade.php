@@ -47,7 +47,7 @@
     }
 @endphp
 
-<div class="form-input-wrapper flex flex-col gap-2" style="{{ $customStyles }}">
+<div class="form-input-wrapper flex flex-col gap-2 w-full">
     <!-- Label -->
     @if($label)
         <label 

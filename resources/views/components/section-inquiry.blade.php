@@ -4,7 +4,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-stretch min-h-[800px]">
 
         <!-- Left Column: Image (60% width on desktop) -->
-        <div class="lg:col-span-3 flex items-center justify-center">
+        <div class="lg:col-span-3 hidden lg:flex lg:items-center lg:justify-center">
             <img src="{{ asset('/images/inquiry-image.png') }}" alt="Laboratory Testing"
                 class="w-full h-auto object-contain rounded-lg" />
         </div>

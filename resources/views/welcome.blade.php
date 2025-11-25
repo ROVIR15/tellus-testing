@@ -31,7 +31,7 @@
     </x-section>
 
     <div style="background: linear-gradient(180deg, rgba(255, 255, 255, 0) 6.77%, #EBF5FF 60.00%);">
-        @include('components.section-testimony')
+        <x-section-testimony />
 
         <div class="flex flex-col items-center gap-14 py-18">
             <div class="flex flex-row justify-center items-center custom-color">

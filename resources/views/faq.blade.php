@@ -4,8 +4,12 @@
 @section('description', 'Find answers to common questions about our testing services, methodologies, and processes.')
 
 @section('content')
-    <!-- Main FAQ section using the existing component -->
-    <x-section-main-faq :items="$items" />
+    <div class="relative">
+        <img src="{{ asset('images/decorative-about-us/circle-center.svg') }}" alt="Decorative element"
+            class="absolute w-full -z-10">
+        <!-- Main FAQ section using the existing component -->
+        <x-section-main-faq :items="$items" />
 
-    <x-section-inquiry />
+        <x-section-inquiry />
+    </div>
 @endsection

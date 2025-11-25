@@ -1,5 +1,5 @@
-<section class="section-lg bg-neutral-100">
-    <div class="relative flex flex-col gap-8">
+<section class="section">
+    <div class="relative flex flex-col gap-8 py-18 md:py-10">
         <!-- Heading -->
         <div class="text-center flex flex-col gap-4">
             <x-heading-h1
@@ -60,7 +60,7 @@
                     @foreach($labCards as $index => $card)
                         <div class="carousel-item" data-index="{{ $index }}">
                             <div
-                                class="carousel-card rounded-3xl overflow-hidden shadow-xl bg-white border border-neutral-300">
+                                class="carousel-card rounded-3xl overflow-hidden bg-white border border-neutral-300">
                                 <img src="{{ asset(path: $card['image']) }}" alt="{{ $card['title'] }}"
                                     class="w-full h-full object-cover" title="{{ $card['description'] }}"
                                     style="max-width: 756px;">
@@ -185,7 +185,7 @@
                 justify-content: center;
                 cursor: pointer;
                 transition: all 0.3s ease;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
             }
 
             .carousel-nav:hover {

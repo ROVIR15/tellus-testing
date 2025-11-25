@@ -1,7 +1,7 @@
 @props(['title', 'image' => null, 'description' => null, 'width' => '421.3333435058594px', 'height' => '396.25px', 'gap' => '24px', 'angle' => '0deg', 'opacity' => '1', 'borderRadius' => '24px', 'borderWidth' => '1px', 'padding' => '16px', 'left' => null, 'rowStart' => 1, 'colStart' => 2, 'colSpan' => 3, 'rowSpan' => 1])
 
 <!-- Who We Serve Card -->
-<div {{ $attributes->merge(['class' => 'bg-primary-100 rounded-2xl overflow-hidden hover:scale-105 transition-all duration-300 p-4']) }} 
+<div {{ $attributes->merge(['class' => 'bg-primary-100 rounded-2xl overflow-hidden hover:scale-105 transition-all duration-300 p-6 flex flex-col gap-6']) }} 
     style="
         border: 1px solid;
         border-image-source: linear-gradient(154.97deg, #C3E0FA 15.92%, #59ADFA 100.32%);

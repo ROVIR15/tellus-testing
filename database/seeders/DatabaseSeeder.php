@@ -33,5 +33,8 @@ class DatabaseSeeder extends Seeder
 
         // Seed FAQs from constants
         $this->call(FaqSeeder::class);
+
+        // Seed News items for testing and demo
+        $this->call(NewsSeeder::class);
     }
 }

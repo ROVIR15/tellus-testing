@@ -519,11 +519,20 @@
 /* Section Spacing */
 .section {
     margin: 0 auto;
-    padding-top: 56px;
-    padding-bottom: 56px;
-    padding-left: 4rem; /* 64px */
-    padding-right: 4rem;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 54px;
+    padding-right: 54px;
+
+    @media screen and (max-width: 640px) {
+        /* for tablets and above */
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
 }
+
 .section-lg {
     padding-top: 8rem; /* py-16 */
     padding-bottom: 8rem;
@@ -532,29 +541,29 @@
 }
 
 .section-top-padding {
-    padding-top: 6rem; /* 96px - mobile */
+    padding-top: 160px; /* 96px - mobile */
 
     @media screen and (min-width: 640px) {
-        padding-top: 7rem; /* 112px - small tablet */
+        padding-top: 160px; /* 112px - small tablet */
     }
 
     @media screen and (min-width: 768px) {
-        padding-top: 8rem; /* 128px - tablet */
+        padding-top: 160px; /* 128px - tablet */
     }
 
     @media screen and (min-width: 1024px) {
-        padding-top: 9rem; /* 144px - desktop */
+        padding-top: 160px; /* 144px - desktop */
     }
 
     @media screen and (min-width: 1280px) {
-        padding-top: 10rem; /* 160px - large desktop */
+        padding-top: 160px; /* 160px - large desktop */
     }
 }
 
 /* Test Detail Card */
 .test-detail-card {
     height: fit-content;
-    background: #FFFFFF4D;
+    background: #ffffff4d;
 }
 
 .test-detail-card.expanded {
@@ -578,7 +587,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    padding: 0 32px;
+    padding: 0 16px;
 }
 
 .navbar-container {
@@ -667,21 +676,21 @@
     /* media screen for mobile */
     @media screen and (min-width: 640px) {
         width: 100%;
-        padding: 24px;
+        padding: 16px;
         padding-bottom: 4rem;
         padding-top: unset;
     }
 
     @media screen and (max-width: 640px) {
         width: 100%;
-        padding: 24px;
+        padding: 16px;
         padding-bottom: 4rem;
         padding-top: unset;
     }
 
     @media screen and (min-width: 1280px) {
         width: 762px;
-        padding: 24px;
+        padding: 16px;
         padding-bottom: 4rem;
         padding-top: unset;
     }
@@ -692,7 +701,7 @@
     background-color: #ffffff;
     border: 1px solid transparent;
     background-image: linear-gradient(#ffffff, #ffffff),
-                      linear-gradient(180deg, #fdedfd 0%, #fdcdfd 100%);
+        linear-gradient(180deg, #fdedfd 0%, #fdcdfd 100%);
     background-origin: border-box;
     background-clip: padding-box, border-box;
     box-shadow: 2px 4px 4px 0px #a7a7a740;
@@ -703,7 +712,7 @@
 .pink-border {
     border: 1px solid transparent;
     background-image: linear-gradient(#ffffff, #ffffff),
-                      linear-gradient(180deg, #fdedfd 0%, #fdcdfd 100%);
+        linear-gradient(180deg, #fdedfd 0%, #fdcdfd 100%);
     background-origin: border-box;
     background-clip: padding-box, border-box;
     box-shadow: 2px 4px 4px 0px #a7a7a740;
@@ -712,52 +721,68 @@
 
 /* Gradient text color – requires background-clip:text for text fill */
 .custom-color {
-    background: linear-gradient(180deg, #2D6BB4 0%, #2F68B1 28%, #355FA7 49%, #415097 68%, #513B81 85%, #652266 100%);
+    background: linear-gradient(
+        180deg,
+        #2d6bb4 0%,
+        #2f68b1 28%,
+        #355fa7 49%,
+        #415097 68%,
+        #513b81 85%,
+        #652266 100%
+    );
     -webkit-background-clip: text;
-            background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
-            text-fill-color: transparent;
+    text-fill-color: transparent;
 }
 
 .application-navigation-btn {
-    box-shadow: 2px -2px 4px 0px #FFFFFF inset;
-    background: var(--Primary-100, #EBF5FF);
+    box-shadow: 2px -2px 4px 0px #ffffff inset;
+    background: var(--Primary-100, #ebf5ff);
 }
 
 /* Container keeps the 392:310 proportion */
 .card-ratio-310x392 {
-  aspect-ratio: 310 / 392; /* or 392 / 310 if height-driven */
-  width: 310px;            /* sets the base size; remove for fluid width */
-  flex: 0 0 auto;
-  flex-direction: column;
-  gap: 16px;
+    aspect-ratio: 310 / 392; /* or 392 / 310 if height-driven */
+    width: 310px; /* sets the base size; remove for fluid width */
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 16px;
 }
 
 /* For images inside maintaining cover fit */
 .card-ratio-310x392 > img {
-  width: 100%;
-  height: 100%;
-  /* object-fit: cover; or contain */
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; or contain */
 }
 
-.latest-news-card-ratio-304x406, .news-card-3 {
-  aspect-ratio: 304 / 406; /* maintain proportion */
-  width: 100%;             /* fluid on mobile */
-  max-width: 304px;        /* cap size so it doesn’t grow beyond design width */
-  flex: 0 0 auto;
-  flex-direction: column;
-  gap: 16px;
+.latest-news-card-ratio-304x406,
+.news-card-3 {
+    aspect-ratio: 304 / 406; /* maintain proportion */
+    width: 100%; /* fluid on mobile */
+    max-width: 304px; /* cap size so it doesn’t grow beyond design width */
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 16px;
 }
 
 @media (min-width: 768px) {
-  .latest-news-card-ratio-304x406, .news-card-3 {
-    width: 304px;          /* fixed width on md+ screens for consistent grid */
-  }
+    .latest-news-card-ratio-304x406,
+    .news-card-3 {
+        width: 304px; /* fixed width on md+ screens for consistent grid */
+    }
 }
 
-.img-news-card-3{
-    aspect-ratio: 304 / 313;
+.img-news-card-3 {
     width: 100%;
-    min-height: 313px;
-    object-fit: cover; /* or contain */
+    aspect-ratio: 304 / 313;
+    object-fit: cover;
+}
+
+/* On tablets and up, switch to 361:189 ratio */
+@media screen and (max-width: 768px) {
+    .img-news-card-3 {
+        aspect-ratio: 361 / 189;
+    }
 }

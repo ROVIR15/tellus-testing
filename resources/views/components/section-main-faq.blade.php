@@ -12,7 +12,7 @@
 @endphp
 
 <!-- Experimentation Section -->
-<div class="section-top-padding px-16 mb-32">
+<div class="section-top-padding px-4 md:px-16 mb-32 sm:pt-40">
     <div class="w-full" style="color: var(--color-secondary-300);" x-data="{
             showAll: false,
             openedId: null,
@@ -49,8 +49,8 @@
             get noResults() {
                 return this.filteredItems.length === 0;
             }
-        }">
-        <div class="text-left mb-16 flex flex-col gap-16">
+        }" x-provide="['openedId']">
+        <div class="text-left mb-16 flex flex-col gap-8">
             <x-heading-display-3 style="color: var(--color-secondary-300);">
                 Frequently Asked Questions
             </x-heading-display-3>
@@ -64,12 +64,14 @@
                 efficient submission.
             </x-body-1>
 
-            <x-form-input label="" placeholder="What are you looking for?" name="search" icon-position="left"
-                style="width: 50%;" x-model="searchQuery">
-                <x-slot name="icon">
-                    ✉️
-                </x-slot>
-            </x-form-input>
+            <div class="w-[50%]">
+                <x-form-input label="" placeholder="What are you looking for?" name="search" icon-position="left"
+                    x-model="searchQuery">
+                    <x-slot name="icon">
+                        ✉️
+                    </x-slot>
+                </x-form-input>
+            </div>
         </div>
 
         <!-- FAQ Items -->
@@ -78,37 +80,48 @@
             <!-- FAQ Items List -->
             <div class="space-y-4">
                 <template x-for="item in displayedItems" :key="item.id">
-                    <div x-data="{ isOpen: false }"
-                        class="pink-border transition-all duration-300 ease-in-out rounded-2xl border border-solid p-6 flex flex-col"
-                        :class="{ 'gap-6': isOpen }">
-                        <!-- Question -->
-                        <div class="flex justify-between items-center cursor-pointer" @click="isOpen = !isOpen">
-                            <h3 class="heading-4 text-neutral-1000 flex-1" x-text="item.label"></h3>
-                            <button type="button"
-                                class="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full transition-transform duration-300"
-                                :class="{ 'rotate-180': isOpen }">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </button>
-                        </div>
+                    <div class="faq-item group">
+                        <button type="button" @click="openedId === item.id ? openedId = null : openedId = item.id"
+                            :class="{ 'rounded-b-none': openedId === item.id }"
+                            class="w-full px-6 py-4 text-left transition-all duration-300 rounded-2xl"
+                            style="background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(5px);"
+                            @keydown.enter="openedId === item.id ? openedId = null : openedId = item.id">
+                            <div class="flex items-center justify-between gap-6">
+                                <!-- Label -->
+                                <x-subheading-1 class="flex-1"
+                                    style="font-weight: 700; font-size: 18px; line-height: 125%;"
+                                    x-text="item.label"></x-subheading-1>
 
-                        <!-- Answer -->
-                        <div x-show="isOpen" x-collapse class="body-3 text-neutral-700 leading-relaxed">
-                            <div x-html="item.description"></div>
+                                <!-- Toggle Icon -->
+                                <div class="flex-shrink-0 transition-transform duration-300"
+                                    :class="{ 'rotate-180': openedId === item.id }">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M23.293 15.3008L16.8242 21.4883C16.543 21.7695 16.1914 21.875 15.875 21.875C15.5234 21.875 15.1719 21.7695 14.8906 21.4883L8.42188 15.3008C7.85938 14.7734 7.82422 13.8945 8.38672 13.332C8.91406 12.7695 9.79297 12.7344 10.3555 13.2969L15.875 18.5352L21.3594 13.2969C21.9219 12.7344 22.8008 12.7695 23.3281 13.332C23.8906 13.8945 23.8555 14.7734 23.293 15.3008Z"
+                                            fill="#020046" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </button>
+
+                        <!-- Collapsible Content -->
+                        <div x-show="openedId === item.id" x-transition:enter="transition ease-out duration-300"
+                            x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+                            x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100"
+                            x-transition:leave-end="opacity-0" class="px-6 py-4 rounded-b-2xl"
+                            style="background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(5px); margin-top: -1px;">
+                            <x-body-2 class="text-neutral-700 leading-relaxed">
+                                <div x-html="item.description"></div>
+                            </x-body-2>
                         </div>
                     </div>
                 </template>
             </div>
 
-            <!-- No Results Message -->
-            <div x-show="noResults" class="text-center py-8">
-                <x-body-2 style="color: var(--color-neutral-600);">
-                    No FAQ items found matching "<span x-text="searchQuery"></span>"
-                </x-body-2>
-            </div>
+            <x-empty-search x-show="noResults">
+                <x-slot name="header">No FAQ items found matching "<span x-text="searchQuery"></span>"</x-slot>
+            </x-empty-search>
 
             <!-- Show All / Show Less Button -->
             <div x-show="hasMoreToShow || (showAll && !searchQuery.trim())" class="flex justify-center mt-8">

@@ -13,10 +13,9 @@ $navbarItems = [
 <nav class="navbar-floating">
   <div class="navbar-container">
     <!-- Left: Logo -->
-    <div class="flex items-center gap-3">
+    <a href="/" class="flex items-center gap-3 cursor-pointer">
       <img src="{{ asset('images/logo.png') }}" alt="logo" class="h-10 rounded-full object-cover">
-    </div>
-
+    </a>
     <!-- Center: Links -->
     <div class="navbar-links hidden md:flex items-center gap-10">
       @foreach ($navbarItems as $item)
@@ -33,7 +32,7 @@ $navbarItems = [
 
     <!-- Right: CTA (Hidden on mobile) -->
     <div class="hidden md:block">
-      <a href="#contact" class="btn-accent px-5 py-2 rounded-full shadow-md">Talk To Us</a>
+      <a href="/contact-us" class="btn-accent px-5 py-2 rounded-full shadow-md">Talk To Us</a>
     </div>
   </div>
 
@@ -43,7 +42,7 @@ $navbarItems = [
       <a href="{{ $item['url'] }}" class="body-2 text-neutral-900 hover:text-primary-500">{{ $item['label'] }}</a>
     @endforeach
     <!-- Talk to Us button in mobile menu -->
-    <a href="#contact" class="btn-accent px-5 py-2 rounded-full shadow-md text-center mt-4">Talk To Us</a>
+    <a href="/contact-us" class="btn-accent px-5 py-2 rounded-full shadow-md text-center mt-4">Talk To Us</a>
   </div>
 
   <script>

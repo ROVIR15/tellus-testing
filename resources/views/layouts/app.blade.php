@@ -32,10 +32,10 @@
     <!-- Footer -->
     <footer class="text-white py-12" style="background-color: var(--color-secondary-500);">
         <div class="flex flex-col gap-4 w-full px-8">
-            <div class="flex flex-col gap-28 md:flex-row justify-between items-center">
+            <div class="flex flex-col gap-22 md:flex-row justify-between items-start md:items-center">
                 <!-- Company Info -->
                 <div class="mb-6 md:mb-0">
-                    <svg width="285" height="34" viewBox="0 0 285 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="285" height="35" viewBox="0 0 285 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M15.7946 15.0991C18.5678 12.0855 23.1161 13.8148 24.693 17.04C25.5983 18.8894 25.446 21.2313 23.6237 23.453C22.5357 24.6324 21.3005 25.5427 19.869 26.1434C14.0366 28.597 6.04167 26.4395 2.1449 21.6171C-2.06152 16.1601 0.405478 8.28167 5.34116 4.18341C13.6102 -3.45301 28.1956 -0.0671261 32.0619 10.5728C27.7522 5.97365 21.0738 4.04466 14.8944 5.23082C9.55942 6.07518 4.18888 11.4104 6.50867 17.0416C8.1178 21.9521 15.9655 24.0063 18.9722 19.3327C20.3563 16.9537 18.1178 15.0991 15.7963 15.1008L15.7946 15.0991Z"
                             fill="url(#paint0_linear_2012_2508)" />
@@ -259,11 +259,11 @@
 
                 <!-- Navigation Links -->
                 <div class="flex flex-col gap-6 md:grid md:grid-cols-3 md:gap-x-20 md:gap-y-4 mb-6 md:mb-0">
-                    <a href="{{ route('home') }}" class="text-2xl hover:underline">Home</a>
-                    <a href="{{ route('testing-inspection') }}" class="text-2xl hover:underline">Testing & Inspection</a>
-                    <a href="{{ route('application') }}" class="text-2xl hover:underline">Application Procedure</a>
-                    <a href="{{ route('faq') }}" class="text-2xl hover:underline">FAQs</a>
-                    <a href="{{ route('contact-us') }}" class="text-2xl hover:underline">Contact Us</a>
+                    <a href="{{ route('home') }}" class="body-2 hover:underline">Home</a>
+                    <a href="{{ route('testing-inspection') }}" class="body-2 hover:underline">Testing & Inspection</a>
+                    <a href="{{ route('application') }}" class="body-2 hover:underline">Application Procedure</a>
+                    <a href="{{ route('faq') }}" class="body-2 hover:underline">FAQs</a>
+                    <a href="{{ route('contact-us') }}" class="body-2 hover:underline">Contact Us</a>
                 </div>
 
                 <!-- Social Media Icons (hidden on mobile to match layout) -->
@@ -273,14 +273,14 @@
             <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-8">
                 <!-- Company Info -->
                 <div class="mb-6 md:mb-0">
-                    <p class="text-lg mb-4">Email: inquiry@tellustesting.com</p>
-                    <p class="text-lg mb-4">Hotline: +60 129678460</p>
-                    <p class="text-lg">Tellus Testing @2025</p>
+                    <p class="body-2 mb-4">Email: inquiry@tellustesting.com</p>
+                    <p class="body-2 mb-4">Hotline: +60 129678460</p>
+                    <p class="body-2">Tellus Testing @2025</p>
                 </div>
 
                 <!-- Social Media Icons -->
                 <div class="flex flex-col gap-3">
-                    <p class="text-lg">Connect with us</p>
+                    <p class="body-2">Connect with us</p>
                     <div class="flex items-center gap-6">
                         <a href="#" class="hover:opacity-80 transition-opacity">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor"

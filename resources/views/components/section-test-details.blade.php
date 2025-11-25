@@ -1,5 +1,5 @@
 <!-- Heading -->
-<div class="section-top-padding px-16">
+<div class="section-top-padding px-4 md:px-16">
     <div class="flex flex-col lg:flex-row gap-8 lg:gap-18 items-center">
         <div class="flex flex-col w-full lg:w-1/2 mb-8 lg:mb-12 gap-6 lg:gap-8">
             <x-heading-display-3 style="color: var(--color-secondary-300);">
@@ -25,7 +25,7 @@
     </div>
 </div>
 
-<div class="px-16">
+<div class="px-4 md:px-16">
     <div x-data="{ 
         isExpanded: false
     }" @class([
@@ -158,6 +158,15 @@
             @endforeach
         </div>
 
+        <div id="test-empty-state" class="hidden">
+            <x-empty-search>
+                <x-slot name="header">No tests found matching "<span id="test-query"></span>"</x-slot>
+                <x-slot name="actions">
+                    <button id="test-clear-btn" type="button" class="px-8 py-3 rounded-full transition-all duration-300 font-semibold" style="color: var(--color-primary-300); background-color: var(--color-primary-100);">Clear search</button>
+                </x-slot>
+            </x-empty-search>
+        </div>
+
         <script>
             (function () {
                 const input = document.getElementById('test-search');
@@ -173,11 +182,17 @@
                 function applyFilter(query) {
                     const q = normalize(query);
                     const cards = grid.querySelectorAll('.js-test-card');
+                    let matchCount = 0;
                     cards.forEach(card => {
                         const content = normalize(card.textContent);
                         const match = !q || content.includes(q);
                         card.classList.toggle('hidden', !match);
+                        if (match) matchCount++;
                     });
+                    const emptyState = document.getElementById('test-empty-state');
+                    const queryText = document.getElementById('test-query');
+                    if (emptyState) emptyState.classList.toggle('hidden', matchCount !== 0);
+                    if (queryText) queryText.textContent = query.trim();
                 }
 
                 function debouncedFilter() {
@@ -186,6 +201,8 @@
                 }
 
                 input.addEventListener('input', debouncedFilter);
+                const clearBtn = document.getElementById('test-clear-btn');
+                if (clearBtn) clearBtn.addEventListener('click', () => { input.value = ''; applyFilter(''); });
                 // Initial render
                 applyFilter('');
             })();

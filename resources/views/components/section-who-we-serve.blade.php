@@ -1,5 +1,5 @@
 <!-- Who We Serve Section - Figma Specification Match -->
-<section class="px-16 md:px-16 lg:px-16">
+<section class="section">
     <!-- 3x3 Grid Layout with 24px gap -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
@@ -30,7 +30,7 @@
         <!-- Row 3, Col 1-2: Complete Laboratory Services (spans 2 columns) -->
         <x-service-highlight title="Complete Laboratory Services"
             description="Any industry working with construction materials, soil analysis, or site development can benefit from our comprehensive testing laboratory."
-            background="bg-secondary-100" image="images/complete-who-we-serve/4.png" class="md:col-span-2" />
+            background="bg-secondary-100" image="images/complete-who-we-serve/4.png" class="md:col-span-2 p-6" />
 
         <!-- Row 3, Col 3: Quality Standards -->
         <x-lab-card-4 lab_name="Soil Compaction Testing" test_type="Geotechnical Analysis" :standards="['ASTM International Standards', 'AASHTO Testing Protocols', 'ISO 17025 Accredited']"
