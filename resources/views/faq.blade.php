@@ -5,7 +5,7 @@
 
 @section('content')
     <!-- Main FAQ section using the existing component -->
-    <x-section-main-faq />
+    <x-section-main-faq :items="$items" />
 
     <x-section-inquiry />
 @endsection
