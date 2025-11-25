@@ -1,8 +1,7 @@
 {{-- Latest News Section Component --}}
 @php
     // Get component properties
-    // $maxNewsItems = $attributes->get('max-news-items', 4);
-    $maxNewsItems = 4;
+    $maxNewsItems = $attributes->get('max-news-items', 4);
     $title = $attributes->get('title', 'Latest News');
     $subtitle = $attributes->get('subtitle', 'Stay updated with our latest news and insights');
     $activateShowMore = $attributes->get('activate-show-more', true);
@@ -66,9 +65,38 @@
     $newsItems = array_slice($newsItems, 0, $maxNewsItems);
 @endphp
 <!-- style="background: linear-gradient(180deg, #F5F9FF 0%, #F0F0F0 100%);" -->
+@php
+    // Override sample items with real data from DB (Filament-managed News)
+    $query = \App\Models\News::query()
+        ->where('is_published', true)
+        ->where(function ($q) {
+            $q->whereNull('published_at')
+              ->orWhere('published_at', '<=', now());
+        })
+        ->orderByDesc('published_at')
+        ->orderByDesc('created_at')
+        ->take($maxNewsItems);
 
-<section {{ $attributes->merge(['class' => 'section']) }}>
-    <div class="flex flex-col gap-8 px-4 sm:px-6 lg:px-8">
+    $realItems = $query->get();
+
+    // Map to shape expected by card component
+    $newsItems = $realItems->map(function ($item) {
+        $image = $item->image_path ? asset('storage/' . $item->image_path) : asset('images/other-news/1.jpg');
+        return [
+            'images' => [$image],
+            'status' => '',
+            'created_at' => optional($item->published_at)->timestamp ?? $item->created_at->timestamp,
+            'author' => '',
+            'category' => $item->category,
+            'read_time' => '',
+            'title' => $item->title,
+            'href' => route('news-detail', $item->slug),
+        ];
+    })->toArray();
+@endphp
+
+<div>
+    <div class="flex flex-col gap-8">
         <!-- Section Header -->
         <div class="flex flex-row items-center justify-between">
             <h2 class="heading-1 mb-4"><span class="custom-color">{{ $title }}</span></h2>
@@ -107,4 +135,4 @@
             </a>
         </div> -->
     </div>
-</section>
+</div>

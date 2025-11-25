@@ -44,11 +44,13 @@
             ];
         @endphp
 
-        <!-- Test Cards Grid -->
-        <div class="grid justify-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Test Cards: Horizontal scroll on mobile, grid on larger screens -->
+        <div id="lab-services-scroll" class="flex gap-4 overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-6 no-scrollbar" style="scroll-snap-type: x mandatory; scroll-behavior: smooth;">
             @foreach($labTests as $test)
-                <x-lab-test-card :title="$test['title']" :description="$test['description']"
-                    :image="asset($test['image'])" />
+                <div class="snap-start shrink-0 w-[260px] sm:w-auto">
+                    <x-lab-test-card :title="$test['title']" :description="$test['description']"
+                        :image="asset($test['image'])" />
+                </div>
             @endforeach
         </div>
     </div>

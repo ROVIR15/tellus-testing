@@ -76,7 +76,7 @@
         <!-- Slider Container -->
         <div id="testimony-slider" class="relative">
             <!-- Scrollable Track -->
-            <div id="testimony-scroll" class="flex gap-4 md:gap-6 overflow-x-auto pb-4 -mx-4 px-4 md:mx-0 md:px-0"
+            <div id="testimony-scroll" class="flex gap-4 md:gap-6 overflow-x-auto pb-4 -mx-4 px-4 md:mx-0 md:px-0 no-scrollbar"
                 style="scroll-snap-type: x mandatory; scroll-behavior: smooth;">
                 @foreach ($testimonies as $testimony)
                     <div class="snap-start shrink-0 w-[280px] sm:w-[320px] md:w-[340px]">

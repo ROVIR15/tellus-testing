@@ -52,9 +52,8 @@
 @endphp
 <!-- src="{{ $imageSrc ?? asset('images/other-news/1.jpg') }}" -->
 
-<div class="rounded-xl cursor-pointer flex flex-col gap-3" style="aspect-ratio: 304/406;"
-    onclick="window.location.href='{{ $attributes->get('href', '#') }}'">
-    <img src="{{ asset('images/other-news/1.jpg') }}" alt="{{ $imageAlt }}" class="img-news-card-3 rounded-[10px]" loading="lazy" />
+<a href="{{ $attributes->get('href', '#') }}" class="rounded-xl cursor-pointer flex flex-col gap-3" style="aspect-ratio: 304/406;">
+    <img src="{{ $imageSrc }}" alt="{{ $imageAlt }}" class="img-news-card-3 rounded-[10px]" loading="lazy" />
     <!-- <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-60"></div> -->
 
     <!-- Status Badge -->
@@ -126,4 +125,4 @@
             </a>
         </div> -->
     </div>
-</div>
+</a>

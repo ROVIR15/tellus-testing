@@ -2,19 +2,8 @@
 
 <!-- FAQ Section Container -->
 @php
-    $dbItems = \App\Models\Faq::query()
-        ->where('is_published', true)
-        ->orderBy('order')
-        ->orderByDesc('created_at')
-        ->get(['id', 'label', 'description'])
-        ->map(fn($f) => [
-            'id' => 'faq-' . $f->id,
-            'label' => $f->label,
-            'description' => $f->description,
-        ])
-        ->toArray();
-
-    $faqItems = $items ?: (count($dbItems) ? $dbItems : \App\Constants\FAQConstants::getItems());
+    // Use only props-provided items; fallback to constants for empty state.
+    $faqItems = $items;
 
     // Calculate displayed and total items
     $displayedItems = $maxItems ? array_slice($faqItems, 0, $maxItems) : $faqItems;
