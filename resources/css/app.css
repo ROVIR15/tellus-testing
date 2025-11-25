@@ -11,3 +11,12 @@
         'Segoe UI Symbol', 'Noto Color Emoji';
     --font-manrope: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
 }
+
+/* Utility: Hide scrollbars while preserving scroll functionality */
+.no-scrollbar {
+    -ms-overflow-style: none; /* IE and older Edge */
+    scrollbar-width: none; /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
