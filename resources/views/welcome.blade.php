@@ -21,9 +21,9 @@
             <x-heading-display-3>
                 "Trusted by engineers, builders, and decision-makers across
                 <span style="background: linear-gradient(180deg, #2D6BB4 0%, #2F68B1 28%, #355FA7 49%, #415097 68%, #513B81 85%, #652266 100%);
-                                -webkit-background-clip: text;
-                                background-clip: text;
-                                color: transparent;">continents
+                                                -webkit-background-clip: text;
+                                                background-clip: text;
+                                                color: transparent;">continents
                     infrastructure</span>
                 landscape."
             </x-heading-display-3>
@@ -32,12 +32,12 @@
 
     <div style="background: linear-gradient(180deg, rgba(255, 255, 255, 0) 6.77%, #EBF5FF 60.00%);">
         @include('components.section-testimony')
-    
+
         <div class="flex flex-col items-center gap-14 py-18">
             <div class="flex flex-row justify-center items-center custom-color">
                 <x-heading-h1><span>Trusted by Industry Professionals</span></x-heading-h1>
             </div>
-    
+
             <!-- hugging client -->
             <x-client-marquee speed="30" aspectRatio="1312/48" />
         </div>
@@ -51,7 +51,8 @@
         @include('components.faq-section')
     </div>
 
-    <!-- Latest News Section -->
-    <x-latest-news-section :max-news-items="3" />
+    <x-section class="relative">
+        <x-latest-news-section :max-news-items="3" />
 
+    </x-section>
 @endsection
