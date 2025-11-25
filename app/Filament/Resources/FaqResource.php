@@ -16,6 +16,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Actions\EditAction;
 use Filament\Actions\DeleteAction;
+use Filament\Actions\Action;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 
@@ -78,6 +79,14 @@ class FaqResource extends Resource
             ->recordActions([
                 EditAction::make(),
                 DeleteAction::make(),
+                Action::make('viewPublic')
+                    ->label('View Public')
+                    ->url(fn (Faq $record) => route('faq'))
+                    ->openUrlInNewTab(),
+                Action::make('openJson')
+                    ->label('Open JSON')
+                    ->url(fn (Faq $record) => route('faq.json'))
+                    ->openUrlInNewTab(),
             ])
             ->groupedBulkActions([
                 DeleteBulkAction::make(),
