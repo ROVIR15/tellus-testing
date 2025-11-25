@@ -55,6 +55,13 @@ class NewsResource extends Resource
                 Textarea::make('excerpt')
                     ->rows(3)
                     ->columnSpanFull(),
+                TextInput::make('category')
+                    ->label('Category')
+                    ->maxLength(255),
+                TextInput::make('tags')
+                    ->label('Tags')
+                    ->placeholder('comma,separated,tags')
+                    ->helperText('Enter tags separated by commas'),
                 RichEditor::make('content')
                     ->required()
                     ->columnSpanFull()
@@ -102,6 +109,10 @@ class NewsResource extends Resource
                 TextColumn::make('slug')
                     ->copyable()
                     ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('category')
+                    ->label('Category')
+                    ->toggleable(isToggledHiddenByDefault: true)
+                    ->sortable(),
                 TextColumn::make('published_at')
                     ->dateTime()
                     ->sortable()

@@ -11,6 +11,8 @@ class News extends Model
         'title',
         'slug',
         'excerpt',
+        'category',
+        'tags',
         'content',
         'image_path',
         'published_at',
@@ -29,5 +31,14 @@ class News extends Model
                 $news->slug = Str::slug($news->title);
             }
         });
+    }
+
+    /**
+     * Helper to get tags as array from comma-separated string.
+     */
+    public function getTagsArrayAttribute(): array
+    {
+        $tags = is_string($this->tags) ? explode(',', $this->tags) : [];
+        return array_values(array_filter(array_map(static fn ($t) => trim($t), $tags)));
     }
 }
