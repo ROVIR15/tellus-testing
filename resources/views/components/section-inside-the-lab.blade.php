@@ -1,5 +1,4 @@
-<section class="section" style="padding-right: 0px; padding-left: 0px;"></section>
-<div class="relative flex flex-col gap-8 py-18 md:py-10">
+<div class="relative flex flex-col gap-8 py-10 md:py-18">
     <!-- Heading -->
     <div class="text-center flex flex-col gap-4">
         <x-heading-h1
