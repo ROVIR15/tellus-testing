@@ -10,11 +10,13 @@
         $publishedAt = $news->published_at ? $news->published_at->format('d F Y \\a\\t h:i A') : $news->created_at->format('d F Y \\a\\t h:i A');
     @endphp
 
-    <div class="flex flex-col gap-4 md:gap-10 mb-16 md:mb-8 px-4 lg:px-8">
-        <div class="flex flex-col pt-38 gap-4 sm:px-6 lg:px-8">
+    <img src="{{ asset('images/decorative-about-us/circle-center.svg') }}" alt="Decorative element"
+        class="absolute w-full -z-10">
+    <div class="flex flex-col gap-4 pt-40 md:gap-10 mb-16 md:mb-8 px-4 lg:px-8">
+        <div class="flex flex-col gap-4 sm:px-6 lg:px-8">
             <!-- Hero / Featured -->
-            <img src="{{ $imageUrl }}" alt="{{ $news->title }}"
-                class="w-full min-h-[300px] h-full rounded-lg" style="background-color: bisque;">
+            <img src="{{ $imageUrl }}" alt="{{ $news->title }}" class="w-full min-h-[300px] h-full rounded-lg"
+                style="background-color: bisque;">
 
             <!-- Title & Meta -->
             <span class="display-3 text-inherit" style="color: var(--color-secondary-300);">{{ $news->title }}</span>
@@ -41,10 +43,7 @@
                             $relatedImage = $article->image_path ? asset('storage/' . $article->image_path) : asset('images/other-news/1.jpg');
                             $relatedTimestamp = optional($article->published_at)->timestamp ?? $article->created_at->timestamp;
                         @endphp
-                        <x-news-card-3 :images="[$relatedImage]"
-                            :created_at="$relatedTimestamp"
-                            :href="route('news-detail', $article->slug)"
-                            :title="$article->title">
+                        <x-news-card-3 :images="[$relatedImage]" :created_at="$relatedTimestamp" :href="route('news-detail', $article->slug)" :title="$article->title">
                             {{ $article->title }}
                         </x-news-card-3>
                     @endforeach
