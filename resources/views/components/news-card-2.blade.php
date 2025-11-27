@@ -11,9 +11,10 @@
     // Get the first image or use placeholder
     $imageSrc = is_array($images) && count($images) > 0 ? $images[0] : 'https://via.placeholder.com/400x300?text=No+Image';
     $imageAlt = $attributes->get('title', 'News Image') ?? 'News Image';
+    $href = $attributes->get('href', '#');
 @endphp
 
-<div class="flex flex-row gap-2 md:gap-4 max-h-[200px] md:max-h-[94px]">
+<a href="{{ $href }}" class="flex flex-row gap-2 md:gap-4 max-h-[200px] md:max-h-[94px] no-underline cursor-pointer">
     <!-- Horizontal Layout: Image Left,ı Content Right -->
     <!-- Image Container -->
     <img src="{{ $imageSrc }}" alt="{{ $imageAlt }}" class="object-fit-cover rounded-2xl max-w-[180px] md:max-w-[141px]" aspect-ratio="141/94" />
@@ -56,4 +57,4 @@
                 </a>
             </div> -->
     </div>
-</div>
+</a>
