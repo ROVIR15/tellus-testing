@@ -23,29 +23,43 @@
                 <x-form-input label="Name" placeholder="Type here" name="first_name" size="medium" required />
                 <x-form-input label="Surname" placeholder="Type here" name="last_name" size="medium" />
                 <x-form-input label="Company Name" placeholder="Type here" name="company_name" size="medium" required />
-                <x-form-input label="Company Country" placeholder="Type here" name="company_country" size="medium" required />
+                <x-form-input label="Company Country" placeholder="Type here" name="company_country" size="medium"
+                    required />
                 <x-form-input label="Company City" placeholder="Type here" name="company_city" size="medium" required />
-                <x-form-input label="Company Address" placeholder="Type here" name="company_address" size="medium" required />
+                <x-form-input label="Company Address" placeholder="Type here" name="company_address" size="medium"
+                    required />
                 <x-form-input label="ZIP" placeholder="Type here" name="zip" size="medium" required />
 
-                <div class="grid grid-cols-3 gap-3">
-                    <div>
-                        <label class="body-2 block mb-2">Phone Number</label>
-                        <div class="flex gap-2">
-                            <select name="phone_country_code" class="input-field w-24" required>
+                <div class="flex flex-col">
+                    <label class="body-2 block mb-2">Phone Number</label>
+                    <div
+                        class="flex items-center rounded-2xl border border-neutral-300 bg-white overflow-hidden focus-within:ring-1 focus-within:ring-primary-300 focus-within:border-primary-300">
+                        <div class="relative w-28">
+                            <select name="phone_country_code"
+                                class="appearance-none w-full bg-transparent pl-4 pr-8 py-3 text-neutral-900 outline-none"
+                                required>
                                 <option value="+61">+61</option>
                                 <option value="+62">+62</option>
                                 <option value="+65">+65</option>
                                 <option value="+1">+1</option>
                                 <option value="+44">+44</option>
                             </select>
-                            <input type="text" name="phone_number" class="input-field flex-1" placeholder="Type here" required />
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 h-4 w-4 text-neutral-600"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
                         </div>
+                        <span class="h-6 w-px bg-neutral-200"></span>
+                        <input type="text" name="phone_number" placeholder="Type here"
+                            class="flex-1 px-4 py-3 bg-transparent outline-none border-0 text-neutral-900" required />
                     </div>
                 </div>
 
                 <x-form-input label="Email" placeholder="Type here" name="email" type="email" size="medium" required />
-                <x-form-input label="How can we help?" placeholder="Type here" name="message" multirow="true" rows="5" size="medium" required />
+                <x-form-input label="How can we help?" placeholder="Type here" name="message" multirow="true" rows="5"
+                    size="medium" required />
 
                 <!-- Submit Button -->
                 <div class="pt-4">
@@ -55,7 +69,8 @@
                 </div>
             </form>
             @if(session('success'))
-                <div class="mt-4 p-3 rounded-lg" style="background-color: var(--color-primary-100); color: var(--color-primary-300);">
+                <div class="mt-4 p-3 rounded-lg"
+                    style="background-color: var(--color-primary-100); color: var(--color-primary-300);">
                     {{ session('success') }}
                 </div>
             @endif
