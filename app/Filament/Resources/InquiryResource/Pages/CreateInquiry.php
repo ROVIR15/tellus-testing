@@ -9,3 +9,4 @@ class CreateInquiry extends CreateRecord
 {
     protected static string $resource = InquiryResource::class;
 }
+

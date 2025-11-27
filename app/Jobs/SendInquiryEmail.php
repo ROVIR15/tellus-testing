@@ -46,3 +46,4 @@ class SendInquiryEmail implements ShouldQueue
         });
     }
 }
+

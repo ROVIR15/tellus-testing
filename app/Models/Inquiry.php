@@ -25,3 +25,4 @@ class Inquiry extends Model
         'user_agent',
     ];
 }
+

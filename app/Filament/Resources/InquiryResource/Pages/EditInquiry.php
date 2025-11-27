@@ -9,3 +9,4 @@ class EditInquiry extends EditRecord
 {
     protected static string $resource = InquiryResource::class;
 }
+
