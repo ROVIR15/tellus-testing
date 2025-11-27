@@ -52,7 +52,7 @@
         </div>
     </x-section-top-padding>
 
-    <div class="mt-20 flex flex-col gap-12">
+    <div class="mt-20 flex flex-col gap-12 hidden">
         <!-- Release This Week -->
         <div class="flex flex-col gap-8  px-4 sm:px-6 lg:px-8">
             <x-heading-h1 class="custom-color">Release This Week</x-heading-h1>

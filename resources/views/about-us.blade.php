@@ -83,7 +83,7 @@
         <img src="{{ asset('images/decorative-about-us/union-3.svg') }}" alt="Decorative element"
             class="absolute top-[5%] left-0 w-[70%] md:w-[50%] h-auto -z-10">
         <img src="{{ asset('images/decorative-about-us/union-1.svg') }}" alt="Decorative element"
-            class="absolute -top-10 -right-10 w-[80%] md:w-[60%] h-auto -z-10">
+            class="absolute -top-10 -right-0 w-[80%] md:w-[60%] h-auto -z-10">
         <div class="section-top-padding px-8 pb-20">
             <div class="grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-12">
                 <div class="flex flex-col gap-6">
@@ -98,7 +98,8 @@
                 </div>
 
                 <div>
-                    <img src="{{ asset('images/about-us.png') }}" alt="About Us" class="w-full h-auto max-w-full object-contain" placeholder="blur">
+                    <img src="{{ asset('images/about-us.png') }}" alt="About Us"
+                        class="w-full h-auto max-w-full object-contain" placeholder="blur">
                 </div>
             </div>
         </div>
@@ -112,11 +113,13 @@
             </x-heading-h1>
 
             <x-subheading-2 style="color: var(--color-secondary-300)">
-                Our team consists of highly skilled technicians & experienced professionals that provide reliable data
-                quality, and efficient services for competitive prices.
+                Our testing services include a full scope of geosynthetic tests that determine physical, mechanical,
+                hydraulic properties in accordance with ISO and ASTM standards to ensure that those materials that are used
+                for ground improvement projects meet the specified quality standards.
             </x-subheading-2>
 
-            <img src="{{ asset('images/tellus-team.jpg') }}" alt="Team Photo" class="w-full h-auto max-w-full object-cover rounded-2xl" placeholder="blur">
+            <img src="{{ asset('images/tellus-team.jpg') }}" alt="Team Photo"
+                class="w-full h-auto max-w-full object-cover rounded-2xl" placeholder="blur">
         </div>
 
         <img src="{{ asset('images/decorative-about-us/union-2.svg') }}" alt="Ellipse 8.svg"
@@ -158,8 +161,9 @@
                 <div class="test-detail-card pink-border transition-all duration-300 ease-in-out rounded-2xl border border-solid p-6 md:p-8 flex flex-col gap-6 h-full"
                     style="aspect-ratio: 421/323; background: #FFFFFF4D;">
                     <div class="flex flex-col gap-6 items-start justify-start gap-4">
-                        <img src="{{ $item['icon'] }}" alt="{{ $item['label'] }}" class="w-12 md:w-14 h-12 md:h-14 object-contain flex-shrink-0"
-                            placeholder="blur" style="aspect-ratio: 62/53">
+                        <img src="{{ $item['icon'] }}" alt="{{ $item['label'] }}"
+                            class="w-12 md:w-14 h-12 md:h-14 object-contain flex-shrink-0" placeholder="blur"
+                            style="aspect-ratio: 62/53">
                         <x-heading-h4 style="color: var(--color-secondary-300);">
                             {{ $item['label'] }}
                         </x-heading-h4>
@@ -180,7 +184,8 @@
                 <div class="test-detail-card pink-border transition-all duration-300 ease-in-out rounded-2xl border border-solid p-6 md:p-8 flex flex-col gap-6 h-full"
                     style="background: #ffffff4d;">
                     <div class="flex flex-col gap-6 items-center justify-start gap-4">
-                        <img src="{{ $item['icon'] }}" alt="{{ $item['label'] }}" class="w-[40%] md:w-[30%] h-auto object-contain" placeholder="blur">
+                        <img src="{{ $item['icon'] }}" alt="{{ $item['label'] }}"
+                            class="w-[40%] md:w-[30%] h-auto object-contain" placeholder="blur">
                         <div class="flex flex-col text-center gap-3.5">
                             <x-heading-h4 style="color: #006ACC">
                                 {{ $item['label'] }}
