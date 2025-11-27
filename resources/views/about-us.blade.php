@@ -70,7 +70,10 @@
             'label' => 'ISO 22000:2018',
             'description' => 'International Standard for Health Care Services',
         ],
-    ]
+    ];
+
+    $qualityCardsSlicedFirstThree = array_slice($qualityCards, 0, 3);
+    $qualityCardsSlicedLast = array_slice($qualityCards, 3);
 @endphp
 
 @extends('layouts.app')
@@ -134,10 +137,10 @@
                 @foreach($cardTest as $item)
                     <!-- card -->
                     <div
-                        class="test-detail-card p-6 pink-border transition-all duration-300 ease-in-out rounded-2xl border border-solid p-6 md:p-8 flex flex-col gap-6 h-full">
+                        class="test-detail-card p-6 pink-border transition-all duration-300 ease-in-out rounded-2xl border border-solid flex flex-col gap-6 h-full">
                         <div class="flex flex-row gap-6 items-center justify-start gap-4">
                             <img src="{{ $item['icon'] }}" alt="{{ $item['label'] }}" placeholder="blur"
-                                class="w-16 md:w-20 h-16 md:h-20 object-contain flex-shrink-0" style="aspect-ratio: 82/88;">
+                                class="w-[54px] md:w-[110px] object-contain flex-shrink-0" style="aspect-ratio: 82/88;">
                             <x-heading-h4>
                                 {{ $item['label'] }}
                             </x-heading-h4>
@@ -155,12 +158,23 @@
             Quality Policy
         </x-heading-h1>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 items-stretch justify-center gap-8 md:gap-12">
-            @foreach($qualityCards as $item)
+
+        @php
+            $firstRow = array_slice($qualityCards, 0, 3);
+            $secondRow = array_slice($qualityCards, 3);
+        @endphp
+
+        @php
+            $firstRow = array_slice($qualityCards, 0, 3);
+            $secondRow = array_slice($qualityCards, 3);
+        @endphp
+
+        <div class="grid grid-cols-1 md:grid-cols-3 items-stretch gap-8 md:gap-12">
+            @foreach($firstRow as $item)
                 <!-- card -->
                 <div class="test-detail-card pink-border transition-all duration-300 ease-in-out rounded-2xl border border-solid p-6 md:p-8 flex flex-col gap-6 h-full"
                     style="aspect-ratio: 421/323; background: #FFFFFF4D;">
-                    <div class="flex flex-col gap-6 items-start justify-start gap-4">
+                    <div class="flex flex-col gap-6 items-start justify-start">
                         <img src="{{ $item['icon'] }}" alt="{{ $item['label'] }}"
                             class="w-12 md:w-14 h-12 md:h-14 object-contain flex-shrink-0" placeholder="blur"
                             style="aspect-ratio: 62/53">
@@ -171,34 +185,54 @@
                 </div>
             @endforeach
         </div>
-    </div>
 
+        @if(count($secondRow) > 0)
+                @php 
+                        $secondCount = count($secondRow);
+                    $gridClass = $secondCount === 1 ? 'md:grid-cols-1 md:max-w-md md:mx-auto' : ($secondCount === 2 ? 'md:grid-cols-2 md:max-w-4xl md:mx-auto' : 'md:grid-cols-3');
+                @endphp
+            <div class="mt-8 grid grid-cols-1 {{ $gridClass }} gap-8 md:gap-12">
+                @foreach($secondRow as $item)
+                    <div class="test-detail-card pink-border transition-all duration-300 ease-in-out rounded-2xl border border-solid p-6 md:p-8 flex flex-col gap-6 h-full"
+                        style="aspect-ratio: 421/323; background: #FFFFFF4D;">
+                        <div class="flex flex-col gap-6 items-start justify-start">
+                            <img src="{{ $item['icon'] }}" alt="{{ $item['label'] }}"
+                                class="w-12 md:w-14 h-12 md:h-14 object-contain flex-shrink-0" placeholder="blur"
+                                style="aspect-ratio: 62/53">
+                            <x-heading-h4 style="color: var(--color-secondary-300);">
+                                {{ $item['label'] }}
+                                </x-heading-h4>
+                            </div>
+                        </div>
+                @endforeach
+                </div>
+        @endif
+    </div>
     <div class="flex flex-col gap-8 py-14 px-8" style="background: #EBF5FF">
-        <x-heading-h1 class="custom-color">
+            <x-heading-h1 class="custom-color">
             Accreditation
         </x-heading-h1>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 items-stretch justify-center gap-8 md:gap-12">
-            @foreach($accrediationCards as $item)
-                <!-- card -->
-                <div class="test-detail-card pink-border transition-all duration-300 ease-in-out rounded-2xl border border-solid p-6 md:p-8 flex flex-col gap-6 h-full"
-                    style="background: #ffffff4d;">
-                    <div class="flex flex-col gap-6 items-center justify-start gap-4">
-                        <img src="{{ $item['icon'] }}" alt="{{ $item['label'] }}"
-                            class="w-[40%] md:w-[30%] h-auto object-contain" placeholder="blur">
-                        <div class="flex flex-col text-center gap-3.5">
-                            <x-heading-h4 style="color: #006ACC">
-                                {{ $item['label'] }}
-                            </x-heading-h4>
-                            <p class="body-1" style="color: #006ACC">
-                                {{ $item['description'] }}
-                            </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 items-stretch justify-center gap-8 md:gap-12">
+        @foreach($accrediationCards as $item)
+            <!-- card -->
+            <div class="test-detail-card pink-border transition-all duration-300 ease-in-out rounded-2xl border border-solid p-6 md:p-8 flex flex-col gap-6 min-h-[342px] md:min-h-[402px]"
+                style="background: #ffffff4d;">
+                <div class="flex flex-col gap-6 items-center justify-start">
+                    <img src="{{ $item['icon'] }}" alt="{{ $item['label'] }}"
+                        class="w-[182px] md:w-[232px] h-auto object-contain" placeholder="blur">
+                    <div class="flex flex-col text-center gap-3.5">
+                        <x-heading-h4 style="color: #006ACC">
+                            {{ $item['label'] }}
+                        </x-heading-h4>
+                        <p class="body-1" style="color: #006ACC">
+                            {{ $item['description'] }}
+                        </p>
                         </div>
                     </div>
                 </div>
-            @endforeach
+        @endforeach
         </div>
-    </div>
+        </div>
 
-    <x-section-inquiry />
+        <x-section-inquiry />
 @endsection
