@@ -14,10 +14,10 @@
                 evaluations. Accurate results for confident project decisions.
             </x-subheading-1>
 
-            <x-button-accent
-                class="bg-secondary-500 hover:bg-secondary-600 text-white px-8 py-3 rounded-full font-semibold inline-block w-fit">
-                Send testing inquiry
-            </x-button-accent>
+            <a href="#inquiry"
+               class="btn-accent bg-secondary-500 hover:bg-secondary-600 text-white px-8 py-3 rounded-full font-semibold inline-block w-fit">
+               Send testing inquiry
+            </a>
         </div>
 
         <!-- Right Image -->

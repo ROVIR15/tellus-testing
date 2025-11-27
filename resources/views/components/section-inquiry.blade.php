@@ -1,5 +1,5 @@
 {{-- Inquiry Section Component --}}
-<x-section style="background: linear-gradient(180deg, #EBF5FF 0%, #E7DFEA 100%);">
+<x-section id="inquiry" style="background: linear-gradient(180deg, #EBF5FF 0%, #E7DFEA 100%);">
     <!-- Two Column Grid Layout -->
     <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-stretch min-h-[800px]">
 
