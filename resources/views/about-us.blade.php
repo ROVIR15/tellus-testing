@@ -212,7 +212,7 @@
             <x-heading-h1 class="custom-color">
             Accreditation
         </x-heading-h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 items-stretch justify-center gap-8 md:gap-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 items-stretch justify-center gap-6 md:gap-8">
         @foreach($accrediationCards as $item)
             <!-- card -->
             <div class="test-detail-card pink-border transition-all duration-300 ease-in-out rounded-2xl border border-solid p-6 md:p-8 flex flex-col gap-6 min-h-[342px] md:min-h-[402px]"
