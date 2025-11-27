@@ -1,7 +1,7 @@
 @props(['title', 'description', 'highlights' => [], 'background' => 'bg-secondary-100', 'image' => null])
 
 <!-- Service Highlight Card -->
-<div {{ $attributes->merge(['class' => ' rounded-2xl overflow-hidden shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300']) }} style="background: var(--color-secondary-100);">
+<div {{ $attributes->merge(['class' => ' rounded-2xl overflow-hidden transition-all duration-300']) }} style="background: var(--color-secondary-100);">
     <div class="flex flex-col gap-6 md:flex-row md:items-start md:gap-6">
         {{-- Text content (left on desktop) --}}
         <div class="flex-1">

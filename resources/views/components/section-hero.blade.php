@@ -21,7 +21,7 @@
         </div>
 
         <!-- Right Image -->
-        <div class="flex justify-center items-center pr-12">
+        <div class="flex justify-center items-center md:pr-12">
             <!-- Placeholder for lab scientist image -->
             <img src="{{ asset('images/hero-section.png') }}" alt="Lab Scientist"
                 class="w-full rounded-3xl shadow-2xl">

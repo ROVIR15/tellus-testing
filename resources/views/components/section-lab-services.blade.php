@@ -1,8 +1,8 @@
-<section class="section">
+<section class="section-no-right-padding">
     <div class="flex flex-col gap-8 mx-auto">
         <!-- Heading -->
         <div class="flex flex-col gap-4">
-            <x-heading-h1 style="color: var(--color-secondary-300);">
+            <x-heading-h1 class="custom-color">
                 Specialized in Soil, Water, and Geosynthetics
             </x-heading-h1>
 

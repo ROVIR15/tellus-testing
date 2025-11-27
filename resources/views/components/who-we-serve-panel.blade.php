@@ -12,7 +12,7 @@
 
     <div class="flex flex-col gap-8">
         <!-- Heading -->
-        <x-heading-display-3 class="text-center md:text-left" style="color: var(--color-primary-100);">
+        <x-heading-display-3 class="text-start md:text-left" style="color: var(--color-primary-100);">
             {{ $title }}
         </x-heading-display-3>
 

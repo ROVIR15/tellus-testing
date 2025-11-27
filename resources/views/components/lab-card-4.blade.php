@@ -12,7 +12,7 @@
     $standardsList = is_array($standards) ? $standards : [];
 @endphp
 
-<div class="relative lab-card-4 rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:scale-[1.02] transition-all duration-300 cursor-pointer"
+<div class="relative lab-card-4 rounded-xl overflow-hidden transition-all duration-300 cursor-pointer"
     style="color: var(--color-secondary-300);">
     <!-- Card Content -->
     <div class="relative flex flex-col gap-12" style="color: var(--color-secondary-100);">

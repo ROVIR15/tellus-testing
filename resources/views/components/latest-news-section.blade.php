@@ -106,7 +106,7 @@
                             color: var(--color-primary-300);
                             background-color: var(--color-primary-100);
                         ">
-                <span>Show More</span>
+                <span href="/news" class="cursor-pointer">Show More</span>
             </button>
             @endif
         </div>

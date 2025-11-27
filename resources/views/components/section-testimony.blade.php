@@ -62,9 +62,10 @@
 <section class="py-16 md:py-20">
     <div class="px-4 md:px-16">
         <div class="text-center mb-10">
-            <h2 class="display-3"
+            <p class="heading-1"
                 style="background: linear-gradient(180deg, #2D6BB4 0%, #2F68B1 28%, #355FA7 49%, #415097 68%, #513B81 85%, #652266 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
-                Real Feedback. Real Results.</h2>
+                Real Feedback. Real Results.
+            </p>
         </div>
 
         @if(!$isEmpty)
