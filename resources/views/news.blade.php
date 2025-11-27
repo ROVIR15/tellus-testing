@@ -11,7 +11,7 @@
         $sidebarItems = $firstPageItems->slice(1, 4);
     @endphp
 
-    <div class="flex flex-col gap-8 md:gap-18 relative">
+    <div class="flex flex-col gap-8 md:gap-18 relative mb-10 md:mb-16">
         <img src="{{ asset('images/decorative-about-us/circle-center.svg') }}" alt="Decorative element"
             class="absolute w-full -z-10">
 
@@ -66,17 +66,47 @@
                 data-next="{{ $news->nextPageUrl() }}">
                 @include('news._items', ['news' => $news])
             </div>
-            <div id="load-more-trigger" class="h-8"></div>
+            <button id="load-more-btn" class="px-8 py-3 rounded-full transition-all duration-300 font-semibold" style="
+                                            color: var(--color-primary-300);
+                                            background-color: var(--color-primary-100);
+                                        ">Show More</button>
             <script>
                 (function () {
                     const grid = document.getElementById('news-grid');
-                    const trigger = document.getElementById('load-more-trigger');
+                    const btn = document.getElementById('load-more-btn');
+                    const BATCH_SIZE = 8;
                     let loading = false;
-                    const observer = new IntersectionObserver(async (entries) => {
-                        const entry = entries[0];
-                        if (!entry.isIntersecting || loading) return;
+
+                    function items() {
+                        return Array.from(grid.children);
+                    }
+
+                    function hideBeyondInitial() {
+                        const els = items();
+                        for (let i = BATCH_SIZE; i < els.length; i++) {
+                            els[i].classList.add('hidden');
+                        }
+                        if (els.length <= BATCH_SIZE && !grid.dataset.next) {
+                            btn.classList.add('hidden');
+                        }
+                    }
+
+                    function revealNextBatch() {
+                        const els = items();
+                        let count = 0;
+                        for (let i = 0; i < els.length; i++) {
+                            if (els[i].classList.contains('hidden')) {
+                                els[i].classList.remove('hidden');
+                                count++;
+                                if (count === BATCH_SIZE) break;
+                            }
+                        }
+                        return count;
+                    }
+
+                    async function fetchNextPage() {
                         const next = grid.dataset.next;
-                        if (!next) return;
+                        if (!next || loading) return 0;
                         loading = true;
                         try {
                             const res = await fetch(next, { headers: { 'X-Requested-With': 'XMLHttpRequest' } });
@@ -84,21 +114,41 @@
                             if (data.html) {
                                 const wrapper = document.createElement('div');
                                 wrapper.innerHTML = data.html;
+                                let appended = 0;
                                 while (wrapper.firstChild) {
-                                    grid.appendChild(wrapper.firstChild);
+                                    const node = wrapper.firstChild;
+                                    wrapper.removeChild(node);
+                                    node.classList.add('hidden');
+                                    grid.appendChild(node);
+                                    appended++;
                                 }
                                 grid.dataset.next = data.next_page_url || '';
+                                return appended;
                             } else {
                                 grid.dataset.next = '';
+                                return 0;
                             }
                         } catch (e) {
-                            console.error(e);
                             grid.dataset.next = '';
+                            return 0;
                         } finally {
                             loading = false;
                         }
-                    }, { rootMargin: '200px' });
-                    observer.observe(trigger);
+                    }
+
+                    btn.addEventListener('click', async () => {
+                        const revealed = revealNextBatch();
+                        if (revealed === BATCH_SIZE) return;
+                        const appended = await fetchNextPage();
+                        if (appended === 0) {
+                            const remainingRevealed = revealNextBatch();
+                            if (remainingRevealed === 0) btn.classList.add('hidden');
+                        } else {
+                            revealNextBatch();
+                        }
+                    });
+
+                    hideBeyondInitial();
                 })();
             </script>
         </div>
