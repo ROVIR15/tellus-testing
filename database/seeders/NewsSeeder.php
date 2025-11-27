@@ -60,3 +60,4 @@ class NewsSeeder extends Seeder
         $makeArticle('Today', $todayStart, $todayEnd, 5);
     }
 }
+
