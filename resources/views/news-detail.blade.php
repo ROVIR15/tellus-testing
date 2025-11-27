@@ -10,11 +10,11 @@
         $publishedAt = $news->published_at ? $news->published_at->format('d F Y \\a\\t h:i A') : $news->created_at->format('d F Y \\a\\t h:i A');
     @endphp
 
-    <div class="flex flex-col gap-10">
+    <div class="flex flex-col gap-4 md:gap-10 mb-16 md:mb-8 px-4 lg:px-8">
         <div class="flex flex-col pt-38 gap-4 sm:px-6 lg:px-8">
             <!-- Hero / Featured -->
             <img src="{{ $imageUrl }}" alt="{{ $news->title }}"
-                class="w-full min-h-[300px] max-h-[1321px] sm:max-h-[424px] object-cover rounded-lg" style="background-color: bisque;">
+                class="w-full min-h-[300px] h-full rounded-lg" style="background-color: bisque;">
 
             <!-- Title & Meta -->
             <span class="display-3 text-inherit" style="color: var(--color-secondary-300);">{{ $news->title }}</span>
