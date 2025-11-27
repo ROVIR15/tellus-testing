@@ -71,7 +71,7 @@
         ->where('is_published', true)
         ->where(function ($q) {
             $q->whereNull('published_at')
-              ->orWhere('published_at', '<=', now());
+                ->orWhere('published_at', '<=', now());
         })
         ->orderByDesc('published_at')
         ->orderByDesc('created_at')
@@ -101,13 +101,13 @@
         <div class="flex flex-row items-center justify-between">
             <h2 class="heading-1 mb-4"><span class="custom-color">{{ $title }}</span></h2>
             @if ($activateShowMore)
-            <button type="button"
-                class="px-8 py-3 rounded-full transition-all duration-300 font-semibold" style="
-                            color: var(--color-primary-300);
-                            background-color: var(--color-primary-100);
-                        ">
-                <span href="/news" class="cursor-pointer">Show More</span>
-            </button>
+                <button type="button" href="/news" class="px-8 py-3 rounded-full transition-all duration-300 font-semibold"
+                    style="
+                                color: var(--color-primary-300);
+                                background-color: var(--color-primary-100);
+                            ">
+                    <span class="cursor-pointer">Show More</span>
+                </button>
             @endif
         </div>
 
