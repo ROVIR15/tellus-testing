@@ -39,13 +39,13 @@
                 [
                     'id' => 4,
                     'title' => '4 Engineering',
-                    'image' => 'images/inside-lab/4.png',
+                    'image' => 'images/inside-lab/4.jpg',
                     'description' => 'Expert analysis and quality control'
                 ],
                 [
                     'id' => 5,
                     'title' => '5 Engineering',
-                    'image' => 'images/inside-lab/5.png',
+                    'image' => 'images/inside-lab/5.jpg',
                     'description' => 'Expert analysis and quality control'
                 ],
             ];

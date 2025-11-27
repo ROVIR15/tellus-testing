@@ -7,9 +7,12 @@
 
   <!-- Overlay Gradient -->
   <div class="absolute inset-0 z-10"
-    style="backdrop-filter: blur(1px); background: linear-gradient(180deg, rgba(80, 80, 80, 0) 30%, #505050 100%);">
+    style="
+      background: linear-gradient(180deg, rgba(80, 80, 80, 0) 49.07%, #505050 100%);
+      backdrop-filter: blur(0);
+    ">
     <!-- Bottom Title -->
-    <div class="absolute bottom-0 left-0 right-0 p-3 md:p-4">
+    <div class="absolute bottom-0 left-0 right-0 p-6">
       <h3 class="heading-6 text-white mb-0">{{ $title ?? 'Test Name' }}</h3>
     </div>
   </div>
