@@ -28,12 +28,10 @@
                 </div>
 
                 <!-- Inquiry Form -->
-                <form method="POST" action="#" class="flex-1 flex flex-col space-y-4">
+                <form method="POST" action="{{ route('inquiries.store') }}" class="flex-1 flex flex-col space-y-4" id="inquiry-mini-form">
                     @csrf
 
-                    <!-- Your Name -->
-                    <x-form-input label="Your Name" placeholder="Enter your full name" name="name" size="medium"
-                        required />
+                    <x-form-input label="Your Name" placeholder="Enter your full name" name="name" size="medium" required />
 
                     <!-- Your Email -->
                     <x-form-input label="Your Email" placeholder="your@email.com" name="email" type="email"
@@ -43,13 +41,18 @@
                     <x-form-input label="Company Name" placeholder="Enter your company name" name="company_name"
                         size="medium" required />
 
-                    <!-- Company Website -->
-                    <x-form-input label="Company Website" placeholder="https://example.com" name="company_website"
-                        type="url" size="medium" />
+                    <x-form-input label="Company Website" placeholder="https://example.com" name="company_website" type="url" size="medium" />
 
-                    <!-- Tell Us Your Project -->
-                    <x-form-input label="Tell Us Your Project" placeholder="Describe your project and requirements"
-                        name="project_description" multirow="true" rows="4" size="medium" required />
+                    <x-form-input label="Tell Us Your Project" placeholder="Describe your project and requirements" name="message" multirow="true" rows="4" size="medium" required />
+
+                    <input type="hidden" name="first_name" id="mini_first_name" value="" />
+                    <input type="hidden" name="last_name" id="mini_last_name" value="" />
+                    <input type="hidden" name="company_country" value="N/A" />
+                    <input type="hidden" name="company_city" value="N/A" />
+                    <input type="hidden" name="company_address" value="N/A" />
+                    <input type="hidden" name="zip" value="N/A" />
+                    <input type="hidden" name="phone_country_code" value="+62" />
+                    <input type="hidden" name="phone_number" value="N/A" />
 
                     <!-- Submit Button -->
                     <div class="pt-4 mt-auto">
@@ -58,6 +61,27 @@
                         </x-button>
                     </div>
                 </form>
+                @if(session('success'))
+                    <div class="mt-4 p-3 rounded-lg" style="background-color: var(--color-primary-100); color: var(--color-primary-300);">
+                        {{ session('success') }}
+                    </div>
+                @endif
+                <script>
+                  document.addEventListener('DOMContentLoaded', function () {
+                    var form = document.getElementById('inquiry-mini-form');
+                    if (!form) return;
+                    form.addEventListener('submit', function () {
+                      var nameInput = form.querySelector('input[name="name"]');
+                      var first = document.getElementById('mini_first_name');
+                      var last = document.getElementById('mini_last_name');
+                      var name = (nameInput && nameInput.value || '').trim();
+                      if (name.length === 0) { first.value = ''; last.value = ''; return; }
+                      var parts = name.split(/\s+/);
+                      first.value = parts.shift();
+                      last.value = parts.length ? parts.join(' ') : '';
+                    });
+                  });
+                </script>
             </div>
         </div>
     </div>

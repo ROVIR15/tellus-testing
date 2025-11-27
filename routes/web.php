@@ -23,6 +23,9 @@ Route::get('/contact-us', function () {
 
 // Inquiry submission
 Route::post('/inquiries', [InquiryController::class, 'store'])->name('inquiries.store');
+Route::get('/inquiries', function () {
+    return redirect()->route('contact-us');
+});
 
 // FAQ
 Route::get('/faq', [FaqController::class, 'index'])->name('faq');

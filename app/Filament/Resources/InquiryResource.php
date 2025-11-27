@@ -13,6 +13,7 @@ use Filament\Schemas\Schema;
 use Filament\Tables; 
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Filament\Actions;
 use Illuminate\Support\Collection;
 use Symfony\Component\HttpFoundation\StreamedResponse;
 
@@ -68,9 +69,9 @@ class InquiryResource extends Resource
                 TextColumn::make('created_at')->dateTime()->sortable(),
             ])
             ->recordActions([
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
-                Tables\Actions\Action::make('sendEmail')
+                Actions\EditAction::make(),
+                Actions\DeleteAction::make(),
+                Actions\Action::make('sendEmail')
                     ->label('Send Email')
                     ->icon('heroicon-o-paper-airplane')
                     ->visible(fn (Inquiry $record) => (bool) env('CONTACT_EMAIL_ENABLED', false))
@@ -79,7 +80,7 @@ class InquiryResource extends Resource
                     }),
             ])
             ->headerActions([
-                Tables\Actions\Action::make('exportAllCsv')
+                Actions\Action::make('exportAllCsv')
                     ->label('Export All CSV')
                     ->icon('heroicon-o-arrow-down-tray')
                     ->action(function () {
@@ -117,8 +118,8 @@ class InquiryResource extends Resource
                     }),
             ])
             ->groupedBulkActions([
-                Tables\Actions\DeleteBulkAction::make(),
-                Tables\Actions\BulkAction::make('exportSelectedCsv')
+                Actions\DeleteBulkAction::make(),
+                Actions\BulkAction::make('exportSelectedCsv')
                     ->label('Export Selected CSV')
                     ->icon('heroicon-o-arrow-down-tray')
                     ->action(function (Collection $records) {
