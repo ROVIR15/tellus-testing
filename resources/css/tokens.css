@@ -533,6 +533,22 @@
     }
 }
 
+.section-no-right-padding {
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 54px;
+    padding-right: 54px;
+
+    @media screen and (max-width: 640px) {
+        /* for tablets and above */
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: 16px;
+        padding-right: 0;
+    }
+}
+
 .section-lg {
     padding-top: 8rem; /* py-16 */
     padding-bottom: 8rem;
