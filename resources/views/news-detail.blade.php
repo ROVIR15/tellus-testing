@@ -13,23 +13,19 @@
     <img src="{{ asset('images/decorative-about-us/circle-center.svg') }}" alt="Decorative element"
         class="absolute w-full -z-10">
     <div class="flex flex-col gap-4 pt-40 md:gap-10 mb-16 md:mb-8 px-4 lg:px-8">
-        <div class="flex flex-col gap-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-4 sm:px-6 lg:px-8 text-center">
+            <!-- Title & Meta -->
+            <span class="display-3 text-inherit" style="color: var(--color-secondary-300);">{{ $news->title }}</span>
+            <span class="heading-4" style="color: var(--color-secondary-300);">Published on
+                {{ $publishedAt }}</span>
             <!-- Hero / Featured -->
             <img src="{{ $imageUrl }}" alt="{{ $news->title }}" class="w-full min-h-[300px] h-full rounded-lg"
                 style="background-color: bisque;">
+        </div>
 
-            <!-- Title & Meta -->
-            <span class="display-3 text-inherit" style="color: var(--color-secondary-300);">{{ $news->title }}</span>
-            <div class="mt-3 flex flex-wrap items-center gap-4 body-3">
-                <div class="flex items-center gap-1.5">
-                    <span class="heading-4" style="color: var(--color-secondary-300);">Published on
-                        {{ $publishedAt }}</span>
-                </div>
-            </div>
-            <!-- Article Body -->
-            <div class="prose max-w-none">
-                {!! $news->content !!}
-            </div>
+        <!-- Article Body -->
+        <div class="prose max-w-none md:max-w-[920px] text-left mx-auto">
+            {!! $news->content !!}
         </div>
 
         <div class="flex flex-col sm:px-6 lg:px-8">
