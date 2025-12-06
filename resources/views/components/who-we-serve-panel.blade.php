@@ -2,7 +2,7 @@
 
 <!-- Who We Serve Left Panel -->
 <div {{ $attributes->merge(['class' => 'shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col gap-8 justify-start p-8 rounded-2xl']) }}
-    style="background: radial-gradient(3022.21% 291.3% at 31.82% 0%, #76B2E8 0%, #006ACC 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */; height: -webkit-fill-available;">
+    style="background: radial-gradient(3072.21% 55% at 100% 0%, #76B2E8 0%, #006ACC 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;height: -webkit-fill-available;">
     <!-- Icon Circle -->
     <div class="flex justify-start">
         <div class="bg-primary-300 rounded-full flex items-center justify-center" style="width: 220px;">

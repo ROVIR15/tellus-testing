@@ -88,8 +88,8 @@
         <img src="{{ asset('images/decorative-about-us/union-1.svg') }}" alt="Decorative element"
             class="absolute -top-10 -right-0 w-[80%] md:w-[60%] h-auto -z-10">
         <div class="section-top-padding px-8 pb-20">
-            <div class="grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-12">
-                <div class="flex flex-col gap-6">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-12">
+                <div class="flex flex-col gap-6 md:w-3/8">
                     <x-heading-display-3 style="color: var(--color-secondary-300)">
                         About Us
                     </x-heading-display-3>
@@ -100,7 +100,7 @@
                     </x-subheading-1>
                 </div>
 
-                <div>
+                <div class="md:w-5/8">
                     <img src="{{ asset('images/about-us.png') }}" alt="About Us"
                         class="w-full h-auto max-w-full object-contain" placeholder="blur">
                 </div>

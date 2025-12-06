@@ -53,7 +53,6 @@
                 gap: 8px;
                 color: var(--color-primary-300);
                 background-color: var(--color-primary-100);
-                box-shadow: 2px -2px 4px 0px #FFFFFF inset;
             "
         >
             <span x-text="isExpanded ? '{{ $hideButtonText }}' : '{{ $buttonText }}'"></span>

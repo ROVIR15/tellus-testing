@@ -18,13 +18,23 @@
         <x-section-top-padding>
             <div class="flex flex-col gap-8 px-4 sm:px-6 lg:px-8">
                 <!-- Page Intro -->
-                <x-heading-display-3 class="text-2xl sm:text-3xl font-extrabold"
-                    style="color: var(--color-secondary-300);">Stay
-                    Informed with the Latest from <br> Tellus
-                    Testing</x-heading-display-3>
-                <x-heading-h4 class="mt-2" style="color: var(--color-secondary-300);">Explore our latest updates, technical
-                    articles, and industry insights—all designed to keep you informed about the evolving world of soil,
-                    water, and geotechnical testing.</x-heading-h4>
+
+                <div class="flex flex-row gap-8">
+                    <div class="w-full md:w-5/8">
+                        <x-heading-display-3 class="text-2xl sm:text-3xl font-extrabold"
+                            style="color: var(--color-secondary-300);">Stay
+                            Informed with the Latest from <br> Tellus
+                            Testing</x-heading-display-3>
+                        <x-heading-h4 class="mt-2" style="color: var(--color-secondary-300);">Explore our latest updates,
+                            technical
+                            articles, and industry insights—all designed to keep you informed about the evolving world of
+                            soil,
+                            water, and geotechnical testing.</x-heading-h4>
+                    </div>
+
+                    <div class="md:w-3/8">
+                    </div>
+                </div>
 
 
                 <!-- Hero row: left featured, right headlines -->
@@ -67,9 +77,9 @@
                 @include('news._items', ['news' => $news])
             </div>
             <button id="load-more-btn" class="px-8 py-3 rounded-full transition-all duration-300 font-semibold" style="
-                                            color: var(--color-primary-300);
-                                            background-color: var(--color-primary-100);
-                                        ">Show More</button>
+                                                    color: var(--color-primary-300);
+                                                    background-color: var(--color-primary-100);
+                                                ">Show More News</button>
             <script>
                 (function () {
                     const grid = document.getElementById('news-grid');

@@ -50,7 +50,7 @@
                 return this.filteredItems.length === 0;
             }
         }" x-provide="['openedId']">
-        <div class="text-left mb-16 flex flex-col gap-8">
+        <div class="text-left mb-16 flex flex-col gap-8 md:w-[50%]">
             <x-heading-display-3 style="color: var(--color-secondary-300);">
                 Frequently Asked Questions
             </x-heading-display-3>
@@ -64,7 +64,7 @@
                 efficient submission.
             </x-body-1>
 
-            <div class="w-[50%]">
+            <div class="w-full">
                 <x-form-input label="" placeholder="What are you looking for?" name="search" icon-position="left"
                     x-model="searchQuery">
                     <x-slot name="icon">

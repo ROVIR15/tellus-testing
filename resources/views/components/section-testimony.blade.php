@@ -60,7 +60,7 @@
 @endphp
 
 <section class="py-16 md:py-20">
-    <div class="px-4 md:px-16">
+    <div>
         <div class="text-center mb-10">
             <p class="heading-1"
                 style="background: linear-gradient(180deg, #2D6BB4 0%, #2F68B1 28%, #355FA7 49%, #415097 68%, #513B81 85%, #652266 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">

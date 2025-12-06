@@ -21,11 +21,11 @@
             <x-heading-display-3>
                 "Trusted by engineers, builders, and decision-makers across
                 <span style="background: linear-gradient(180deg, #2D6BB4 0%, #2F68B1 28%, #355FA7 49%, #415097 68%, #513B81 85%, #652266 100%);
-                                                -webkit-background-clip: text;
-                                                background-clip: text;
-                                                color: transparent;">continents
-                    infrastructure</span>
-                landscape."
+                                                        -webkit-background-clip: text;
+                                                        background-clip: text;
+                                                        color: transparent;">continents
+                    infrastructure landscape</span>
+                ."
             </x-heading-display-3>
         </div>
     </x-section>
@@ -51,8 +51,8 @@
         @include('components.faq-section')
     </div>
 
-    <x-section class="relative">
+    <div class="relative md:pt-40 py-10 px-4 md:px-12">
         <x-latest-news-section :max-news-items="3" />
+    </div>
 
-    </x-section>
 @endsection

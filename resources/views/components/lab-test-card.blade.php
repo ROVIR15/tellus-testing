@@ -1,6 +1,6 @@
 <!-- Lab Test Card Component -->
 <div
-  class="latest-news-card-ratio-304x406 w-full m-auto rounded-2xl overflow-hidden relative flex flex-col justify-between text-white">
+  class="latest-news-card-ratio-304x406 w-full rounded-2xl overflow-hidden relative flex flex-col justify-between text-white">
   <!-- Image Background -->
   <img src="{{ $image ?? asset('images/lab-test-default.jpg') }}" alt="{{ $title ?? 'Lab Test' }}"
     class="w-full h-full object-cover">

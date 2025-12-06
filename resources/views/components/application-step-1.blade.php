@@ -1,9 +1,7 @@
 <div class="mb-8">
     <div class="flex items-center gap-6">
-        <img src="{{ asset('images/application-procedures/1.png') }}" alt="Envelope" class="w-[91px] h-[91px] md:w-[136px] md:h-[136px]" />
-        <span class="heading-h7" style="font-weight: 700;">Please prepare your material samples
-            according to the required
-            size and quantity:</span>
+        <img src="{{ asset('images/application-procedures/2.png') }}" alt="Envelope" class="w-[91px] h-[91px] md:w-[136px] md:h-[136px]" />
+        <span class="heading-h7" style="font-weight: 700;">Please prepare your material samples according to the required size and quantity:</span>
     </div>
 
     <div class="bg-white rounded-2xl border border-neutral-200 p-6 mb-6">

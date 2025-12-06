@@ -71,7 +71,7 @@
     <div class="flex flex-col gap-2">
         <!-- Title -->
         @if($slot->isNotEmpty())
-            <h3 class="subheading-3 md:text-2xl font-bold text-neutral-1000 dark:text-white line-clamp-2 leading-tight">
+            <h3 class="subheading-3 md:text-2xl font-bold text-neutral-1000 line-clamp-2 leading-tight">
                 {{ $slot }}
             </h3>
         @endif

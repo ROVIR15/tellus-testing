@@ -810,9 +810,10 @@
 
 .latest-news-card-ratio-304x406,
 .news-card-3 {
-    aspect-ratio: 304 / 406; /* maintain proportion */
+    /* aspect-ratio: 304 / 406; maintain proportion */
+    max-height: 506px;
     width: 100%; /* fluid on mobile */
-    max-width: 304px; /* cap size so it doesn’t grow beyond design width */
+    /* max-width: 304px; cap size so it doesn’t grow beyond design width */
     flex: 0 0 auto;
     flex-direction: column;
     gap: 16px;
@@ -821,7 +822,7 @@
 @media (min-width: 768px) {
     .latest-news-card-ratio-304x406,
     .news-card-3 {
-        width: 304px; /* fixed width on md+ screens for consistent grid */
+        width: 100%; /* fixed width on md+ screens for consistent grid */
     }
 }
 
