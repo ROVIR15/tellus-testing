@@ -757,7 +757,6 @@
     background-clip: padding-box, border-box;
     box-shadow: 2px 4px 4px 0px #a7a7a740;
     backdrop-filter: blur(10px);
-    max-height: 295px;
 }
 
 .pink-border {
