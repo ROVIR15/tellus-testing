@@ -1,7 +1,7 @@
 @php
     $color = "color: var(--color-secondary-300);";
 @endphp
-<div class="flex flex-col gap-12 lg:gap-24 px-4 md:px-16">
+<div class="flex flex-col gap-12 lg:gap-24 px-8 md:px-16">
     <!-- Heading -->
     <div class="flex flex-col lg:flex-row gap-8 lg:gap-18 items-center">
         <div class="flex flex-col w-full lg:w-1/2 gap-8 md:gap-8">
