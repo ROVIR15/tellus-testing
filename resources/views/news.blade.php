@@ -42,7 +42,7 @@
                     <div class="w-full md:w-5/8 h-[472px]">
                         @if($featuredItem)
                             @php
-                                $featuredImage = $featuredItem->image_path ? asset('storage/' . $featuredItem->image_path) : asset('images/other-news/3.jpg');
+                                $featuredImage = $featuredItem->thumbnail;
                                 $featuredTimestamp = optional($featuredItem->published_at)->timestamp ?? $featuredItem->created_at->timestamp;
                             @endphp
                             <x-news-card-1 :images="[$featuredImage]" :status="'Featured'" :created_at="$featuredTimestamp"
@@ -55,7 +55,7 @@
                     <div class="h-full md:w-3/8 flex flex-col gap-4 md:gap-8">
                         @foreach($sidebarItems as $item)
                             @php
-                                $sbImage = $item->image_path ? asset('storage/' . $item->image_path) : asset('images/other-news/3.jpg');
+                                $sbImage = $item->thumbnail;
                                 $sbTimestamp = optional($item->published_at)->timestamp ?? $item->created_at->timestamp;
                             @endphp
                             <x-news-card-2 :images="[$sbImage]" :status="''" :created_at="$sbTimestamp"

@@ -236,11 +236,11 @@
             @foreach($firstRow as $item)
                 <!-- card -->
                 <div class="test-detail-card pink-border transition-all duration-300 ease-in-out rounded-2xl border border-solid p-6 md:p-8 flex flex-col gap-6 h-[218px]"
-                    style="aspect-ratio: 421/323; background: #FFFFFF4D;">
+                    style="aspect-ratio: 421/220; background: #FFFFFF4D;">
                     <div class="flex flex-col gap-6 justify-between items-end h-full">
-                        <x-heading-h4 style="color: var(--color-secondary-300);">
+                        <span class="heading-6" style="color: var(--color-secondary-300);">
                             {{ $item['label'] }}
-                        </x-heading-h4>
+                        </span>
 
                         <img src="{{ $item['icon'] }}" alt="{{ $item['label'] }}"
                             class="w-12 md:w-14 h-12 md:h-14 object-contain flex-shrink-0" placeholder="blur"
@@ -258,11 +258,11 @@
             <div class="mt-8 grid grid-cols-1 {{ $gridClass }} gap-8 md:gap-12">
                 @foreach($secondRow as $item)
                     <div class="test-detail-card pink-border transition-all duration-300 ease-in-out rounded-2xl border border-solid p-6 md:p-8 flex flex-col gap-6 h-full"
-                        style="aspect-ratio: 421/323; background: #FFFFFF4D;">
+                        style="aspect-ratio: 421/220; background: #FFFFFF4D;">
                         <div class="flex flex-col gap-6 justify-between items-end h-full">
-                            <x-heading-h4 style="color: var(--color-secondary-300);">
+                            <span class="heading-6" style="color: var(--color-secondary-300);">
                                 {{ $item['label'] }}
-                            </x-heading-h4>
+                            </span>
 
                             <img src="{{ $item['icon'] }}" alt="{{ $item['label'] }}"
                                 class="w-12 md:w-14 h-12 md:h-14 object-contain flex-shrink-0" placeholder="blur"

@@ -79,6 +79,8 @@ class NewsResource extends Resource
                     ]),
                 FileUpload::make('image_path')
                     ->image()
+                    ->multiple()
+                    ->reorderable()
                     ->directory('news')
                     ->disk('public')
                     ->imageEditor()
@@ -100,7 +102,9 @@ class NewsResource extends Resource
                 ImageColumn::make('image_path')
                     ->label('Image')
                     ->disk('public')
-                    ->square(),
+                    ->square()
+                    ->stacked()
+                    ->limit(3),
                 TextColumn::make('title')
                     ->searchable()
                     ->sortable()

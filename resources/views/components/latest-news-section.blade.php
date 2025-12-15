@@ -81,7 +81,7 @@
 
     // Map to shape expected by card component
     $newsItems = $realItems->map(function ($item) {
-        $image = $item->image_path ? asset('storage/' . $item->image_path) : asset('images/other-news/1.jpg');
+        $image = $item->thumbnail;
         return [
             'images' => [$image],
             'status' => '',
