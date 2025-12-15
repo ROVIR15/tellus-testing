@@ -27,7 +27,7 @@
 
 <button 
     {{ $mergedClasses }}
-    style="border-radius: 2000px; background-color: linear-gradient(352.51deg, #660A66 14.94%, #CC14CC 131.28%);
+    style="border-radius: 28px; background-color: linear-gradient(352.51deg, #660A66 14.94%, #CC14CC 131.28%);
 ;"
     @if($disabled) disabled @endif
 >

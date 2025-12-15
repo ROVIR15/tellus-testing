@@ -24,7 +24,7 @@
 
     <!-- Description -->
     @if($description ?? false)
-        <p class="body-2 text-neutral-800">{{ $description }}</p>
+        <p class="body-2" :style="isExpanded ? 'color: #333333; font-weight: 500' : 'color: #333333;'">{{ $description }}</p>
     @endif
 
     <!-- Details Section - Hidden by default -->
@@ -36,7 +36,7 @@
         x-transition:leave="transition ease-in-out duration-300"
     >
         @if($details ?? false)
-            <div class="body-3 text-neutral-700 leading-relaxed">
+            <div class="body-3 leading-relaxed">
                 {{ $details }}
             </div>
         @endif

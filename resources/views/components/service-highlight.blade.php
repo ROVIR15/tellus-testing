@@ -29,7 +29,7 @@
 
         {{-- Image / visual area (left on desktop) --}}
         @if($image)
-            <div class="w-full md:w-4/7 rounded-lg overflow-hidden mb-4 md:mb-0">
+            <div class="w-full md:w-4/7 rounded-lg overflow-hidden md:mb-0">
                 <img src="{{ asset('images/truck-pic.png') }}" alt="{{ $title }}" class="w-full h-full object-cover">
             </div>
         @endif

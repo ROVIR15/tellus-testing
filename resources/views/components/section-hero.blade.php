@@ -24,7 +24,7 @@
         <div class="flex justify-center items-center md:pr-12">
             <!-- Placeholder for lab scientist image -->
             <img src="{{ asset('images/hero-section.png') }}" alt="Lab Scientist"
-                class="w-full rounded-3xl">
+                class="w-full" style="border-radius: 25px">
         </div>
     </div>
 </x-hero>

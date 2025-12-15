@@ -186,7 +186,7 @@
                 Why Choose Tellus Testing?
             </x-heading-h1>
 
-    <div class="grid grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         @foreach($why_choose_us as $item)
             <div class="relative flex flex-col items-start gap-4 h-[210px] w-full text-white overflow-hidden rounded-3xl p-6"
                 style="background-color: #76B2E8;">
@@ -244,7 +244,7 @@
             <x-heading-h1 class="custom-color">
             Accreditation
         </x-heading-h1>
-    <div class="grid grid-cols-4 gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
         @foreach ($accreditations as $item)
             <div class="relative text-white h-[317px] rounded-2xl p-6" style="
                     ratio-scale: 1/1;

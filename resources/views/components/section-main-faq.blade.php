@@ -12,7 +12,7 @@
 @endphp
 
 <!-- Experimentation Section -->
-<div class="section-top-padding px-4 md:px-16 mb-32 sm:pt-40">
+<div class="section-top-padding px-8 md:px-16 mb-32 sm:pt-40">
     <div class="w-full" style="color: var(--color-secondary-300);" x-data="{
             showAll: false,
             openedId: null,
@@ -92,7 +92,7 @@
                             <div class="flex items-center justify-between gap-6">
                                 <!-- Label -->
                                 <x-subheading-1 class="flex-1"
-                                    style="font-weight: 700; font-size: 18px; line-height: 125%;"
+                                    style="font-weight: 700; font-size: 18px; line-height: 125%; color: #333333;"
                                     x-text="item.label"></x-subheading-1>
 
                                 <!-- Toggle Icon -->

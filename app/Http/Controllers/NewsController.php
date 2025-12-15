@@ -77,7 +77,7 @@ class NewsController extends Controller
             });
         }
 
-        $related = $relatedQuery->take(4)->get();
+        $related = $relatedQuery->take(5)->get();
 
         // Fallback to latest if none found
         if ($related->isEmpty()) {
@@ -86,7 +86,7 @@ class NewsController extends Controller
                 ->whereKeyNot($news->getKey())
                 ->orderByDesc('published_at')
                 ->orderByDesc('created_at')
-                ->take(4)
+                ->take(5)
                 ->get();
         }
 

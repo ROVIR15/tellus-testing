@@ -4,7 +4,7 @@
 <div class="flex flex-col gap-12 lg:gap-24 px-4 md:px-16">
     <!-- Heading -->
     <div class="flex flex-col lg:flex-row gap-8 lg:gap-18 items-center">
-        <div class="flex flex-col w-full lg:w-1/2 gap-6 lg:gap-8">
+        <div class="flex flex-col w-full lg:w-1/2 gap-8 md:gap-8">
             <x-heading-display-3 :style="$color">
                 Application Procedure
             </x-heading-display-3>
@@ -22,7 +22,7 @@
             </x-body-1>
         </div>
         
-        <div class="w-full lg:w-1/2 min-h-[600px] lg:min-h-[700px] flex items-start">
+        <div class="w-full lg:w-1/2 lg:min-h-[700px] flex items-start">
             <x-application-submission-wizard />
         </div>
     </div>

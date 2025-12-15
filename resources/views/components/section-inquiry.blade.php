@@ -6,7 +6,7 @@
         <!-- Left Column: Image (60% width on desktop) -->
         <div class="lg:col-span-3 hidden lg:flex lg:items-center lg:justify-center">
             <img src="{{ asset('/images/inquiry-image.png') }}" alt="Laboratory Testing"
-                class="w-full h-auto object-contain rounded-lg" />
+                class="w-full h-auto object-contain rounded-2xl" />
         </div>
 
         <!-- Right Column: Form (40% width on desktop) -->

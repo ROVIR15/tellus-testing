@@ -6,6 +6,8 @@
     $subtitle = $attributes->get('subtitle', 'Stay updated with our latest news and insights');
     $activateShowMore = $attributes->get('activate-show-more', true);
 
+    $buttonLabel = $attributes->get('button-label', 'Read More');
+
     // In a real application, you would fetch news from a database
     // For this example, we'll create sample news items
     $newsItems = [
@@ -106,7 +108,7 @@
                                     color: var(--color-primary-300);
                                     background-color: var(--color-primary-100);
                                 ">
-                    <span class="cursor-pointer">Show More</span>
+                    <span class="cursor-pointer">{{ $buttonLabel }}</span>
                 </a>
             @endif
         </div>

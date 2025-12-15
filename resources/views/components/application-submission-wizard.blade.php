@@ -13,6 +13,15 @@
             <span x-text="step < total ? 'Next' : 'Previous'"></span>
             <span aria-hidden="true" x-text="step < total ? '→' : '←'"></span>
         </button>
+
+        <!-- mobile navigation button -->
+        <!-- <button type="button" @click="step < total ? next() : prev()"
+            class="application-navigation-btn inline-flex items-center gap-2 px-4 py-2 rounded-full shadow-sm subheading-3"
+            style="background: var(--Primary-100, #EBF5FF);color: var(--color-primary-300);"
+            :aria-label="step < total ? 'Go to next step' : 'Go to previous step'">
+            <span x-text="step < total ? 'Next' : ''"></span>
+            <span aria-hidden="true" x-text="step < total ? '→' : '←'"></span>
+        </button> -->
     </div>
 
     <div class="rounded-3xl shadow-lg p-6 md:p-8 border border-neutral-200"

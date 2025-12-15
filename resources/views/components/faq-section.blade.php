@@ -11,7 +11,7 @@
 @endphp
 
 <!-- Experimentation Section -->
-<x-section class="bg-gradient-to-br from-primary-100 to-neutral-100">
+<x-section>
     <div>
         <div class="text-center mb-16">
             <x-heading-h1 style="

@@ -5,7 +5,7 @@
             style="background: linear-gradient(180deg, #2D6BB4 0%, #2F68B1 28%, #355FA7 49%, #415097 68%, #513B81 85%, #652266 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
             Inside The Lab
         </x-heading-h1>
-        <x-subheading-2 class="mx-auto leading-relaxed">
+        <x-subheading-2 class="mx-12 leading-relaxed md:mx-auto">
             Our lab isn't just a facility—it's a partner in your project's success.<br>
             Whether you're in construction, geotech, or infrastructure, reliable results mean smarter decisions.
         </x-subheading-2>

@@ -24,8 +24,7 @@
                                                         -webkit-background-clip: text;
                                                         background-clip: text;
                                                         color: transparent;">continents
-                    infrastructure landscape</span>
-                ."
+                    infrastructure landscape.</span>"
             </x-heading-display-3>
         </div>
     </x-section>
@@ -51,8 +50,8 @@
         @include('components.faq-section')
     </div>
 
-    <div class="relative md:pt-40 py-10 px-4 md:px-12">
-        <x-latest-news-section :max-news-items="3" />
+    <div class="relative md:pt-40 py-10 px-8 md:px-12">
+        <x-latest-news-section :max-news-items="3" :button-label="'Show More News'" />
     </div>
 
 @endsection

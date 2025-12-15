@@ -1,7 +1,7 @@
 @props(['title', 'image' => null, 'description' => null, 'width' => '421.3333435058594px', 'height' => '396.25px', 'gap' => '24px', 'angle' => '0deg', 'opacity' => '1', 'borderRadius' => '24px', 'borderWidth' => '1px', 'padding' => '16px', 'left' => null, 'rowStart' => 1, 'colStart' => 2, 'colSpan' => 3, 'rowSpan' => 1])
 
 <!-- Who We Serve Card -->
-<div {{ $attributes->merge(['class' => 'bg-primary-100 rounded-2xl overflow-hidden transition-all duration-300 p-6 flex flex-col gap-6']) }} 
+<div {{ $attributes->merge(['class' => 'bg-primary-100 rounded-3xl overflow-hidden transition-all duration-300 p-6 flex flex-col gap-6']) }} 
     style="
         border: 1px solid;
         border-image-source: linear-gradient(154.97deg, #C3E0FA 15.92%, #59ADFA 100.32%);
@@ -9,10 +9,10 @@
     ">
     @if($image)
         <div 
-            class="h-40 bg-neutral-300 overflow-hidden"
+            class="h-40 bg-neutral-300 overflow-hidden rounded-xl"
             style="height: 270px;"
         >
-            <img src="{{ $image }}" alt="{{ $title }}" class="w-full h-full object-cover">
+            <img src="{{ $image }}" alt="{{ $title }}" class="w-full h-full object-cover" style="border-radius: 14px;">
         </div>
     @else
         <div 

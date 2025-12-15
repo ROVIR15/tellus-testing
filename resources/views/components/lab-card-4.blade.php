@@ -15,7 +15,10 @@
 <div class="relative lab-card-4 rounded-xl overflow-hidden transition-all duration-300 cursor-pointer"
     style="color: var(--color-secondary-300);">
     <!-- Card Content -->
-    <div class="relative flex flex-col gap-12" style="color: var(--color-secondary-100);">
+    <img src="{{ asset('images/vector-4.svg') }}" alt="Decorative element" class="w-full h-auto absolute -top-10
+                                                 -right-10 z-10">
+
+    <div class="relative flex flex-col gap-12 z-10" style="color: var(--color-secondary-100);">
         <!-- Quality Standards Section -->
         @if(count($standardsList) > 0)
             <div class="flex flex-col gap-1" style="color: var(--color-secondary-100);">
@@ -30,8 +33,6 @@
                 </ul>
             </div>
         @endif
-        <img src="{{ asset('images/vector-4.svg') }}" alt="Decorative element" class="w-full h-auto absolute -top-10
-                                                 -right-10 z-10">
 
         <div class="flex flex-col gap-2 pl-3">
             <!-- Turnaround Time Section -->
