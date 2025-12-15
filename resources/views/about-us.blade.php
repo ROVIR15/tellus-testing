@@ -222,20 +222,10 @@
         </x-heading-h1>
 
 
-        @php
-            $firstRow = array_slice($qualityCards, 0, 3);
-            $secondRow = array_slice($qualityCards, 3);
-        @endphp
-
-        @php
-            $firstRow = array_slice($qualityCards, 0, 3);
-            $secondRow = array_slice($qualityCards, 3);
-        @endphp
-
-        <div class="grid grid-cols-1 md:grid-cols-3 items-stretch gap-8 md:gap-12">
-            @foreach($firstRow as $item)
+        <div class="flex flex-wrap justify-center gap-8 md:gap-12">
+            @foreach($qualityCards as $item)
                 <!-- card -->
-                <div class="test-detail-card pink-border transition-all duration-300 ease-in-out rounded-2xl border border-solid p-6 md:p-8 flex flex-col gap-6 h-[218px]"
+                <div class="test-detail-card pink-border transition-all duration-300 ease-in-out rounded-2xl border border-solid p-6 md:p-8 flex flex-col gap-6 h-full w-full md:w-[calc((100%-6rem)/3)]"
                     style="aspect-ratio: 421/220; background: #FFFFFF4D;">
                     <div class="flex flex-col gap-6 justify-between items-end h-full">
                         <span class="heading-6" style="color: var(--color-secondary-300);">
@@ -249,29 +239,6 @@
                 </div>
             @endforeach
         </div>
-
-        @if(count($secondRow) > 0)
-                @php 
-                        $secondCount = count($secondRow);
-                    $gridClass = $secondCount === 1 ? 'md:grid-cols-1 md:max-w-md md:mx-auto' : ($secondCount === 2 ? 'md:grid-cols-2 md:max-w-4xl md:mx-auto' : 'md:grid-cols-3');
-                @endphp
-            <div class="mt-8 grid grid-cols-1 {{ $gridClass }} gap-8 md:gap-12">
-                @foreach($secondRow as $item)
-                    <div class="test-detail-card pink-border transition-all duration-300 ease-in-out rounded-2xl border border-solid p-6 md:p-8 flex flex-col gap-6 h-full"
-                        style="aspect-ratio: 421/220; background: #FFFFFF4D;">
-                        <div class="flex flex-col gap-6 justify-between items-end h-full">
-                            <span class="heading-6" style="color: var(--color-secondary-300);">
-                                {{ $item['label'] }}
-                            </span>
-
-                            <img src="{{ $item['icon'] }}" alt="{{ $item['label'] }}"
-                                class="w-12 md:w-14 h-12 md:h-14 object-contain flex-shrink-0" placeholder="blur"
-                                style="aspect-ratio: 62/53">
-                        </div>
-                        </div>
-                @endforeach
-                </div>
-        @endif
     </div>
     <div class="flex flex-col gap-8 py-14 px-8" style="background: #EBF5FF">
             <x-heading-h1 class="custom-color">
