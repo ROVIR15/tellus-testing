@@ -140,7 +140,7 @@
             class="absolute top-[5%] left-0 w-[70%] md:w-[50%] h-auto -z-10">
         <img src="{{ asset('images/decorative-about-us/union-1.svg') }}" alt="Decorative element"
             class="absolute -top-10 -right-0 w-[80%] md:w-[60%] h-auto -z-10">
-        <div class="section-top-padding px-4 md:px-8 pb-0 md:pb-20">
+        <div class="section-top-padding px-4 md:px-16 pb-0 md:pb-20">
             <div class="flex flex-col md:flex-row items-center justify-center gap-12">
                 <div class="flex flex-col gap-6 md:w-3/8">
                     <x-heading-display-3 style="color: var(--color-secondary-300)">
