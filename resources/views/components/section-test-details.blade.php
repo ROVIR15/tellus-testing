@@ -25,7 +25,7 @@
     </div>
 </div>
 
-<div class="px-8 md:px-16">
+<div class="px-4 md:px-16">
     <div x-data="{ 
         isExpanded: false
     }" @class([
