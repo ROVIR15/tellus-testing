@@ -44,13 +44,13 @@
 
     <div class="relative">
         <img src="{{ asset('images/elipse-6.svg') }}" alt="decorative background"
-            class="absolute left-0 top-0 w-full pointer-events-none select-none" style="z-index:-1;">
+            class="absolute bottom-0 w-full left-0 md:top-0 pointer-events-none select-none" style="z-index:-1;">
         @include('components.section-inquiry')
 
         @include('components.faq-section')
     </div>
 
-    <div class="relative md:pt-40 py-10 px-8 md:px-12">
+    <div class="relative md:pt-40 py-10 px-4 md:px-12">
         <x-latest-news-section :max-news-items="3" :button-label="'Show More News'" />
     </div>
 

@@ -101,14 +101,15 @@
     <div class="flex flex-col gap-8">
         <!-- Section Header -->
         <div class="flex flex-row items-center justify-between">
-            <h2 class="heading-1 mb-4"><span class="custom-color">{{ $title }}</span></h2>
+            <h2 class="heading-1 my-auto"><span class="custom-color">{{ $title }}</span></h2>
             @if ($activateShowMore)
-                <a type="button" href="/news" class="px-8 py-3 rounded-full transition-all duration-300 font-semibold"
+                <a type="button" href="/news" class="py-[10px] px-4 md:px-8 md:py-3 rounded-full cursor-pointer font-semibold"
                     style="
-                                    color: var(--color-primary-300);
-                                    background-color: var(--color-primary-100);
-                                ">
-                    <span class="cursor-pointer">{{ $buttonLabel }}</span>
+                            font-size: 14px;
+                            color: var(--color-primary-300);
+                            background-color: var(--color-primary-100);
+                        ">
+                    <span>{{ $buttonLabel }}</span>
                 </a>
             @endif
         </div>

@@ -1,4 +1,4 @@
-<x-section-top-padding class="pt-48 sm:pt-48 lg:pt-48 px-4 md:px-16">
+<x-section-top-padding class="pt-48 sm:pt-48 lg:pt-48 px-8 md:px-16">
     <div class="flex flex-col text-start md:text-center mb-16 gap-10">
         <x-heading-display-3 class="font-small" style="
                 color: var(--color-secondary-300);

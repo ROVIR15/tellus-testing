@@ -13,13 +13,13 @@
     @endphp
 
     <img src="{{ asset('images/decorative-about-us/circle-center.svg') }}" alt="Decorative element"
-        class="absolute w-full -z-10" style="height: inherit;">
+        class="absolute w-full -top-[41%]" style="height: inherit;">
 
     <div class="relative flex flex-col gap-4 pt-40 md:gap-10 mb-16 md:mb-8 px-4 lg:px-8">
         <div class="flex flex-col gap-4 sm:px-6 lg:px-8 text-center">
             <!-- Title & Meta -->
             <span class="display-3 text-inherit" style="color: var(--color-secondary-300);">{{ $news->title }}</span>
-            <span class="heading-4" style="color: var(--color-secondary-300);">Published on
+            <span class="subheading-3" style="color: var(--color-secondary-300);">Published on
                 {{ $publishedAt }}</span>
 
             <!-- Hero / Featured Slider -->
@@ -30,7 +30,7 @@
                     @foreach($heroImages as $index => $img)
                         <div class="min-w-full h-full relative">
                             <img src="{{ $img }}" alt="{{ $news->title }} - Slide {{ $index + 1 }}"
-                                class="w-full h-full object-cover" style="background-color: bisque;">
+                                class="w-full h-full object-cover rounded-2xl" style="background-color: bisque;">
                         </div>
                     @endforeach
                 </div>

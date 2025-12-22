@@ -10,7 +10,7 @@
 
 <!-- Testimony Card -->
 <div
-    {{ $attributes->merge(['class' => 'testimony-card p-6 min-h-[280px] max-h-[315px]']) }}
+    {{ $attributes->merge(['class' => 'testimony-card p-6']) }}
 >
     <div class="flex items-start gap-4">
         <div class="shrink-0 w-14 h-14 rounded-full overflow-hidden border border-neutral-300">

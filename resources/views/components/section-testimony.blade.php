@@ -72,10 +72,10 @@
             <!-- Slider Container -->
             <div id="testimony-slider" class="relative overflow-hidden">
                 <!-- Scrollable Track -->
-                <div id="testimony-scroll" class="flex gap-4 md:gap-6 overflow-x-auto py-4 -mx-4 px-4 md:mx-0 md:px-0 no-scrollbar"
-                    style="scroll-snap-type: x mandatory; scroll-behavior: smooth;">
+                <div id="testimony-scroll" class="flex gap-4 md:gap-6 overflow-x-auto -mx-4 px-4 md:mx-0 no-scrollbar"
+                    style="scroll-snap-type: x mandatory; scroll-behavior: smooth; margin: 0 -4px;">
                     @foreach ($testimonies as $testimony)
-                        <div class="snap-start shrink-0 w-[280px] sm:w-[320px] md:w-[340px]">
+                        <div class="snap-center shrink-0 w-full sm:w-[320px] md:w-[340px]">
                             <x-testimony-card :name="$testimony['name']" :role="$testimony['role']"
                                 :company="$testimony['company']" :location="$testimony['location'] ?? null"
                                 :avatar="$testimony['avatar'] ?? null" :quote="$testimony['quote'] ?? null" :source="$testimony['source'] ?? null" />

@@ -1,7 +1,7 @@
 <section class="mx-4 md:section-no-right-padding">
-    <div class="flex flex-col gap-8 mx-auto">
+    <div class="flex flex-col gap-6 mx-auto">
         <!-- Heading -->
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-6">
             <x-heading-h1 class="custom-color">
                 Specialized in Soil, Water, and Geosynthetics
             </x-heading-h1>
@@ -46,7 +46,7 @@
 
         <!-- Test Cards: Horizontal scroll on mobile, grid on larger screens -->
         <div id="lab-services-scroll"
-            class="flex gap-4 overflow-x-auto mx-1 md:px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-6 no-scrollbar"
+            class="flex gap-6 overflow-x-auto sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-6 no-scrollbar"
             style="scroll-snap-type: x mandatory; scroll-behavior: smooth;">
             @foreach($labTests as $test)
                 <x-lab-test-card :title="$test['title']" :description="$test['description']"

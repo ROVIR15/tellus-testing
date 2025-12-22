@@ -140,7 +140,7 @@
             class="absolute top-[5%] left-0 w-[70%] md:w-[50%] h-auto -z-10">
         <img src="{{ asset('images/decorative-about-us/union-1.svg') }}" alt="Decorative element"
             class="absolute -top-10 -right-0 w-[80%] md:w-[60%] h-auto -z-10">
-        <div class="section-top-padding px-8 pb-20">
+        <div class="section-top-padding px-4 md:px-8 pb-0 md:pb-20">
             <div class="flex flex-col md:flex-row items-center justify-center gap-12">
                 <div class="flex flex-col gap-6 md:w-3/8">
                     <x-heading-display-3 style="color: var(--color-secondary-300)">
@@ -155,67 +155,70 @@
 
                 <div class="md:w-5/8">
                     <img src="{{ asset('images/about-us.png') }}" alt="About Us"
-                        class="w-full h-auto max-w-full object-contain" placeholder="blur">
+                        class="w-full md:h-auto max-w-full h-[513px] rounded-3xl object-cover" placeholder="blur">
                 </div>
             </div>
         </div>
     </div>
 
     <div class="relative">
-        <div class="flex flex-col gap-8 py-14 px-8">
-            <x-heading-h1 style="color: var(--color-secondary-300)">
-                Our team consists of highly skilled technicians & experienced professionals that provide reliable data
-                quality, and efficient services for competitive prices.
-            </x-heading-h1>
-
-            <x-subheading-2 style="color: var(--color-secondary-300)">
-                Our testing services include a full scope of geosynthetic tests that determine physical, mechanical,
-                hydraulic properties in accordance with ISO and ASTM standards to ensure that those materials that are used
-                for ground improvement projects meet the specified quality standards.
-            </x-subheading-2>
-
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 py-10 md:py-14 px-4 md:px-8">
             <img src="{{ asset('images/tellus-team.jpg') }}" alt="Team Photo"
-                class="w-full h-auto max-w-full object-cover rounded-2xl" placeholder="blur">
+                class="w-full h-auto max-w-full object-cover rounded-3xl" placeholder="blur">
+
+            <div class="flex flex-col gap-6">
+                <x-heading-h2 style="color: var(--color-secondary-300)">
+                    Our team consists of highly skilled technicians & experienced professionals that provide reliable data
+                    quality, and efficient services for competitive prices.
+                </x-heading-h2>
+
+                <x-subheading-2 style="color: var(--color-secondary-300)">
+                    Our testing services include a full scope of geosynthetic tests that determine physical, mechanical,
+                    hydraulic properties in accordance with ISO and ASTM standards to ensure that those materials that are
+                    used
+                    for ground improvement projects meet the specified quality standards.
+                </x-subheading-2>
+            </div>
         </div>
 
         <img src="{{ asset('images/decorative-about-us/union-2.svg') }}" alt="Ellipse 8.svg"
             class="absolute top-0 left-0 w-full h-full">
 
-        <div class="flex flex-col gap-8 py-14 px-8">
+        <div class="flex flex-col gap-8 py-10 md:py-14 px-4 md:px-8">
             <x-heading-h1 class="custom-color">
                 Why Choose Tellus Testing?
             </x-heading-h1>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        @foreach($why_choose_us as $item)
-            <div class="relative flex flex-col items-start gap-4 h-[210px] w-full text-white overflow-hidden rounded-3xl p-6"
-                style="background-color: #76B2E8;">
-                <!-- Third Layer: Image -->
-                <img class="absolute bottom-0 right-0 hidden lg:block z-0"
-                    src="{{ asset('/images' . $item['decoratiove_url']) }}" alt="{{ $item['title'] }}" />
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                @foreach($why_choose_us as $item)
+                    <div class="relative flex flex-col items-start gap-4 h-[210px] w-full text-white overflow-hidden rounded-3xl p-6"
+                        style="background-color: #76B2E8;">
+                        <!-- Third Layer: Image -->
+                        <img class="absolute bottom-0 right-0 md:hidden lg:block z-0"
+                            src="{{ asset('/images' . $item['decoratiove_url']) }}" alt="{{ $item['title'] }}" />
 
-                <div class="absolute inset-0 z-5" style="background: #006ACC; opacity: 0.85;"></div>
+                        <div class="absolute inset-0 z-5" style="background: #006ACC; opacity: 0.85;"></div>
 
-                <!-- Second Layer: Gradient -->
-                <div class="absolute inset-0 z-10" style="
-                        background: radial-gradient(150% 20% at 32% 0%, #76B2E8 0%, transparent 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-                    "></div>
+                        <!-- Second Layer: Gradient -->
+                        <div class="absolute inset-0 z-10" style="
+                                        background: radial-gradient(150% 20% at 32% 0%, #76B2E8 0%, transparent 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+                                    "></div>
 
-                <div class="absolute inset-0 z-11" style="
-                        background: radial-gradient(150% 60% at 32% 0%, #76B2E8 0%, transparent 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-                    "></div>
+                        <div class="absolute inset-0 z-11" style="
+                                        background: radial-gradient(150% 60% at 32% 0%, #76B2E8 0%, transparent 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+                                    "></div>
 
-                <!-- First Layer: Text -->
-                <span class="relative z-20 w-3/5 text-left heading-5">{{ $item['title'] }}</span>
+                        <!-- First Layer: Text -->
+                        <span class="relative z-20 w-3/5 text-left heading-5">{{ $item['title'] }}</span>
+                    </div>
+                @endforeach
             </div>
-        @endforeach
-    </div>
 
         </div>
     </div>
     </div>
 
-    <div class="flex flex-col gap-8 py-14 px-8"
+    <div class="flex flex-col gap-8 py-10 md:py-14 px-4 md:px-8"
         style="background: linear-gradient(180deg, rgba(255, 255, 255, 0) 6.77%, #EBF5FF 72.99%);">
         <x-heading-h1 class="custom-color">
             Quality Policy
@@ -240,27 +243,27 @@
             @endforeach
         </div>
     </div>
-    <div class="flex flex-col gap-8 py-14 px-8" style="background: #EBF5FF">
-            <x-heading-h1 class="custom-color">
+    <div class="flex flex-col gap-8 py-10 md:py-14 px-4 md:px-8" style="background: #EBF5FF">
+        <x-heading-h1 class="custom-color">
             Accreditation
         </x-heading-h1>
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-        @foreach ($accreditations as $item)
-            <div class="relative text-white h-[317px] rounded-2xl p-6" style="
-                    ratio-scale: 1/1;
-                    background: linear-gradient(180deg, #660A66 0%, #B21BB2 100%);
-                ">
-                <div class="flex flex-col">
-                    <span
-                        style="font-size: 20px; font-weight: 600; color: var(--Secondary-100, #FDEDFD);">{{ $item['title'] }}</span>
-                    <span style="font-size: 16px; color: var(--Secondary-100, #FDEDFD);">{{ $item['description'] }}</span>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            @foreach ($accreditations as $item)
+                <div class="relative text-white h-[317px] rounded-2xl p-6" style="
+                                    ratio-scale: 1/1;
+                                    background: linear-gradient(180deg, #660A66 0%, #B21BB2 100%);
+                                ">
+                    <div class="flex flex-col">
+                        <span
+                            style="font-size: 20px; font-weight: 600; color: var(--Secondary-100, #FDEDFD);">{{ $item['title'] }}</span>
+                        <span style="font-size: 16px; color: var(--Secondary-100, #FDEDFD);">{{ $item['description'] }}</span>
+                    </div>
+                    <img class="absolute right-0 bottom-0" src="{{ asset('/images' . $item['url']) }}"
+                        alt="{{ $item['title'] }}" />
                 </div>
-                <img class="absolute right-0 bottom-0" src="{{ asset('/images' . $item['url']) }}"
-                    alt="{{ $item['title'] }}" />
-            </div>
-        @endforeach
-    </div>
+            @endforeach
+        </div>
     </div>
 
-        <x-section-inquiry />
+    <x-section-inquiry />
 @endsection

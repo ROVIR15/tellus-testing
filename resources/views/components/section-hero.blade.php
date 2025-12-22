@@ -1,7 +1,7 @@
 <x-hero class="bg-gradient-to-br from-primary-500 via-primary-400 to-primary-300">
     <div class="grid grid-cols-1 sm:grid-cols-[40%_60%] gap-12 items-center">
         <!-- Left Content -->
-        <div class="relative flex flex-col gap-8 justify-center">
+        <div class="relative flex flex-col gap-6 justify-center">
             <x-heading-display-2 class="text-white" style="color: var(--color-secondary-300);">
                 Accurate testing for geosynthetic materials.
             </x-heading-display-2>

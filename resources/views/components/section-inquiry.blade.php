@@ -21,7 +21,7 @@
                     <x-heading-h1 class="mb-4" style="color: var(--color-secondary-300);">
                         Ready to Get Reliable <br /> Test Results?
                     </x-heading-h1>
-                    <x-body-1 class="text-neutral-700">
+                    <x-body-1 style="color: var(--color-secondary-300);">
                         Partner with a lab that understands the stakes. Fast turnaround. Certified methods. Real
                         precision.
                     </x-body-1>

@@ -6,7 +6,7 @@
 @section('content')
     <div class="relative flex flex-col gap-10">
         <img src="{{ asset('images/decorative-about-us/union-1.svg') }}" alt="Decorative element"
-            class="absolute -top-10 -right-0 w-[80%] md:w-[60%] h-auto -z-10">
+            class="absolute top-[10%] right-0 md:-top-10 md:-right-0 w-[80%] md:w-[60%] h-auto -z-10">
 
         <!-- Main content with responsive margin -->
         <x-section-top-padding>

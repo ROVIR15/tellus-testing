@@ -4,14 +4,17 @@
         next(){ if(this.step < this.total) this.step++ }, 
         prev(){ if(this.step > 1) this.step-- } 
     }" class="relative" aria-label="Application Submission Wizard">
-    <div class="flex justify-start gap-6 mb-3">
-        <x-heading-h4 x-text="`${step}. ${step === 1 ? 'Submission' : 'Test Report Issuance'}`"></x-heading-h4>
+    <div class="flex justify-between gap-6 mb-3" :class="step < total ? '' : 'flex-row-reverse'">
+        <x-heading-h4 class="my-auto" x-text="`${step}. ${step === 1 ? 'Submission' : 'Test Report Issuance'}`"></x-heading-h4>
         <button type="button" @click="step < total ? next() : prev()"
             class="application-navigation-btn inline-flex items-center gap-2 px-4 py-2 rounded-full shadow-sm subheading-3"
             style="background: var(--Primary-100, #EBF5FF);color: var(--color-primary-300);"
             :aria-label="step < total ? 'Go to next step' : 'Go to previous step'">
-            <span x-text="step < total ? 'Next' : 'Previous'"></span>
-            <span aria-hidden="true" x-text="step < total ? '→' : '←'"></span>
+            <span x-show="step < total">Next</span>
+            <span x-show="step < total" aria-hidden="true">→</span>
+            <svg x-show="step >= total" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="display: none;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
         </button>
 
         <!-- mobile navigation button -->

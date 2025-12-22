@@ -12,7 +12,7 @@
     $standardsList = is_array($standards) ? $standards : [];
 @endphp
 
-<div class="relative lab-card-4 rounded-xl overflow-hidden transition-all duration-300 cursor-pointer"
+<div class="relative lab-card-4 rounded-3xl overflow-hidden transition-all duration-300 cursor-pointer"
     style="color: var(--color-secondary-300);">
     <!-- Card Content -->
     <img src="{{ asset('images/vector-4.svg') }}" alt="Decorative element" class="w-full h-auto absolute -top-10

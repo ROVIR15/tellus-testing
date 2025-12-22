@@ -247,7 +247,7 @@
 
 .subheading-3 {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 125%;
     letter-spacing: 1px;
     font-family: var(--font-manrope);
@@ -520,8 +520,8 @@
     margin: 0 auto;
     padding-top: 40px;
     padding-bottom: 40px;
-    padding-left: 54px;
-    padding-right: 54px;
+    padding-left: 32px;
+    padding-right: 32px;
 
     @media screen and (max-width: 640px) {
         /* for tablets and above */
@@ -536,8 +536,8 @@
     margin: 0 auto;
     padding-top: 40px;
     padding-bottom: 40px;
-    padding-left: 54px;
-    padding-right: 54px;
+    padding-left: 32px;
+    padding-right: 32px;
 
     @media screen and (max-width: 640px) {
         /* for tablets and above */
