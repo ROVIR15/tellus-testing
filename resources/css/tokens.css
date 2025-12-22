@@ -748,6 +748,7 @@
 }
 
 .testimony-card {
+    height: 100%;
     border-radius: 16px;
     background-color: #ffffff;
     border: 1px solid transparent;
@@ -755,7 +756,7 @@
         linear-gradient(180deg, #fdedfd 0%, #fdcdfd 100%);
     background-origin: border-box;
     background-clip: padding-box, border-box;
-    box-shadow: 2px 4px 4px 0px #a7a7a740;
+    /* box-shadow: 2px 4px 4px 0px #a7a7a740; */
     backdrop-filter: blur(10px);
 }
 
