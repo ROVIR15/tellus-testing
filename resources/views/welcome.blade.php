@@ -44,7 +44,10 @@
 
     <div class="relative">
         <img src="{{ asset('images/elipse-6.svg') }}" alt="decorative background"
-            class="absolute bottom-0 w-full left-0 md:top-0 pointer-events-none select-none" style="z-index:-1;">
+            class="absolute hidden md:block bottom-0 w-full left-0 md:top-0 pointer-events-none select-none" style="z-index:-1;">
+        
+        <img src="{{ asset('images/bg-fqa-eclipse.svg') }}" alt="decorative background"
+            class="absolute bottom-[-600px] w-full left-0 md:hidden" style="z-index:-1;">
         @include('components.section-inquiry')
 
         @include('components.faq-section')
