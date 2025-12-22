@@ -159,7 +159,12 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
                     @foreach($related as $article)
                         @php
-                            $relatedImage = $article->image_path ? asset('storage/' . $article->image_path) : asset('images/other-news/1.jpg');
+                            $images = $article->image_path;
+                            $thumbnail = (is_array($images) && count($images) > 0)
+                                ? asset('storage/' . $images[0])
+                                : asset('images/other-news/1.jpg');
+
+                            $relatedImage = $thumbnail;
                             $relatedTimestamp = optional($article->published_at)->timestamp ?? $article->created_at->timestamp;
                         @endphp
                         <x-news-card-3 :images="[$relatedImage]" :created_at="$relatedTimestamp" :href="route('news-detail', $article->slug)" :title="$article->title">
