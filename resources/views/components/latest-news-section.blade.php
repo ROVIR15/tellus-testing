@@ -83,9 +83,14 @@
 
     // Map to shape expected by card component
     $newsItems = $realItems->map(function ($item) {
-        $image = $item->thumbnail;
+        // NewsResource uses multiple file upload, so image_path is an array
+        $images = $item->image_path;
+        $thumbnail = (is_array($images) && count($images) > 0)
+            ? asset('storage/' . $images[0])
+            : asset('images/other-news/1.jpg');
+
         return [
-            'images' => [$image],
+            'images' => [$thumbnail],
             'status' => '',
             'created_at' => optional($item->published_at)->timestamp ?? $item->created_at->timestamp,
             'author' => '',
