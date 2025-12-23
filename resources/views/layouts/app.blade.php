@@ -32,7 +32,7 @@
     <!-- Footer -->
     <footer class="text-white py-12" style="background-color: var(--color-secondary-500);">
         <div class="flex flex-col gap-4 w-full px-8">
-            <div class="flex flex-col gap-22 md:flex-row justify-between items-start md:items-center">
+            <div class="flex flex-col gap-6 md:flex-row justify-between items-start md:items-center">
                 <!-- Company Info -->
                 <div class="mb-6 md:mb-0">
                     <svg width="285" height="35" viewBox="0 0 285 34" fill="none" xmlns="http://www.w3.org/2000/svg">
