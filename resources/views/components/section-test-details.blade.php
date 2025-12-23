@@ -1,5 +1,5 @@
 <!-- Heading -->
-<div class="section-top-padding px-4 md:px-16">
+<div class="section-top-padding px-8 md:px-16">
     <div class="flex flex-col lg:flex-row gap-8 lg:gap-18 items-center">
         <div class="flex flex-col w-full lg:w-1/2 mb-8 lg:mb-12 gap-6 lg:gap-8">
             <x-heading-display-3 style="color: var(--color-secondary-300);">
@@ -25,7 +25,7 @@
     </div>
 </div>
 
-<div class="px-4 md:px-16">
+<div class="px-8 md:px-16">
     <div x-data="{ 
         isExpanded: false
     }" @class([

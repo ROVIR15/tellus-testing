@@ -140,7 +140,7 @@
             class="absolute top-[5%] left-0 w-[70%] md:w-[50%] h-auto -z-10">
         <img src="{{ asset('images/decorative-about-us/union-1.svg') }}" alt="Decorative element"
             class="absolute -top-10 -right-0 w-[80%] md:w-[60%] h-auto -z-10">
-        <div class="section-top-padding px-4 md:px-16 pb-0 md:pb-20">
+        <div class="section-top-padding px-8 md:px-16 pb-0 md:pb-20">
             <div class="flex flex-col md:flex-row items-center justify-center gap-12">
                 <div class="flex flex-col gap-6 md:w-3/8">
                     <x-heading-display-3 style="color: var(--color-secondary-300)">
@@ -162,7 +162,7 @@
     </div>
 
     <div class="relative">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 py-10 md:py-14 px-4 md:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 py-10 md:py-14 px-8">
             <img src="{{ asset('images/tellus-team.jpg') }}" alt="Team Photo"
                 class="w-full h-auto max-w-full object-cover rounded-3xl" placeholder="blur">
 
@@ -184,7 +184,7 @@
         <img src="{{ asset('images/decorative-about-us/union-2.svg') }}" alt="Ellipse 8.svg"
             class="absolute top-0 left-0 w-full h-full">
 
-        <div class="flex flex-col gap-8 py-10 md:py-14 px-4 md:px-8">
+        <div class="flex flex-col gap-8 py-10 md:py-14 px-8">
             <x-heading-h1 class="custom-color">
                 Why Choose Tellus Testing?
             </x-heading-h1>
@@ -218,7 +218,7 @@
     </div>
     </div>
 
-    <div class="flex flex-col gap-8 py-10 md:py-14 px-4 md:px-8"
+    <div class="flex flex-col gap-8 py-10 md:py-14 px-8"
         style="background: linear-gradient(180deg, rgba(255, 255, 255, 0) 6.77%, #EBF5FF 72.99%);">
         <x-heading-h1 class="custom-color">
             Quality Policy
@@ -243,7 +243,7 @@
             @endforeach
         </div>
     </div>
-    <div class="flex flex-col gap-8 py-10 md:py-14 px-4 md:px-8" style="background: #EBF5FF">
+    <div class="flex flex-col gap-8 py-10 md:py-14 px-8" style="background: #EBF5FF">
         <x-heading-h1 class="custom-color">
             Accreditation
         </x-heading-h1>

@@ -9,7 +9,7 @@
             class="absolute hidden md:block md:-top-10 md:-right-0 w-[80%] md:w-[60%] h-auto -z-10">
 
         <img src="{{ asset('images/union.png') }}" alt="Decorative element"
-            class="absolute top-[270px] right-0 md:hidden">
+            class="absolute w-full top-[270px] right-0 md:hidden -z-1">
         <!-- Main content with responsive margin -->
         <x-section-top-padding>
             <x-section-application />
