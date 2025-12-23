@@ -6,7 +6,7 @@
 @section('content')
 <div class="relative">
     <!-- SVG Background -->
-    <div class="absolute inset-0 overflow-hidden z-0 pointer-events-none">
+    <div class="absolute md:block hidden inset-0 overflow-hidden z-0 pointer-events-none">
         <svg width="100%" height="100%" viewBox="0 0 1440 1281" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"> 
             <g filter="url(#filter0_f_1720_6839)"> 
                 <path d="M1423.63 -46C2018.55 603.297 1214.05 1273 690.371 1273C166.689 1273 -448.894 928.037 -16.8747 -46.5C-16.8747 -355.476 450.013 -381 703.876 -381C957.739 -381 1423.63 -354.976 1423.63 -46Z" fill="url(#paint0_linear_1720_6839)" fill-opacity="0.08"/> 
@@ -27,6 +27,12 @@
             </defs> 
         </svg>
     </div>
+
+    <img 
+        src="{{ asset('images/mobile-elipse-get-in-touch-decorative.png') }}" 
+        alt="Mobile Elipse Get in Touch Decorative" 
+        class="absolute inset-0 overflow-hidden z-0 block md:hidden"
+    >
     
     <!-- Content -->
     <div class="relative z-10">

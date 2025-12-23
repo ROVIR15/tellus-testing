@@ -1,4 +1,4 @@
-<section class="mx-4 md:section-no-right-padding">
+<section class="px-8 md:section-no-right-padding">
     <div class="flex flex-col gap-6 mx-auto">
         <!-- Heading -->
         <div class="flex flex-col gap-6">

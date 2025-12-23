@@ -15,7 +15,6 @@
     <div>
         <div class="text-center mb-16">
             <x-heading-h1 style="
-                background: linear-gradient(180deg, #2D6BB4 0%, #2F68B1 28%, #355FA7 49%, #415097 68%, #513B81 85%, #652266 100%);
                 -webkit-background-clip: text; /* Safari/Chrome */
                 background-clip: text;         /* Modern browsers */
                 color: transparent;            /* Hide solid color to reveal gradient */

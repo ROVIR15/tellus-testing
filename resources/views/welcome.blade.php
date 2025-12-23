@@ -53,7 +53,7 @@
         @include('components.faq-section')
     </div>
 
-    <div class="relative md:pt-40 py-10 px-4 md:px-12">
+    <div class="relative md:pt-40 py-10 px-8 md:px-12">
         <x-latest-news-section :max-news-items="4" :button-label="'Show More News'" />
     </div>
 
