@@ -12,7 +12,7 @@
 @endphp
 
 <!-- Experimentation Section -->
-<div class="section-top-padding px-8 md:px-16 mb-32 sm:pt-40">
+<div class="section-top-padding px-8 md:px-16 mb-16 md:mb-32 sm:pt-40">
     <div class="w-full" style="color: var(--color-secondary-300);" x-data="{
             showAll: false,
             openedId: null,
