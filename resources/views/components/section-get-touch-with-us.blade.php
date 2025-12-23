@@ -14,7 +14,7 @@
 <x-section style="padding: 0;">
     <!-- Two Column Layout: Image and Content -->
     <div class="grid gap-8 items-stretch">
-        <div class="contact-us-form flex flex-col justify-center mx-auto">
+        <div class="contact-us-form flex flex-col justify-center mx-auto px-8 md:px-16">
 
             <!-- Inquiry form -->
             <form method="POST" action="{{ route('inquiries.store') }}" class="space-y-6">

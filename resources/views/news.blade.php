@@ -16,7 +16,7 @@
             class="absolute w-full -z-10">
 
         <x-section-top-padding>
-            <div class="flex flex-col gap-8 px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col gap-8 px-8 md:px-16">
                 <!-- Page Intro -->
 
                 <div class="flex flex-row gap-8">
@@ -68,7 +68,7 @@
             </div>
         </x-section-top-padding>
 
-        <div class="flex flex-col gap-4 md:gap-8 px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-4 md:gap-8 px-8 md:px-16">
             <!-- Latest News Grid -->
             <x-heading-h2 class="custom-color">Latest News</x-heading-h2>
 

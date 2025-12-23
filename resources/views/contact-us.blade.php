@@ -31,7 +31,7 @@
     <img 
         src="{{ asset('images/mobile-elipse-get-in-touch-decorative.png') }}" 
         alt="Mobile Elipse Get in Touch Decorative" 
-        class="absolute inset-0 overflow-hidden z-0 block md:hidden"
+        class="absolute w-full inset-0 overflow-hidden z-0 block md:hidden"
     >
     
     <!-- Content -->

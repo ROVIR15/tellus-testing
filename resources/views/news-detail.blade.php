@@ -15,7 +15,7 @@
     <img src="{{ asset('images/decorative-about-us/circle-center.svg') }}" alt="Decorative element"
         class="absolute w-full -top-[41%]" style="height: inherit;">
 
-    <div class="relative flex flex-col gap-4 pt-40 md:gap-10 mb-16 md:mb-8 px-4 lg:px-8">
+    <div class="relative flex flex-col gap-4 pt-40 md:gap-10 mb-16 md:mb-8 px-8 md:px-16">
         <div class="flex flex-col gap-4 sm:px-6 lg:px-8 text-center">
             <!-- Title & Meta -->
             <span class="display-3 text-inherit" style="color: var(--color-secondary-300);">{{ $news->title }}</span>
