@@ -6,7 +6,7 @@
             Inside The Lab
         </x-heading-h1>
         <x-subheading-2 class="mx-12 leading-relaxed md:mx-auto">
-            Our lab isn't just a facility—it's a partner in your project's success.<br>
+            Our lab isn't just a facility, it's a partner in your project's success.<br>
             Whether you're in construction, geotech, or infrastructure, reliable results mean smarter decisions.
         </x-subheading-2>
     </div>

@@ -7,7 +7,7 @@
             </x-heading-h1>
 
             <x-subheading-2>
-                Our lab isn’t just a facility—it’s a partner in your project’s success. Whether you're in construction,
+                Our lab isn’t just a facility, it’s a partner in your project’s success. Whether you're in construction,
                 geotech, or infrastructure,
                 reliable results mean smarter decisions.
             </x-subheading-2>
