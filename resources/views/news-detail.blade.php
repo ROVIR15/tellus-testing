@@ -23,10 +23,10 @@
                 {{ $publishedAt }}</span>
 
             <!-- Hero / Featured Slider -->
-            <div class="relative w-full min-h-[300px] h-[300px] md:h-[500px] rounded-lg overflow-hidden group"
+            <div class="relative w-full h-[424px] md:h-[500px] rounded-lg overflow-hidden group"
                 id="hero-slider">
                 <!-- Slides Track -->
-                <div class="flex h-full transition-transform duration-500 ease-in-out" id="hero-slider-track">
+                <div class="flex transition-transform duration-500 ease-in-out h-full" id="hero-slider-track">
                     @foreach($heroImages as $index => $img)
                         <div class="min-w-full h-full relative">
                             <img src="{{ $img }}" alt="{{ $news->title }} - Slide {{ $index + 1 }}"

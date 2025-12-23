@@ -5,7 +5,7 @@
 
 @section('content')
     <div class="relative">
-        <img src="{{ asset('images/union.svg') }}" alt="decorative background"
+        <img src="{{ asset('images/union.png') }}" alt="decorative background"
             class="absolute right-0 top-0 -z-10 pointer-events-none select-none" style="z-index:-1;">
 
 
