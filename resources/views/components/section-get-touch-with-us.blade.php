@@ -6,7 +6,7 @@
             Get in Touch With Us
         </x-heading-display-3>
         <x-heading-h4 style="color: var(--color-secondary-300);">
-            We’d love to hear from you — whether you have a question, need support, or just want to say hello.
+            We’d love to hear from you, whether you have a question, need support, or just want to say hello.
         </x-heading-h4>
     </div>
 </x-section-top-padding>
