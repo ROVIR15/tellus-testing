@@ -22,13 +22,10 @@
 
                 <x-form-input label="Name" placeholder="Type here" name="first_name" size="medium" required />
                 <x-form-input label="Surname" placeholder="Type here" name="last_name" size="medium" />
-                <x-form-input label="Company Name" placeholder="Type here" name="company_name" size="medium" required />
-                <x-form-input label="Company Country" placeholder="Type here" name="company_country" size="medium"
-                    required />
-                <x-form-input label="Company City" placeholder="Type here" name="company_city" size="medium" required />
-                <x-form-input label="Company Address" placeholder="Type here" name="company_address" size="medium"
-                    required />
+                <x-form-input label="Company" placeholder="Type here" name="company_name" size="medium" required />
                 <x-form-input label="ZIP" placeholder="Type here" name="zip" size="medium" required />
+                <x-form-input label="Country" placeholder="Type here" name="company_country" size="medium"
+                    required />
 
                 <div class="flex flex-col">
                     <label class="body-2 block mb-2">Phone Number</label>
