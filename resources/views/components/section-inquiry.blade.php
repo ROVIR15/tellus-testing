@@ -47,10 +47,6 @@
 
                     <input type="hidden" name="first_name" id="mini_first_name" value="" />
                     <input type="hidden" name="last_name" id="mini_last_name" value="" />
-                    <input type="hidden" name="company_country" value="N/A" />
-                    <input type="hidden" name="zip" value="N/A" />
-                    <input type="hidden" name="phone_country_code" value="+62" />
-                    <input type="hidden" name="phone_number" value="N/A" />
 
                     <!-- Submit Button -->
                     <div class="pt-4 mt-auto">

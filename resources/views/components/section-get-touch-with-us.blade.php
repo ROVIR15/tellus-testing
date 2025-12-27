@@ -17,46 +17,17 @@
         <div class="contact-us-form flex flex-col justify-center mx-auto px-8 md:px-16">
 
             <!-- Inquiry form -->
-            <form method="POST" action="{{ route('inquiries.store') }}" class="space-y-6">
+            <form method="POST" action="{{ route('inquiries.store') }}" class="space-y-6" id="contact-us-form">
                 @csrf
 
-                <x-form-input label="Name" placeholder="Type here" name="first_name" size="medium" required />
-                <x-form-input label="Surname" placeholder="Type here" name="last_name" size="medium" />
-                <x-form-input label="Company" placeholder="Type here" name="company_name" size="medium" required />
-                <x-form-input label="ZIP" placeholder="Type here" name="zip" size="medium" required />
-                <x-form-input label="Country" placeholder="Type here" name="company_country" size="medium"
-                    required />
+                <x-form-input label="Your Name" placeholder="Enter your full name" name="name" size="medium" required />
+                <x-form-input label="Your Email" placeholder="your@email.com" name="email" type="email" size="medium" required />
+                <x-form-input label="Company Name" placeholder="Enter your company name" name="company_name" size="medium" required />
+                <x-form-input label="Company Website" placeholder="https://example.com" name="company_website" type="url" size="medium" />
+                <x-form-input label="Tell Us Your Project" placeholder="Describe your project and requirements" name="message" multirow="true" rows="5" size="medium" required />
 
-                <div class="flex flex-col">
-                    <label class="body-2 block mb-2">Phone Number</label>
-                    <div
-                        class="flex items-center rounded-2xl border border-neutral-300 bg-white overflow-hidden focus-within:ring-1 focus-within:ring-primary-300 focus-within:border-primary-300">
-                        <div class="relative w-28">
-                            <select name="phone_country_code"
-                                class="appearance-none w-full bg-transparent pl-4 pr-8 py-3 text-neutral-900 outline-none"
-                                required>
-                                <option value="+61">+61</option>
-                                <option value="+62">+62</option>
-                                <option value="+65">+65</option>
-                                <option value="+1">+1</option>
-                                <option value="+44">+44</option>
-                            </select>
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 h-4 w-4 text-neutral-600"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </div>
-                        <span class="h-6 w-px bg-neutral-200"></span>
-                        <input type="text" name="phone_number" placeholder="Type here"
-                            class="flex-1 px-4 py-3 bg-transparent outline-none border-0 text-neutral-900" required />
-                    </div>
-                </div>
-
-                <x-form-input label="Email" placeholder="Type here" name="email" type="email" size="medium" required />
-                <x-form-input label="How can we help?" placeholder="Type here" name="message" multirow="true" rows="5"
-                    size="medium" required />
+                <input type="hidden" name="first_name" id="contact_first_name" value="" />
+                <input type="hidden" name="last_name" id="contact_last_name" value="" />
 
                 <!-- Submit Button -->
                 <div class="pt-4">
@@ -71,6 +42,22 @@
                     {{ session('success') }}
                 </div>
             @endif
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var form = document.getElementById('contact-us-form');
+                    if (!form) return;
+                    form.addEventListener('submit', function () {
+                        var nameInput = form.querySelector('input[name="name"]');
+                        var first = document.getElementById('contact_first_name');
+                        var last = document.getElementById('contact_last_name');
+                        var name = (nameInput && nameInput.value || '').trim();
+                        if (name.length === 0) { first.value = ''; last.value = ''; return; }
+                        var parts = name.split(/\s+/);
+                        first.value = parts.shift();
+                        last.value = parts.length ? parts.join(' ') : '';
+                    });
+                });
+            </script>
         </div>
     </div>
 </x-section>

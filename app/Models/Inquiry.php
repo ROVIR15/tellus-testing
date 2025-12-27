@@ -13,6 +13,7 @@ class Inquiry extends Model
         'first_name',
         'last_name',
         'company_name',
+        'company_website',
         'company_country',
         'company_city',
         'company_address',
