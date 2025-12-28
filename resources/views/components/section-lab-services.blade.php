@@ -1,7 +1,7 @@
-<section class="px-8 md:section-no-right-padding">
+<section class="px-8 pr-0 md:section-no-right-padding">
     <div class="flex flex-col gap-6 mx-auto">
         <!-- Heading -->
-        <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-6 pr-8">
             <x-heading-h1 class="custom-color">
                 Specialized in Soil, Water, and Geosynthetics
             </x-heading-h1>
@@ -16,7 +16,7 @@
 
         <!-- Mock Test Data -->
         @php
-            $labTests = [
+            $defaultLabTests = [
                 [
                     'id' => 1,
                     'title' => 'Permeability & Hydraulic Conductivity Test',
@@ -42,6 +42,19 @@
                     'image' => 'images/lab-facility/4.jpg'
                 ],
             ];
+
+            $labTests = $defaultLabTests;
+            if (!empty($page->content['lab_services'])) {
+                $labTests = [];
+                foreach($page->content['lab_services'] as $index => $item) {
+                    $labTests[] = [
+                        'id' => $index,
+                        'title' => $item['title'] ?? '',
+                        'description' => $item['description'] ?? '',
+                        'image' => !empty($item['image']) ? 'storage/' . $item['image'] : ''
+                    ];
+                }
+            }
         @endphp
 
         <!-- Test Cards: Horizontal scroll on mobile, grid on larger screens -->
