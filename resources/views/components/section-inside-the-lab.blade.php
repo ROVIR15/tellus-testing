@@ -11,12 +11,12 @@
         </x-subheading-2>
     </div>
 
-    <img src="{{ asset('images/decorative-about-us/union-2.svg') }}" alt="Decorative element"
+    <img src="{{ !empty($page->content['inside_lab_bg']) ? asset('storage/' . $page->content['inside_lab_bg']) : asset('images/decorative-about-us/union-2.svg') }}" alt="Decorative element"
         class="absolute top-0 left-0 w-[200%] h-[200%] z-10">
 
     <!-- Mock Card Data -->
     @php
-        $labCards = [
+        $defaultLabCards = [
             [
                 'id' => 1,
                 'title' => 'Modern Architecture',
@@ -48,6 +48,19 @@
                 'description' => 'Expert analysis and quality control'
             ],
         ];
+
+        $labCards = $defaultLabCards;
+        if (!empty($page->content['inside_lab_carousel'])) {
+            $labCards = [];
+            foreach($page->content['inside_lab_carousel'] as $index => $item) {
+                $labCards[] = [
+                    'id' => $index,
+                    'title' => $item['title'] ?? '',
+                    'image' => !empty($item['image']) ? 'storage/' . $item['image'] : '',
+                    'description' => $item['description'] ?? ''
+                ];
+            }
+        }
     @endphp
 
     <!-- Center-Focused Carousel -->
