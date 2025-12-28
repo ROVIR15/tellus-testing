@@ -835,3 +835,12 @@
         aspect-ratio: 361 / 189;
     }
 }
+
+.custom-height {
+    height: 100%;
+
+    /* min md screen height */
+    @media (min-width: 768px) {
+        height: -webkit-fill-available;
+    }
+}
