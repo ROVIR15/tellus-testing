@@ -1,7 +1,7 @@
-<section class="px-8 pr-0 md:section-no-right-padding">
+<section class="md:section-no-right-padding md:px-8">
     <div class="flex flex-col gap-6 mx-auto">
         <!-- Heading -->
-        <div class="flex flex-col gap-6 pr-8">
+        <div class="flex flex-col gap-6 px-8">
             <x-heading-h1 class="custom-color">
                 Specialized in Soil, Water, and Geosynthetics
             </x-heading-h1>
