@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Files\Tables;
 
+use Filament\Actions\Action;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
@@ -47,14 +48,14 @@ class FilesTable
                 //
             ])
             ->recordActions([
-                \Filament\Tables\Actions\Action::make('download')
+                Action::make('download')
                     ->label('Download')
                     ->icon('heroicon-o-arrow-down-tray')
                     ->url(fn ($record) => $record->url)
                     ->openUrlInNewTab(),
                 ViewAction::make(),
                 EditAction::make(),
-                \Filament\Tables\Actions\Action::make('copy_url')
+                Action::make('copy_url')
                     ->label('Copy URL')
                     ->icon('heroicon-o-clipboard')
                     ->action(function () {
