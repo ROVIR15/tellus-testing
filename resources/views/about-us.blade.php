@@ -257,6 +257,16 @@
                         <span
                             style="font-size: 20px; font-weight: 600; color: var(--Secondary-100, #FDEDFD);">{{ $item['title'] }}</span>
                         <span style="font-size: 16px; color: var(--Secondary-100, #FDEDFD);">{{ $item['description'] }}</span>
+                        <a href="{{ asset('/images' . $item['url']) }}" download
+                            class="inline-flex items-center gap-2 mt-4 hover:underline w-fit"
+                            style="color: var(--Secondary-100, #FDEDFD);">
+                            <span class="font-semibold">Download</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                            </svg>
+                        </a>
                     </div>
                     <img class="absolute right-0 bottom-0" src="{{ asset('/images' . $item['url']) }}"
                         alt="{{ $item['title'] }}" />

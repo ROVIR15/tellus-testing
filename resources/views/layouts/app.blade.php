@@ -275,7 +275,8 @@
                 <div class="mb-6 md:mb-0">
                     <p class="body-2 mb-4">Email: inquiry@tellustesting.com</p>
                     <p class="body-2 mb-4">Hotline: +60 129678460</p>
-                    <p class="body-2">Tellus Testing @2025</p>
+                    <p class="body-2">Address: No. 14 Jalan Permata 2A/KS9, Taman Perindustrian Air Hitam, 41200 Klang, Selangor, Malaysia</p>
+                    <p class="body-2">Tellus Testing © {{ date('Y') }}</p>
                 </div>
 
                 <!-- Social Media Icons -->
