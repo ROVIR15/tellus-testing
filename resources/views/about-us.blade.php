@@ -54,21 +54,25 @@
             'icon' => '/images/icons/accreditation/1.svg',
             'label' => 'ISO 9001:2015',
             'description' => 'International Standard for Quality Management Systems',
+            'files_url' => '/storage/uploads/01KH2R6BKPT9J6TBWJSZRTC638.pdf',
         ],
         [
             'icon' => '/images/icons/accreditation/2.svg',
             'label' => 'ISO 13485:2016',
             'description' => 'International Standard for Medical Device Quality',
+            'files_url' => 'https://tellustesting.com/storage/uploads/01KH2R52FZVYHG7G4KZN7CB1AJ.pdf'
         ],
         [
             'icon' => '/images/icons/accreditation/3.svg',
             'label' => 'ISO 27001:2013',
             'description' => 'International Standard for Information Security Management Systems',
+            'files_url' => '',
         ],
         [
             'icon' => '/images/icons/accreditation/4.svg',
             'label' => 'ISO 22000:2018',
             'description' => 'International Standard for Health Care Services',
+            'files_url' => '',
         ],
     ];
 
@@ -201,12 +205,12 @@
 
                         <!-- Second Layer: Gradient -->
                         <div class="absolute inset-0 z-10" style="
-                                        background: radial-gradient(150% 20% at 32% 0%, #76B2E8 0%, transparent 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-                                    "></div>
+                                                background: radial-gradient(150% 20% at 32% 0%, #76B2E8 0%, transparent 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+                                            "></div>
 
                         <div class="absolute inset-0 z-11" style="
-                                        background: radial-gradient(150% 60% at 32% 0%, #76B2E8 0%, transparent 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-                                    "></div>
+                                                background: radial-gradient(150% 60% at 32% 0%, #76B2E8 0%, transparent 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+                                            "></div>
 
                         <!-- First Layer: Text -->
                         <span class="relative z-20 w-3/5 text-left heading-5">{{ $item['title'] }}</span>
@@ -250,13 +254,23 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
             @foreach ($accreditations as $item)
                 <div class="relative text-white h-[317px] rounded-2xl p-6" style="
-                                    ratio-scale: 1/1;
-                                    background: linear-gradient(180deg, #660A66 0%, #B21BB2 100%);
-                                ">
+                                            ratio-scale: 1/1;
+                                            background: linear-gradient(180deg, #660A66 0%, #B21BB2 100%);
+                                        ">
                     <div class="flex flex-col">
                         <span
                             style="font-size: 20px; font-weight: 600; color: var(--Secondary-100, #FDEDFD);">{{ $item['title'] }}</span>
                         <span style="font-size: 16px; color: var(--Secondary-100, #FDEDFD);">{{ $item['description'] }}</span>
+                        <a href="{{ $item['files_url'] }}" download
+                            class="inline-flex items-center gap-2 mt-4 hover:underline w-fit"
+                            style="color: var(--Secondary-100, #FDEDFD);">
+                            <span class="font-semibold">Download</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                            </svg>
+                        </a>
                     </div>
                     <img class="absolute right-0 bottom-0" src="{{ asset('/images' . $item['url']) }}"
                         alt="{{ $item['title'] }}" />
