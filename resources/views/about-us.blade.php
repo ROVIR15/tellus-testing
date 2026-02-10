@@ -117,7 +117,7 @@
             'title' => 'ILAC MRA Recognized',
             'description' => 'Accepted worldwide',
             'url' => '/about/accreditation/2.png',
-            'files_url' => 'https://tellustesting.com/storage/uploads/01KH2R52FZVYHG7G4KZN7CB1AJ.pdf'
+            'files_url' => '/storage/uploads/01KH2R52FZVYHG7G4KZN7CB1AJ.pdf'
         ],
         [
             'title' => '16+ Accredited Methods',
@@ -259,22 +259,24 @@
                                                     ratio-scale: 1/1;
                                                     background: linear-gradient(180deg, #660A66 0%, #B21BB2 100%);
                                                 ">
-                    <div class="flex flex-col">
+                    <div class="flex flex-col relative z-10">
                         <span
                             style="font-size: 20px; font-weight: 600; color: var(--Secondary-100, #FDEDFD);">{{ $item['title'] }}</span>
                         <span style="font-size: 16px; color: var(--Secondary-100, #FDEDFD);">{{ $item['description'] }}</span>
-                        <a href="{{ $item['files_url'] }}" download
-                            class="inline-flex items-center gap-2 mt-4 hover:underline w-fit"
-                            style="color: var(--Secondary-100, #FDEDFD);">
-                            <span class="font-semibold">Download</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                            </svg>
-                        </a>
+                        @if (!empty($item['files_url']))
+                            <a href="{{ $item['files_url'] }}" download
+                                class="inline-flex items-center gap-2 mt-4 hover:underline w-fit"
+                                style="color: var(--Secondary-100, #FDEDFD);">
+                                <span class="font-semibold">Download</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                </svg>
+                            </a>
+                        @endif
                     </div>
-                    <img class="absolute right-0 bottom-0" src="{{ asset('/images' . $item['url']) }}"
+                    <img class="absolute right-0 bottom-0 " src="{{ asset('/images' . $item['url']) }}"
                         alt="{{ $item['title'] }}" />
                 </div>
             @endforeach
