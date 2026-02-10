@@ -54,13 +54,11 @@
             'icon' => '/images/icons/accreditation/1.svg',
             'label' => 'ISO 9001:2015',
             'description' => 'International Standard for Quality Management Systems',
-            'files_url' => '/storage/uploads/01KH2R6BKPT9J6TBWJSZRTC638.pdf',
         ],
         [
             'icon' => '/images/icons/accreditation/2.svg',
             'label' => 'ISO 13485:2016',
             'description' => 'International Standard for Medical Device Quality',
-            'files_url' => 'https://tellustesting.com/storage/uploads/01KH2R52FZVYHG7G4KZN7CB1AJ.pdf'
         ],
         [
             'icon' => '/images/icons/accreditation/3.svg',
@@ -113,21 +111,25 @@
             'title' => 'ISO/IEC 17025 Certified',
             'description' => 'Ensures global test accuracy',
             'url' => '/about/accreditation/1.png',
+            'files_url' => '/storage/uploads/01KH2R6BKPT9J6TBWJSZRTC638.pdf',
         ],
         [
             'title' => 'ILAC MRA Recognized',
             'description' => 'Accepted worldwide',
             'url' => '/about/accreditation/2.png',
+            'files_url' => 'https://tellustesting.com/storage/uploads/01KH2R52FZVYHG7G4KZN7CB1AJ.pdf'
         ],
         [
             'title' => '16+ Accredited Methods',
             'description' => 'Covering PVD & Geotextile',
             'url' => '/about/accreditation/3.png',
+            'files_url' => '',
         ],
         [
             'title' => 'Verify Accreditation',
             'description' => 'You can verify our accreditation from Department of Standards Malaysia (DSM)',
             'url' => '/about/accreditation/4.png',
+            'files_url' => '',
         ]
     ]
 @endphp
@@ -205,12 +207,12 @@
 
                         <!-- Second Layer: Gradient -->
                         <div class="absolute inset-0 z-10" style="
-                                                background: radial-gradient(150% 20% at 32% 0%, #76B2E8 0%, transparent 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-                                            "></div>
+                                                        background: radial-gradient(150% 20% at 32% 0%, #76B2E8 0%, transparent 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+                                                    "></div>
 
                         <div class="absolute inset-0 z-11" style="
-                                                background: radial-gradient(150% 60% at 32% 0%, #76B2E8 0%, transparent 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-                                            "></div>
+                                                        background: radial-gradient(150% 60% at 32% 0%, #76B2E8 0%, transparent 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+                                                    "></div>
 
                         <!-- First Layer: Text -->
                         <span class="relative z-20 w-3/5 text-left heading-5">{{ $item['title'] }}</span>
@@ -254,9 +256,9 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
             @foreach ($accreditations as $item)
                 <div class="relative text-white h-[317px] rounded-2xl p-6" style="
-                                            ratio-scale: 1/1;
-                                            background: linear-gradient(180deg, #660A66 0%, #B21BB2 100%);
-                                        ">
+                                                    ratio-scale: 1/1;
+                                                    background: linear-gradient(180deg, #660A66 0%, #B21BB2 100%);
+                                                ">
                     <div class="flex flex-col">
                         <span
                             style="font-size: 20px; font-weight: 600; color: var(--Secondary-100, #FDEDFD);">{{ $item['title'] }}</span>
