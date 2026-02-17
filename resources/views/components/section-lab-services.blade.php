@@ -3,7 +3,7 @@
         <!-- Heading -->
         <div class="flex flex-col gap-6 px-8">
             <x-heading-h1 class="custom-color">
-                Specialized in Soil, Water, and Geosynthetics
+                One Stop Testing Center for providing all geosynthetic testing under one roof
             </x-heading-h1>
 
             <x-subheading-2>
