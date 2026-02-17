@@ -10,8 +10,7 @@
                 class="w-full h-auto absolute top-[45%] left-0 hidden lg:block">
 
             <x-subheading-1 class="opacity-95" style="color: var(--color-secondary-300);">
-                Certified lab services for soil and water testing. Specialized in PVD analysis and geotechnical
-                evaluations. Accurate results for confident project decisions.
+                Certified laboratory services for Geosysthetic Testing. Specialized in Pefabricated Vertical Drain, Geotextile material testing and geotechnical evaluations. Accurate results for confident project decisions.
             </x-subheading-1>
 
             <a href="#inquiry"

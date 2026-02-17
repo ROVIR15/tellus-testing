@@ -111,7 +111,7 @@
             'title' => 'ISO/IEC 17025 Certified',
             'description' => 'Ensures global test accuracy',
             'url' => '/about/accreditation/1.png',
-            'files_url' => '/storage/uploads/01KH2R6BKPT9J6TBWJSZRTC638.pdf',
+            'files_url' => '/storage/uploads/01KH69GZCA5J6A30PS7WNMB2AY.pdf',
         ],
         [
             'title' => 'ILAC MRA Recognized',
@@ -123,7 +123,7 @@
             'title' => '16+ Accredited Methods',
             'description' => 'Covering PVD & Geotextile',
             'url' => '/about/accreditation/3.png',
-            'files_url' => '',
+            'files_url' => '/storage/uploads/01KH2R6BKPT9J6TBWJSZRTC638.pdf',
         ],
         [
             'title' => 'Verify Accreditation',

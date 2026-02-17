@@ -292,7 +292,7 @@
                         <a href="#" class="hover:opacity-80 transition-opacity">
                             <img src="{{ asset('images/social-media/facebook.png') }}" alt="Instagram" class="h-6 w-6" />
                         </a>
-                        <a href="#" class="hover:opacity-80 transition-opacity">
+                        <a href="https://www.linkedin.com/company/tellus-testing" class="hover:opacity-80 transition-opacity">
                             <img src="{{ asset('images/social-media/linkedn.png') }}" alt="LinkedIn" class="h-6 w-6" />
                         </a>
                     </div>
